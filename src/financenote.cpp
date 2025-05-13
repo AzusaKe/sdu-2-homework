@@ -48,3 +48,7 @@ void financenote::display() const {//显示函数
              << setw(15) << temp.category << endl;//输出类别
     }
 }
+
+void financenote::add_entry(const string &date, double amount, const string &category) {//记录添加函数
+    entries.push_back({date, amount, category});//将数据添加进总表
+}
