@@ -5,6 +5,8 @@
 #include"notebasic.h"
 #include "financenote.h"
 #include <cstdlib>
+#include <iostream>
+
 
 void financenote::load_from_file(const string &filepath) {//文件加载函数
     entries.clear();//清除之前内存里的记录
@@ -93,7 +95,8 @@ void financenote::search(const string & month) {
     }else {
         cout << "没有记录" << endl;
     }
-    cout << "回车以回到记账本主页：" << endl;
+    cout << "输入0以回到记账本主页：" << endl;
+    cin.ignore();
     cin.get();
 }
 
