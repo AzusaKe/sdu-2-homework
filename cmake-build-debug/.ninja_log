@@ -3,9 +3,8 @@
 42	439	7688487324693861	CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.obj	cdf504da18c47b75
 34	453	7688487324610422	CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.obj	3b81a809d7781716
 51	455	7688487324772391	CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.obj	f6f863c22df7363b
-2	623	7688487324286448	CMakeFiles/SDU_2_homework.dir/main.cpp.obj	82e5835b67313401
-26	719	7688487324531500	CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.obj	65be4d916650ebc2
-8	761	7688487324351512	CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.obj	17975e51a1dae76f
-761	943	7688487331879463	SDU_2_homework.exe	70e5d137e7fe5a34
+5	633	7688494111605139	CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.obj	17975e51a1dae76f
 4	1404	7688491175643319	CMakeFiles/SDU_2_homework.dir/main.cpp.obj	82e5835b67313401
-1406	1605	7688491189658453	SDU_2_homework.exe	70e5d137e7fe5a34
+7	534	7688499086342207	CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.obj	65be4d916650ebc2
+535	720	7688499091627160	SDU_2_homework.exe	70e5d137e7fe5a34
+5	486	7688500086128049	SDU_2_homework.exe	f6c1780406fe21a

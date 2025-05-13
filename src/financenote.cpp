@@ -4,6 +4,7 @@
 
 #include"notebasic.h"
 #include "financenote.h"
+#include <cstdlib>
 
 void financenote::load_from_file(const string &filepath) {//文件加载函数
     entries.clear();//清除之前内存里的记录
@@ -49,6 +50,7 @@ void financenote::save_to_file(const string &filepath) {//文件写入函数
 }
 
 void financenote::display() const {//显示函数
+    system("cls");
     cout << left << setw(10) << "日期"
          << setw(10) << "金额"
          << setw(10) << "类别" << endl;//表格格式分别输出三种数据
