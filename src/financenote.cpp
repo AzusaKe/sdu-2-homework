@@ -9,7 +9,7 @@ void financenote::load_from_file(const string &filepath) {//文件加载函数
     entries.clear();//清除之前内存里的记录
     ifstream file(filepath);//获取文件路径
     if (!file.is_open()) {//检测文件是否可读
-        cerr << "无法打开目标文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;
+        cerr << "无法打开目标文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;//报错
         return;
     }
 
@@ -23,4 +23,16 @@ void financenote::load_from_file(const string &filepath) {//文件加载函数
     file.close();//关闭文件占用
 }
 
-void
+void financenote::save_to_file(const string &filepath) {//文件写入函数
+    ofstream file(filepath);//创建文件输出流
+    if (!file.is_open()) {//检测文件是否可写
+        cerr << "无法修改目标文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;//报错
+        return;
+    }
+
+    for (const auto& temp : entries) {//从总表中提取临时表并写入文件
+        file << temp.date << " " << temp.amount << " " << temp.category << endl;//用空格隔开
+    }
+    file.close();//关闭文件占用
+}
+
