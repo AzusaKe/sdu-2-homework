@@ -3,4 +3,6 @@ project(SDU_2_homework)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(SDU_2_homework main.cpp)
+include_directories(${PROJECT_SOURCE_DIR}/include)
+file(GLOB SRC_LIST ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
+add_executable(SDU_2_homework ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp  ${SRC_LIST})
