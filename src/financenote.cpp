@@ -68,6 +68,39 @@ void financenote::add_entry(const string &date, double amount, const string &cat
     entries.push_back({date, amount, category});//将数据添加进总表
 }
 
+void financenote::search(const string & month) {
+    double total = 0.0;
+    bool has_record = false;
+
+    cout << "[" << month << "月消费记录" << endl;
+
+    cout << left << setw(10) << "日期"
+         << setw(10) << "金额"
+         << setw(10) << "类别" << endl;//表格格式分别输出三种数据
+    cout << string(40,'-') << endl;
+
+    for (const auto& temp : entries) {
+        if (temp.date.substr(0,7) == month) {
+            cout << left << setw(15) << temp.date//输出日期
+             << setw(10) << fixed << setprecision(2) << temp.amount//输出金额
+             << setw(15) << temp.category << endl;//输出类别
+            total += temp.amount;
+            has_record = true;
+        }
+    }
+    if (has_record) {
+        cout << "总支出：" << total << endl;
+    }else {
+        cout << "没有记录" << endl;
+    }
+    cout << "回车以回到记账本主页：" << endl;
+    cin.get();
+}
+
+void financenote::close() {
+    financenote::save_to_file("./data/finance.txt");
+}
+
 void financenote::init() {
     string path = "./data/finance.txt";
     financenote::load_from_file(path);
@@ -100,39 +133,5 @@ void financenote::init() {
         financenote::close();
     }
 }
-
-void financenote::close() {
-    financenote::save_to_file("./data/finance.txt");
-}
-
-void financenote::search(const string & month) {
-    double total = 0.0;
-    bool has_record = false;
-
-    cout << "[" << month << "月消费记录" << endl;
-
-    cout << left << setw(10) << "日期"
-         << setw(10) << "金额"
-         << setw(10) << "类别" << endl;//表格格式分别输出三种数据
-    cout << string(40,'-') << endl;
-
-    for (const auto& temp : entries) {
-        if (temp.date.substr(0,7) == month) {
-            cout << left << setw(15) << temp.date//输出日期
-             << setw(10) << fixed << setprecision(2) << temp.amount//输出金额
-             << setw(15) << temp.category << endl;//输出类别
-            total += temp.amount;
-            has_record = true;
-        }
-    }
-    if (has_record) {
-        cout << "总支出：" << total << endl;
-    }else {
-        cout << "没有记录" << endl;
-    }
-    cout << "回车以回到记账本主页：" << endl;
-    cin.get();
-}
-
 
 
