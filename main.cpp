@@ -9,11 +9,9 @@ using namespace std;
 int main() {
 
     financenote finance_note;
-    string path = "./data/finance.txt";
-
-    finance_note.load_from_file(path);
+    finance_note.init();
     finance_note.add_entry("2025-05-13",88.88,"娱乐");
     finance_note.display();
-    finance_note.save_to_file(path);
+    finance_note.close();
     return 0;
 }

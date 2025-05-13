@@ -71,3 +71,8 @@ void financenote::init() {
     financenote::display();
 }
 
+void financenote::close() {
+    financenote::save_to_file("./data/finance.txt");
+}
+
+

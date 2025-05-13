@@ -16,6 +16,7 @@ public:
     virtual void display() const = 0;
     virtual string get_type() const = 0;
     virtual void init() = 0;
+    virtual void close() = 0;
     virtual ~notebasic() = default;
 };
 

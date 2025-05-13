@@ -24,6 +24,7 @@ public:
 
     void add_entry(const string& date,double amount,const string& category);//添加记录
     void init() override;
+    void close() override;
 private:
     struct entry {
         string date;//日期
