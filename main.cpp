@@ -9,18 +9,17 @@ using namespace std;
 
 int main() {
     SetConsoleOutputCP(CP_UTF8);
-    cout << "请选择你要使用的工具：" << endl << "1.记账本" << endl << "选择数字并按下回车：" << endl;
-    int choice;
-    cin >> choice;
-    system("cls");
-    if (choice == 1) {
-        financenote finance_note;
-        finance_note.init();
-        cout << "请选择你希望的操作：" << endl << "1.添加记录" << endl << "2.关闭记账本" << endl << "选择数字并按下回车：" << endl;
-        finance_note.add_entry("2025-05-13",88.88,"娱乐");
-        finance_note.display();
-        finance_note.close();
+    while (true) {
+        cout << "请选择你要使用的工具：" << endl << "1.记账本" << endl << "选择数字并按下回车(为0则退出)：" << endl;
+        int choice;
+        cin >> choice;
+        system("cls");
+        if (choice == 1) {//记账本模式
+            financenote finance_note;
+            finance_note.init();
+        }else {
+            break;
+        }
     }
-
     return 0;
 }

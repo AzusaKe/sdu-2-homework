@@ -71,7 +71,30 @@ void financenote::add_entry(const string &date, double amount, const string &cat
 void financenote::init() {
     string path = "./data/finance.txt";
     financenote::load_from_file(path);
-    financenote::display();
+    while (true) {
+        financenote::display();
+        cout << "请选择你希望的操作：" << endl << "1.添加记录" << endl << "2.按月份筛选消费记录并输出总金额"<< endl << "选择数字并按下回车(为0则退出)：" << endl;//记账本主界面
+        int choice;
+        cin >> choice;
+        system("cls");
+        if (choice == 1) {
+            string date;
+            double amount;
+            string category;//初始化变量
+            cout << "请输入日期：" << endl;
+            cin >> date;
+            cout << "请输入金额：" << endl;
+            cin >> amount;
+            cout << "请输入类别：" << endl;
+            cin >> category;
+            financenote::add_entry(date,amount,category);
+        }else if (choice == 2) {
+
+        }else {
+            break;
+        }
+        financenote::close();
+    }
 }
 
 void financenote::close() {
