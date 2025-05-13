@@ -5,6 +5,8 @@
 #ifndef NOTEBASIC_H
 #define NOTEBASIC_H
 
+#include<string>
+
 using namespace std;
 
 class notebasic {

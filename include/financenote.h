@@ -5,4 +5,31 @@
 #ifndef FINANCENOTE_H
 #define FINANCENOTE_H
 
+#include"notebasic.h"
+#include<vector>
+#include<iostream>
+#include<iomanip>
+#include<fstream>
+#include<sstream>
+#include <string>
+
+using namespace std;
+
+class financenote : public notebasic {
+public:
+    void load_from_file(const string &filepath) override;//从文件加载，继承自基类
+    void save_to_file(const string &filepath) override;//保存到文件，继承自基类
+    void display() const override;//显示，继承自基类
+    string get_type() const override;//获取类别，继承自基类
+
+    void add_entry(const string& date,double amount,const string& category);//添加记录
+private:
+    struct entry {
+        string date;//日期
+        double amount;//金额
+        string category;//类别
+    };
+    vector<entry> entries;//创建向量用于存储记录
+};
+
 #endif //FINANCENOTE_H
