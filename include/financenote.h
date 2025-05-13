@@ -16,6 +16,13 @@
 using namespace std;
 
 class financenote : public notebasic {
+private:
+    struct entry {
+        string date;//日期
+        double amount;//金额
+        string category;//类别
+    };
+    vector<entry> entries;//创建向量用于存储记录
 public:
     void load_from_file(const string &filepath) override;//从文件加载，继承自基类
     void save_to_file(const string &filepath) override;//保存到文件，继承自基类
@@ -25,13 +32,7 @@ public:
     void add_entry(const string& date,double amount,const string& category);//添加记录
     void init() override;
     void close() override;
-private:
-    struct entry {
-        string date;//日期
-        double amount;//金额
-        string category;//类别
-    };
-    vector<entry> entries;//创建向量用于存储记录
+    void search(const string&);
 };
 
 #endif //FINANCENOTE_H

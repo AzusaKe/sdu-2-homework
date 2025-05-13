@@ -61,7 +61,7 @@ void financenote::display() const {//显示函数
              << setw(10) << fixed << setprecision(2) << temp.amount//输出金额
              << setw(15) << temp.category << endl;//输出类别
     }
-    cin.get();//调试用
+    //cin.get();//调试用
 }
 
 void financenote::add_entry(const string &date, double amount, const string &category) {//记录添加函数
@@ -89,7 +89,11 @@ void financenote::init() {
             cin >> category;
             financenote::add_entry(date,amount,category);
         }else if (choice == 2) {
-
+            string month;
+            cout << "请输入月份(YYYY-MM)：" << endl;
+            cin >> month;
+            system("cls");
+            financenote::search(month);
         }else {
             break;
         }
@@ -100,5 +104,35 @@ void financenote::init() {
 void financenote::close() {
     financenote::save_to_file("./data/finance.txt");
 }
+
+void financenote::search(const string & month) {
+    double total = 0.0;
+    bool has_record = false;
+
+    cout << "[" << month << "月消费记录" << endl;
+
+    cout << left << setw(10) << "日期"
+         << setw(10) << "金额"
+         << setw(10) << "类别" << endl;//表格格式分别输出三种数据
+    cout << string(40,'-') << endl;
+
+    for (const auto& temp : entries) {
+        if (temp.date.substr(0,7) == month) {
+            cout << left << setw(15) << temp.date//输出日期
+             << setw(10) << fixed << setprecision(2) << temp.amount//输出金额
+             << setw(15) << temp.category << endl;//输出类别
+            total += temp.amount;
+            has_record = true;
+        }
+    }
+    if (has_record) {
+        cout << "总支出：" << total << endl;
+    }else {
+        cout << "没有记录" << endl;
+    }
+    cout << "回车以回到记账本主页：" << endl;
+    cin.get();
+}
+
 
 
