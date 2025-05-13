@@ -1,3 +1,4 @@
+#include<windows.h>
 #include<iostream>
 #include"fileoperater.h"
 #include"financenote.h"
@@ -7,6 +8,7 @@
 using namespace std;
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     filecheck_and_init();
     financenote finance_note;
     finance_note.init();
