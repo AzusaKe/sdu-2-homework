@@ -23,6 +23,7 @@ public:
     string get_type() const override;//获取类别，继承自基类
 
     void add_entry(const string& date,double amount,const string& category);//添加记录
+    void init() override;
 private:
     struct entry {
         string date;//日期
