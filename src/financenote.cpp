@@ -9,7 +9,12 @@ void financenote::load_from_file(const string &filepath) {//文件加载函数
     entries.clear();//清除之前内存里的记录
     ifstream file(filepath);//获取文件路径
     if (!file.is_open()) {//检测文件是否可读
-        cerr << "无法打开目标文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;//报错
+        cerr << "无法打开目标文件：" << filepath << "，即将自动创建新文件" << endl;//报错
+        ofstream createFile(filepath);
+        if (!createFile.is_open()) {
+            cerr << "无法创建文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;//报错
+        }
+        createFile.close();
         return;
     }
 
@@ -18,7 +23,9 @@ void financenote::load_from_file(const string &filepath) {//文件加载函数
         stringstream ss(line);//读取特定行
         entry temp;//创建临时表
         ss >> temp.date >> temp.amount >> temp.category;//将变量写入到临时表
-        entries.push_back(temp);//将这个临时表加入总表
+        if (!temp.date.empty()) {//若读取数据不为空
+            entries.push_back(temp);//将这个临时表加入总表
+        }//反之不写入
     }
     file.close();//关闭文件占用
 }
@@ -26,7 +33,12 @@ void financenote::load_from_file(const string &filepath) {//文件加载函数
 void financenote::save_to_file(const string &filepath) {//文件写入函数
     ofstream file(filepath);//创建文件输出流
     if (!file.is_open()) {//检测文件是否可写
-        cerr << "无法修改目标文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;//报错
+        cerr << "无法修改目标文件：" << filepath << "，即将自动创建新文件" << endl;//报错
+        ofstream createFile(filepath);
+        if (!createFile.is_open()) {
+            cerr << "无法创建文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;//报错
+        }
+        createFile.close();
         return;
     }
 
