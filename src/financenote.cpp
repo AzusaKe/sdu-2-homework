@@ -61,6 +61,7 @@ void financenote::display() const {//显示函数
              << setw(10) << fixed << setprecision(2) << temp.amount//输出金额
              << setw(15) << temp.category << endl;//输出类别
     }
+    cin.get();//调试用
 }
 
 void financenote::add_entry(const string &date, double amount, const string &category) {//记录添加函数
