@@ -14,7 +14,7 @@ public:
     virtual void load_from_file(const string& filepath) = 0;
     virtual void save_to_file(const string& filepath) = 0;
     virtual void display() const = 0;
-    virtual string get_type() const = 0;
+    //virtual string get_type() const = 0;
     virtual void init() = 0;
     virtual void close() = 0;
     virtual ~notebasic() = default;
