@@ -52,12 +52,14 @@ build cmake_object_order_depends_target_SDU_2_homework: phony || .
 build CMakeFiles/SDU_2_homework.dir/main.cpp.obj: CXX_COMPILER__SDU_2_homework_unscanned_Debug F$:/SDU-2-homework/main.cpp || cmake_object_order_depends_target_SDU_2_homework
   DEP_FILE = CMakeFiles\SDU_2_homework.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IF:/SDU-2-homework/include
   OBJECT_DIR = CMakeFiles\SDU_2_homework.dir
   OBJECT_FILE_DIR = CMakeFiles\SDU_2_homework.dir
 
 build CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.obj: CXX_COMPILER__SDU_2_homework_unscanned_Debug F$:/SDU-2-homework/src/financenote.cpp || cmake_object_order_depends_target_SDU_2_homework
   DEP_FILE = CMakeFiles\SDU_2_homework.dir\src\financenote.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IF:/SDU-2-homework/include
   OBJECT_DIR = CMakeFiles\SDU_2_homework.dir
   OBJECT_FILE_DIR = CMakeFiles\SDU_2_homework.dir\src
 
