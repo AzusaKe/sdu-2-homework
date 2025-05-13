@@ -5,7 +5,6 @@
 #include "filecheck_and_init.h"
 #include <filesystem>
 using namespace std;
-
 void filecheck_and_init() {
     if (!filesystem::exists("data")) {
         filesystem::create_directory("data");
