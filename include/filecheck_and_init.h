@@ -5,6 +5,9 @@
 #ifndef FILECHECK_AND_INIT_H
 #define FILECHECK_AND_INIT_H
 
+#include <filesystem>
+using namespace std;
+
 void filecheck_and_init();
 
 #endif //FILECHECK_AND_INIT_H

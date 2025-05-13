@@ -3,11 +3,11 @@
 #include"financenote.h"
 #include"passwordmanager.h"
 #include"reminder.h"
-
+#include"filecheck_and_init.h"
 using namespace std;
 
 int main() {
-
+    filecheck_and_init();
     financenote finance_note;
     finance_note.init();
     finance_note.add_entry("2025-05-13",88.88,"娱乐");
