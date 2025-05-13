@@ -30,9 +30,21 @@ void financenote::save_to_file(const string &filepath) {//文件写入函数
         return;
     }
 
-    for (const auto& temp : entries) {//从总表中提取临时表并写入文件
+    for (const auto& temp : entries) {//从总表中遍历临时表
         file << temp.date << " " << temp.amount << " " << temp.category << endl;//用空格隔开
     }
     file.close();//关闭文件占用
 }
 
+void financenote::display() const {//显示函数
+    cout << left << setw(10) << "日期"
+         << setw(10) << "金额"
+         << setw(10) << "类别" << endl;//表格格式分别输出三种数据
+    cout << string(40,'-') << endl;
+
+    for (const auto& temp : entries) {//从总表中遍历临时表
+        cout << left << setw(15) << temp.date//输出日期
+             << setw(10) << fixed << setprecision(2) << temp.amount//输出金额
+             << setw(15) << temp.category << endl;//输出类别
+    }
+}
