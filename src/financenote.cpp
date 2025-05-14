@@ -71,7 +71,7 @@ void financenote::add_entry(const string &date, double amount, const string &cat
     financenote::save_to_file("./data/finance.txt");
 }
 
-void financenote::search(const string & month) {
+void financenote::display(const string & month) {
     double total = 0.0;//记录总开销
     bool has_record = false;//检测是否有记录，避免误判
 
@@ -97,7 +97,12 @@ void financenote::search(const string & month) {
         cout << "没有记录" << endl;
     }
     cout << "回车以回到记账本主页：" << endl;
+#ifdef _WIN32
     system("pause");
+#else
+    system("read -p 'Press any key to continue...' var");
+#endif
+    //保证多系统兼容
 }
 
 void financenote::close() {
@@ -129,7 +134,7 @@ void financenote::init() {
             cout << "请输入月份(YYYY-MM)：" << endl;
             cin >> month;
             system("cls");
-            financenote::search(month);
+            financenote::display(month);
         }else {
             break;
         }
