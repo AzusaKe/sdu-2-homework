@@ -208,6 +208,30 @@ src/financenote.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.s
 .PHONY : src/financenote.cpp.s
 
+src/formatcheck.o: src/formatcheck.cpp.o
+.PHONY : src/formatcheck.o
+
+# target to build an object file
+src/formatcheck.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.o
+.PHONY : src/formatcheck.cpp.o
+
+src/formatcheck.i: src/formatcheck.cpp.i
+.PHONY : src/formatcheck.i
+
+# target to preprocess a source file
+src/formatcheck.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.i
+.PHONY : src/formatcheck.cpp.i
+
+src/formatcheck.s: src/formatcheck.cpp.s
+.PHONY : src/formatcheck.s
+
+# target to generate assembly for a file
+src/formatcheck.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.s
+.PHONY : src/formatcheck.cpp.s
+
 src/notebasic.o: src/notebasic.cpp.o
 .PHONY : src/notebasic.o
 
@@ -299,6 +323,9 @@ help:
 	@echo "... src/financenote.o"
 	@echo "... src/financenote.i"
 	@echo "... src/financenote.s"
+	@echo "... src/formatcheck.o"
+	@echo "... src/formatcheck.i"
+	@echo "... src/formatcheck.s"
 	@echo "... src/notebasic.o"
 	@echo "... src/notebasic.i"
 	@echo "... src/notebasic.s"
