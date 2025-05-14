@@ -71,11 +71,6 @@ void financenote::display() const {//显示函数
     //cin.get();//调试用
 }
 
-void financenote::add_entry(const string &date, double amount, const string &category) {//记录添加函数
-    entries.push_back({date, amount, category});//将数据添加进总表
-    financenote::save_to_file("./data/finance.txt");
-}
-
 void financenote::display(const string & month) const {
     double total = 0.0;//记录总开销
     bool has_record = false;//检测是否有记录，避免误判
@@ -108,6 +103,11 @@ void financenote::display(const string & month) const {
     system("read -p 'Press any key to continue...' var");
 #endif
     //保证多系统兼容
+}
+
+void financenote::add_entry(const string &date, double amount, const string &category) {//记录添加函数
+    entries.push_back({date, amount, category});//将数据添加进总表
+    financenote::save_to_file("./data/finance.txt");
 }
 
 void financenote::close() {
