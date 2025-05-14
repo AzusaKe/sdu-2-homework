@@ -74,7 +74,7 @@ void financenote::search(const string & month) {
     double total = 0.0;
     bool has_record = false;
 
-    cout << "[" << month << "月消费记录" << endl;
+    cout << "[" << month << "月消费记录]" << endl;
 
     cout << left << setw(10) << "日期"
          << setw(10) << "金额"

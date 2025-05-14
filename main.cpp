@@ -1,6 +1,5 @@
 #include<windows.h>
 #include<iostream>
-#include"fileoperater.h"
 #include"financenote.h"
 #include"passwordmanager.h"
 #include"reminder.h"
