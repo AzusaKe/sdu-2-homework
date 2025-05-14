@@ -9,6 +9,7 @@
 #include<regex>
 using namespace std;
 
-bool is_valid_date(const std::string& date);
+bool is_valid_date(const string& date);
+bool is_valid_month(const string& month);
 
 #endif //FORMATCHECK_H

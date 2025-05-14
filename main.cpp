@@ -7,24 +7,27 @@
 #include"passwordmanager.h"
 #include"reminder.h"
 #include"filecheck_and_init.h"
-using namespace std;
+using namespace std;//使用标准命名空间
 
 //图形化程序入口
 void runGraphicalInterface() {
-    cout << "Running graphical interface..." << std::endl;
-    // 在这里实现你的图形化界面代码
+    cout << "Running graphical interface..." << endl;
+    //图形化界面代码实现
 }
 
 //命令行程序入口
 int runCommandLineInterface(int argc, char* argv[]) {
+    //windows兼容代码
 #ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8);
+    SetConsoleMode(GetStdHandle(STD_OUTPUT_HANDLE),ENABLE_PROCESSED_OUTPUT | ENABLE_WRAP_AT_EOL_OUTPUT);//修改控制台编码格式
 #endif
-    filecheck_and_init();
+    filecheck_and_init();//检查文件是否存在并初始化
     while (true) {
-        cout << "请选择你要使用的工具：" << endl << "1.记账本" << endl << "选择数字并按下回车(为0则退出)：" << endl;
+        cout << "请选择你要使用的工具：" << endl << "1.记账本" << endl << "选择数字并按下回车(为0则退出)：" << endl;//选择功能
         int choice;
-        cin >> choice;
+        cin >> choice;//输入功能
 #ifdef _WIN32
         system("cls");
 #else
@@ -32,22 +35,22 @@ int runCommandLineInterface(int argc, char* argv[]) {
 #endif
         //提高兼容性
         if (choice == 1) {//记账本模式
-            financenote finance_note;
-            finance_note.init();
+            financenote finance_note;//创建记账本对象
+            finance_note.init();//记账本初始化
         }else {
-            break;
+            break;//退出代码
         }
     }
-    return 0;
+    return 0;//退出
 }
 
 int main(int argc, char* argv[]) {
     if (argc <= 1) {
-        // 如果有命令行参数，运行命令行界面
+        // 如果没有命令行参数，运行命令行界面
         runCommandLineInterface(argc, argv);
     } else {
         // 否则，运行图形化界面
         runGraphicalInterface();
     }
-    return 0;
+    return 0;//退出
 }
