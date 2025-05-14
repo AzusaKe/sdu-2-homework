@@ -128,7 +128,7 @@ void financenote::init() {
             cin >> amount;
             cout << "请输入类别：" << endl;
             cin >> category;
-            financenote::add_entry(date,amount,category);
+            financenote::add_entry(date,amount,category);//添加行函数
         }else if (choice == 2) {
             string month;
             cout << "请输入月份(YYYY-MM)：" << endl;
