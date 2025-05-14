@@ -137,7 +137,7 @@ void financenote::init() {
                 system("clear");
 #endif
                 //提高兼容性
-                if (is_valid_date(date)) {
+                if (!is_valid_date(date)) {
                     cerr << "错误的日期格式！请重新输入" << endl;
                 }
             }while (!is_valid_date(date));
