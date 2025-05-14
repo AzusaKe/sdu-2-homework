@@ -58,19 +58,21 @@ void financenote::display(const string &month) const {//显示函数
     system("clear");//linux/macos清屏代码
 #endif
     //提高兼容性
-    cout << left << setw(17) << "日期"
-         << setw(23) << "| 金额"
+    if (month.empty()) {
+        cout << "[全部消费记录]" << endl;
+    } else {
+        cout << "[" << month << "月消费记录]" << endl;
+    }
+
+    cout << left << setw(19) << "日期"
+         << setw(24) << "| 金额"
          << setw(15) << "| 类别" << endl;//表格格式分别输出三种数据
     cout << string(55,'-') << endl;
 
     double total = 0.0;//记录总开销
     bool has_record = false;//检测是否有记录，避免误判
 
-    if (month.empty()) {
-        cout << "[全部消费记录]" << endl;
-    } else {
-        cout << "[" << month << "月消费记录]" << endl;
-    }
+
 
     for (const auto& temp : entries) {
         if (month.empty() || temp.date.substr(0, 7) == month) {
@@ -136,6 +138,7 @@ void financenote::init() {
             string month;
             cout << "请输入月份(YYYY-MM)：" << endl;
             cin >> month;
+
 #ifdef _WIN32
             system("cls");
 #else
