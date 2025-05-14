@@ -18,7 +18,12 @@ int main() {
         cout << "请选择你要使用的工具：" << endl << "1.记账本" << endl << "选择数字并按下回车(为0则退出)：" << endl;
         int choice;
         cin >> choice;
+#ifdef _WIN32
         system("cls");
+#else
+        system("clear");
+#endif
+        //提高兼容性
         if (choice == 1) {//记账本模式
             financenote finance_note;
             finance_note.init();
