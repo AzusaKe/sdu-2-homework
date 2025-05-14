@@ -15,11 +15,11 @@ void financenote::load_from_file(const string &filepath) {
     if (!file.is_open()) {//检测文件是否可读
         cerr << "无法打开目标文件：" << filepath << "，即将自动创建新文件" << endl;//报错
         ofstream createFile(filepath);//重新创建文件
-        if (!createFile.is_open()) {
+        if (!createFile.is_open()) {//检测文件是否存在
             cerr << "无法创建文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;//报错
+	    return;//退出
         }
-        createFile.close();
-        return;
+        createFile.close();//关闭
     }
 
     string line;
@@ -39,11 +39,11 @@ void financenote::save_to_file(const string &filepath) {
     if (!file.is_open()) {//检测文件是否可写
         cerr << "无法修改目标文件：" << filepath << "，即将自动创建新文件" << endl;//报错
         ofstream createFile(filepath);
-        if (!createFile.is_open()) {
+        if (!createFile.is_open()) {//检测文件是否能够打开
             cerr << "无法创建文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;//报错
+            return;//退出
         }
-        createFile.close();
-        return;
+        createFile.close();//关闭
     }
 
     for (const auto& temp : entries) {//从总表中遍历临时表
@@ -76,7 +76,7 @@ void financenote::display(const string &month) const {
     for (const auto& temp : entries) {
         //如果参数为空或者符合搜索条件，输出全部删记录
         if (month.empty() || temp.date.substr(0, 7) == month) {
-            cout << left << setw(17) << temp.date
+            cout << left << setw(17) << temp.date//以行为单位输出记录
                  << "| " << setw(20) << fixed << setprecision(2) << temp.amount
                  << "| " << setw(15) << temp.category << endl;
             total += temp.amount;
@@ -115,7 +115,7 @@ void financenote::close() {
 void financenote::init() {
     string path = "./data/finance.txt";
     financenote::load_from_file(path);//加载数据
-    while (true) {
+    while (true) {//循环输入选项
         financenote::display("");
         cout << "请选择你希望的操作：" << endl << "1.添加记录" << endl << "2.按月份筛选消费记录并输出总金额"<< endl << "选择数字并按下回车(为0则退出)：" << endl;//记账本主界面
         int choice;
@@ -127,12 +127,12 @@ void financenote::init() {
 #endif
         //提高兼容性
         if (choice == 1) {
-            string date;
-            double amount;
+            string date;//日期
+            double amount;//金额
             string category;//初始化变量
             do {
                 cout << "请输入日期：" << endl;
-                cin >> date;
+                cin >> date;//输入日期
 #ifdef _WIN32
                 system("cls");
 #else

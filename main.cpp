@@ -11,7 +11,7 @@ using namespace std;//使用标准命名空间
 
 //图形化程序入口
 void runGraphicalInterface() {
-    std::cout << "Running graphical interface..." << std::endl;
+    cout << "Running graphical interface..." << endl;
     //图形化界面代码实现
 }
 

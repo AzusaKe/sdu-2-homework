@@ -3,9 +3,10 @@
 //
 
 #include "formatcheck.h"
+using namespace std;
 
 
-bool is_valid_date(const std::string& date) {
+bool is_valid_date(const string& date) {
     regex pattern(R"(^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$)");
     smatch match;
     if (!regex_match(date, match, pattern)) {
@@ -26,5 +27,9 @@ bool is_valid_date(const std::string& date) {
         days_in_month[1] = 29;
     }
     return day >= 1 && day <= days_in_month[month - 1];
+}
+
+bool is_valid_month(const string& month) {
+    regex partern(R"(^\d{4}-(0[1-9]|1[0-2])-())")
 }
 
