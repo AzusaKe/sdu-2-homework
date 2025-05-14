@@ -74,22 +74,24 @@ void financenote::display(const string &month) const {
     bool has_record = false;//检测是否有记录，避免误判
     //遍历总表，寻找符合要求的记录
     for (const auto& temp : entries) {
-        //如果参数为空，且
+        //如果参数为空或者符合搜索条件，输出全部删记录
         if (month.empty() || temp.date.substr(0, 7) == month) {
             cout << left << setw(17) << temp.date
                  << "| " << setw(20) << fixed << setprecision(2) << temp.amount
                  << "| " << setw(15) << temp.category << endl;
             total += temp.amount;
             has_record = true;
-        } else if (!month.empty() && temp.date.substr(0, 7) != month) {
+        }//如果传入参数且不符合搜索条件，跳过
+        else if (!month.empty() && temp.date.substr(0, 7) != month) {
             continue;
         }
-    }
+    }//判定是否有记录，有则输出
     if (has_record) {
         cout << "总支出：" << total << endl;
-    }else {
+    }//无则输出：无记录
+    else {
         cout << "没有记录" << endl;
-    }
+    }//如果传入搜索参数，显示返回操作
     if (!month.empty()) {
         cout << "回车以回到记账本主页：" << endl;
         #ifdef _WIN32
@@ -97,21 +99,22 @@ void financenote::display(const string &month) const {
         #else
             system("read -p 'Press any key to continue...' var");
         #endif
+        //添加兼容代码
     }
 }
-
-void financenote::add_entry(const string &date, double amount, const string &category) {//记录添加函数
+//记录添加函数
+void financenote::add_entry(const string &date, double amount, const string &category) {
     entries.push_back({date, amount, category});//将数据添加进总表
-    financenote::save_to_file("./data/finance.txt");
+    financenote::save_to_file("./data/finance.txt");//每添加一次记录就保存一次，避免出错
 }
-
+//关闭函数，避免错误保存
 void financenote::close() {
     financenote::save_to_file("./data/finance.txt");
 }
-
+//初始化函数，包含记账本主页
 void financenote::init() {
     string path = "./data/finance.txt";
-    financenote::load_from_file(path);
+    financenote::load_from_file(path);//加载数据
     while (true) {
         financenote::display("");
         cout << "请选择你希望的操作：" << endl << "1.添加记录" << endl << "2.按月份筛选消费记录并输出总金额"<< endl << "选择数字并按下回车(为0则退出)：" << endl;//记账本主界面
@@ -136,7 +139,7 @@ void financenote::init() {
                 system("clear");
 #endif
                 //提高兼容性
-                if (!is_valid_date(date)) {
+                if (!is_valid_date(date)) {//检验日期是否合法
                     cerr << "错误的日期格式！请重新输入" << endl;
                 }
             }while (!is_valid_date(date));
@@ -148,7 +151,7 @@ void financenote::init() {
         }else if (choice == 2) {
             string month;
             cout << "请输入月份(YYYY-MM)：" << endl;
-            cin >> month;
+            cin >> month;//搜索界面
 
 #ifdef _WIN32
             system("cls");
@@ -158,8 +161,8 @@ void financenote::init() {
             //提高兼容性
             financenote::display(month);
         }else {
-            break;
+            break;//返回
         }
-        financenote::close();
+        financenote::close();//关闭窗口
     }
 }
