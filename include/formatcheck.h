@@ -4,6 +4,8 @@
 
 #ifndef FORMATCHECK_H
 #define FORMATCHECK_H
+
+#include <string>
 using namespace std;
 
 bool is_valid_date(const std::string& date);

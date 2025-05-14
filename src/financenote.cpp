@@ -4,6 +4,7 @@
 
 #include"notebasic.h"
 #include "financenote.h"
+#include "formatcheck.h"
 #include <cstdlib>
 #include <iostream>
 
@@ -127,8 +128,19 @@ void financenote::init() {
             string date;
             double amount;
             string category;//初始化变量
-            cout << "请输入日期：" << endl;
-            cin >> date;
+            do {
+                cout << "请输入日期：" << endl;
+                cin >> date;
+#ifdef _WIN32
+                system("cls");
+#else
+                system("clear");
+#endif
+                //提高兼容性
+                if (is_valid_date(date)) {
+                    cerr << "错误的日期格式！请重新输入" << endl;
+                }
+            }while (!is_valid_date(date));
             cout << "请输入金额：" << endl;
             cin >> amount;
             cout << "请输入类别：" << endl;
