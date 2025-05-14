@@ -11,7 +11,7 @@ using namespace std;
 
 //图形化程序入口
 void runGraphicalInterface() {
-    std::cout << "Running graphical interface..." << std::endl;
+    cout << "Running graphical interface..." << std::endl;
     // 在这里实现你的图形化界面代码
 }
 
