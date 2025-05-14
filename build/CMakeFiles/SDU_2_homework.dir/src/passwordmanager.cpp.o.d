@@ -1,8 +1,7 @@
 CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.o: \
- /root/sdu-2-homework/sdu-2-homework/src/passwordmanager.cpp \
- /usr/include/stdc-predef.h \
- /root/sdu-2-homework/sdu-2-homework/include/notebasic.h \
- /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
+ /root/sdu-2-homework/src/passwordmanager.cpp /usr/include/stdc-predef.h \
+ /root/sdu-2-homework/include/notebasic.h /usr/include/c++/13/string \
+ /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/aarch64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -123,4 +122,4 @@ CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.o: \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
  /usr/include/c++/13/bits/ranges_util.h \
- /root/sdu-2-homework/sdu-2-homework/include/passwordmanager.h
+ /root/sdu-2-homework/include/passwordmanager.h

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/root/sdu-2-homework/sdu-2-homework/include
+CXX_INCLUDES = -I/root/sdu-2-homework/include
 
 CXX_FLAGS = -std=gnu++20
 

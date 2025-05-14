@@ -25,6 +25,11 @@ int runCommandLineInterface(int argc, char* argv[]) {
 #endif
     filecheck_and_init();//检查文件是否存在并初始化
     while (true) {
+#ifdef _WIN32
+        system("cls");
+#else
+        system("clear");
+#endif
         cout << "请选择你要使用的工具：" << endl << "1.记账本" << endl << "选择数字并按下回车(为0则退出)：" << endl;//选择功能
         int choice;
         cin >> choice;//输入功能

@@ -1,7 +1,7 @@
 CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.o: \
- /root/sdu-2-homework/sdu-2-homework/src/filecheck_and_init.cpp \
+ /root/sdu-2-homework/src/filecheck_and_init.cpp \
  /usr/include/stdc-predef.h \
- /root/sdu-2-homework/sdu-2-homework/include/filecheck_and_init.h \
+ /root/sdu-2-homework/include/filecheck_and_init.h \
  /usr/include/c++/13/filesystem \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/aarch64-linux-gnu/c++/13/bits/c++config.h \

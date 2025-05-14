@@ -1,8 +1,7 @@
 CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.o: \
- /root/sdu-2-homework/sdu-2-homework/src/financenote.cpp \
- /usr/include/stdc-predef.h \
- /root/sdu-2-homework/sdu-2-homework/include/notebasic.h \
- /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
+ /root/sdu-2-homework/src/financenote.cpp /usr/include/stdc-predef.h \
+ /root/sdu-2-homework/include/notebasic.h /usr/include/c++/13/string \
+ /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/aarch64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -123,9 +122,9 @@ CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.o: \
  /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/uses_allocator_args.h /usr/include/c++/13/tuple \
  /usr/include/c++/13/bits/ranges_util.h \
- /root/sdu-2-homework/sdu-2-homework/include/financenote.h \
- /root/sdu-2-homework/sdu-2-homework/include/notebasic.h \
- /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
+ /root/sdu-2-homework/include/financenote.h \
+ /root/sdu-2-homework/include/notebasic.h /usr/include/c++/13/vector \
+ /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/iostream \
@@ -177,11 +176,10 @@ CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.o: \
  /usr/include/aarch64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/aarch64-linux-gnu/c++/13/bits/c++io.h \
  /usr/include/c++/13/bits/fstream.tcc \
- /root/sdu-2-homework/sdu-2-homework/include/formatcheck.h \
- /usr/include/c++/13/regex /usr/include/c++/13/bitset \
- /usr/include/c++/13/stack /usr/include/c++/13/deque \
- /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
- /usr/include/c++/13/bits/stl_stack.h \
+ /root/sdu-2-homework/include/formatcheck.h /usr/include/c++/13/regex \
+ /usr/include/c++/13/bitset /usr/include/c++/13/stack \
+ /usr/include/c++/13/deque /usr/include/c++/13/bits/stl_deque.h \
+ /usr/include/c++/13/bits/deque.tcc /usr/include/c++/13/bits/stl_stack.h \
  /usr/include/c++/13/ext/aligned_buffer.h \
  /usr/include/c++/13/bits/shared_ptr.h \
  /usr/include/c++/13/bits/shared_ptr_base.h \

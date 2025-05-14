@@ -1,6 +1,6 @@
-CMakeFiles/SDU_2_homework.dir/main.cpp.o: \
- /root/sdu-2-homework/sdu-2-homework/main.cpp /usr/include/stdc-predef.h \
- /usr/include/c++/13/iostream /usr/include/c++/13/bits/requires_hosted.h \
+CMakeFiles/SDU_2_homework.dir/main.cpp.o: /root/sdu-2-homework/main.cpp \
+ /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
+ /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/aarch64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -155,9 +155,9 @@ CMakeFiles/SDU_2_homework.dir/main.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /root/sdu-2-homework/sdu-2-homework/include/financenote.h \
- /root/sdu-2-homework/sdu-2-homework/include/notebasic.h \
- /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
+ /root/sdu-2-homework/include/financenote.h \
+ /root/sdu-2-homework/include/notebasic.h /usr/include/c++/13/vector \
+ /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/iomanip \
@@ -173,6 +173,6 @@ CMakeFiles/SDU_2_homework.dir/main.cpp.o: \
  /usr/include/aarch64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/aarch64-linux-gnu/c++/13/bits/c++io.h \
  /usr/include/c++/13/bits/fstream.tcc \
- /root/sdu-2-homework/sdu-2-homework/include/passwordmanager.h \
- /root/sdu-2-homework/sdu-2-homework/include/reminder.h \
- /root/sdu-2-homework/sdu-2-homework/include/filecheck_and_init.h
+ /root/sdu-2-homework/include/passwordmanager.h \
+ /root/sdu-2-homework/include/reminder.h \
+ /root/sdu-2-homework/include/filecheck_and_init.h

@@ -1,8 +1,7 @@
 CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.o: \
- /root/sdu-2-homework/sdu-2-homework/src/formatcheck.cpp \
- /usr/include/stdc-predef.h \
- /root/sdu-2-homework/sdu-2-homework/include/formatcheck.h \
- /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
+ /root/sdu-2-homework/src/formatcheck.cpp /usr/include/stdc-predef.h \
+ /root/sdu-2-homework/include/formatcheck.h /usr/include/c++/13/string \
+ /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/aarch64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/13/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
