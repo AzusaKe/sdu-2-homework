@@ -8,8 +8,8 @@
 #include <cstdlib>
 #include <iostream>
 
-
-void financenote::load_from_file(const string &filepath) {//文件加载函数
+//文件加载函数
+void financenote::load_from_file(const string &filepath) {
     entries.clear();//清除之前内存里的记录
     ifstream file(filepath);//获取文件路径
     if (!file.is_open()) {//检测文件是否可读
@@ -33,8 +33,8 @@ void financenote::load_from_file(const string &filepath) {//文件加载函数
     }
     file.close();//关闭文件占用
 }
-
-void financenote::save_to_file(const string &filepath) {//文件写入函数
+//文件写入函数
+void financenote::save_to_file(const string &filepath) {
     ofstream file(filepath);//创建文件输出流
     if (!file.is_open()) {//检测文件是否可写
         cerr << "无法修改目标文件：" << filepath << "，即将自动创建新文件" << endl;//报错
@@ -51,31 +51,30 @@ void financenote::save_to_file(const string &filepath) {//文件写入函数
     }
     file.close();//关闭文件占用
 }
-
-void financenote::display(const string &month) const {//显示函数
+//显示函数
+void financenote::display(const string &month) const {
 #ifdef _WIN32
     system("cls");//windows清屏代码
 #else
     system("clear");//linux/macos清屏代码
 #endif
     //提高兼容性
-    if (month.empty()) {
+    if (month.empty()) {//如果没有传入参数，显示全部消费记录
         cout << "[全部消费记录]" << endl;
-    } else {
+    } else {//如果传入参数，显示月份记录
         cout << "[" << month << "月消费记录]" << endl;
     }
-
+    //表格格式分别输出三种数据表头
     cout << left << setw(19) << "日期"
          << setw(24) << "| 金额"
-         << setw(15) << "| 类别" << endl;//表格格式分别输出三种数据
+         << setw(15) << "| 类别" << endl;
     cout << string(55,'-') << endl;
 
     double total = 0.0;//记录总开销
     bool has_record = false;//检测是否有记录，避免误判
-
-
-
+    //遍历总表，寻找符合要求的记录
     for (const auto& temp : entries) {
+        //如果参数为空，且
         if (month.empty() || temp.date.substr(0, 7) == month) {
             cout << left << setw(17) << temp.date
                  << "| " << setw(20) << fixed << setprecision(2) << temp.amount
