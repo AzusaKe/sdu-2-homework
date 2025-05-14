@@ -52,7 +52,12 @@ void financenote::save_to_file(const string &filepath) {//文件写入函数
 }
 
 void financenote::display() const {//显示函数
+#ifdef _WIN32
     system("cls");
+#else
+    system("clear");
+#endif
+    //提高兼容性
     cout << left << setw(10) << "日期"
          << setw(10) << "金额"
          << setw(10) << "类别" << endl;//表格格式分别输出三种数据
@@ -117,7 +122,12 @@ void financenote::init() {
         cout << "请选择你希望的操作：" << endl << "1.添加记录" << endl << "2.按月份筛选消费记录并输出总金额"<< endl << "选择数字并按下回车(为0则退出)：" << endl;//记账本主界面
         int choice;
         cin >> choice;
+#ifdef _WIN32
         system("cls");
+#else
+        system("clear");
+#endif
+        //提高兼容性
         if (choice == 1) {
             string date;
             double amount;
@@ -133,7 +143,12 @@ void financenote::init() {
             string month;
             cout << "请输入月份(YYYY-MM)：" << endl;
             cin >> month;
+#ifdef _WIN32
             system("cls");
+#else
+            system("clear");
+#endif
+            //提高兼容性
             financenote::display(month);
         }else {
             break;
