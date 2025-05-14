@@ -160,7 +160,7 @@ void financenote::init() {
 #endif
                 //提高兼容性
                 if (!is_valid_month(month)) {
-                    cerr << "错误的日期格式！请重新输入！"
+                    cerr << "错误的日期格式！请重新输入！" << endl;
                 }
             }while (!is_valid_month(month));
             financenote::display(month);
