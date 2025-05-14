@@ -13,7 +13,7 @@ void financenote::load_from_file(const string &filepath) {//文件加载函数
     ifstream file(filepath);//获取文件路径
     if (!file.is_open()) {//检测文件是否可读
         cerr << "无法打开目标文件：" << filepath << "，即将自动创建新文件" << endl;//报错
-        ofstream createFile(filepath);
+        ofstream createFile(filepath);//重新创建文件
         if (!createFile.is_open()) {
             cerr << "无法创建文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;//报错
         }
@@ -68,11 +68,12 @@ void financenote::display() const {//显示函数
 
 void financenote::add_entry(const string &date, double amount, const string &category) {//记录添加函数
     entries.push_back({date, amount, category});//将数据添加进总表
+    financenote::save_to_file("./data/finance.txt");
 }
 
 void financenote::search(const string & month) {
-    double total = 0.0;
-    bool has_record = false;
+    double total = 0.0;//记录总开销
+    bool has_record = false;//检测是否有记录，避免误判
 
     cout << "[" << month << "月消费记录]" << endl;
 
@@ -95,9 +96,8 @@ void financenote::search(const string & month) {
     }else {
         cout << "没有记录" << endl;
     }
-    cout << "输入0以回到记账本主页：" << endl;
-    cin.ignore();
-    cin.get();
+    cout << "回车以回到记账本主页：" << endl;
+    system("pause");
 }
 
 void financenote::close() {

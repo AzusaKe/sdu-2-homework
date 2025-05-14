@@ -11,6 +11,6 @@
 -- Check for working CXX compiler: D:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/bin/g++.exe - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Configuring done (1.6s)
+-- Configuring done (3.3s)
 -- Generating done (0.0s)
 -- Build files have been written to: F:/SDU-2-homework/cmake-build-debug

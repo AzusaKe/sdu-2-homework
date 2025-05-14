@@ -1,16 +1,8 @@
 # ninja log v6
-19	423	7688547557114039	CMakeFiles/SDU_2_homework.dir/src/fileoperater.cpp.obj	d8a4998968701a88
-35	426	7688547557280194	CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.obj	3b81a809d7781716
-44	437	7688547557360387	CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.obj	cdf504da18c47b75
-54	457	7688547557455576	CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.obj	f6f863c22df7363b
-26	737	7688547557184156	CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.obj	65be4d916650ebc2
-11	815	7688547557033884	CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.obj	17975e51a1dae76f
-2	1642	7688547556968737	CMakeFiles/SDU_2_homework.dir/main.cpp.obj	82e5835b67313401
-1644	2083	7688547573367704	SDU_2_homework.exe	f6c1780406fe21a
-13	566	7688548839913703	CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.obj	65be4d916650ebc2
-5	1418	7688548839834595	CMakeFiles/SDU_2_homework.dir/main.cpp.obj	82e5835b67313401
-1418	1843	7688548853961202	SDU_2_homework.exe	f6c1780406fe21a
-5	550	7688550391079859	CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.obj	65be4d916650ebc2
-551	966	7688550396538144	SDU_2_homework.exe	f6c1780406fe21a
-5	1390	7688551914979226	CMakeFiles/SDU_2_homework.dir/main.cpp.obj	82e5835b67313401
-1390	1819	7688551928834685	SDU_2_homework.exe	f6c1780406fe21a
+41	570	7688951071642023	CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.obj	cdf504da18c47b75
+30	573	7688951071539953	CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.obj	3b81a809d7781716
+51	574	7688951071748176	CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.obj	f6f863c22df7363b
+21	921	7688951071439509	CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.obj	65be4d916650ebc2
+12	988	7688951071348966	CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.obj	17975e51a1dae76f
+3	1972	7688951071257650	CMakeFiles/SDU_2_homework.dir/main.cpp.obj	82e5835b67313401
+1974	2481	7688951090980584	SDU_2_homework.exe	b7daadee60938b78
