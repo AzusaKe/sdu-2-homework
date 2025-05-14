@@ -140,7 +140,7 @@ void financenote::init() {
 #endif
                 //提高兼容性
                 if (!is_valid_date(date)) {//检验日期是否合法
-                    cerr << "错误的日期格式！请重新输入" << endl;
+                    cerr << "错误的日期格式！请重新输入！" << endl;
                 }
             }while (!is_valid_date(date));
             cout << "请输入金额：" << endl;
@@ -150,15 +150,19 @@ void financenote::init() {
             financenote::add_entry(date,amount,category);//添加行函数
         }else if (choice == 2) {
             string month;
-            cout << "请输入月份(YYYY-MM)：" << endl;
-            cin >> month;//搜索界面
-
+            do {
+                cout << "请输入月份(YYYY-MM)：" << endl;
+                cin >> month;//搜索界面
 #ifdef _WIN32
-            system("cls");
+                system("cls");
 #else
-            system("clear");
+                system("clear");
 #endif
-            //提高兼容性
+                //提高兼容性
+                if (!is_valid_month(month)) {
+                    cerr << "错误的日期格式！请重新输入！"
+                }
+            }while (!is_valid_month(month));
             financenote::display(month);
         }else {
             break;//返回

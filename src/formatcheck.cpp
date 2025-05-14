@@ -30,6 +30,7 @@ bool is_valid_date(const string& date) {
 }
 
 bool is_valid_month(const string& month) {
-    regex partern(R"(^\d{4}-(0[1-9]|1[0-2])-())")
+    regex pattern(R"(^\d{4}-(0[1-9]|1[0-2])$)");
+    return  regex_match(month,pattern);
 }
 
