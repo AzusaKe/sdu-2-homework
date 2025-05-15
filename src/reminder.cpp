@@ -142,7 +142,6 @@ void reminder::init() {
         reminder::display("");
         cout << "请选择你希望的操作：" << endl << "1.添加提醒" << endl << "2.按日期筛选提醒并输出"<< endl << "选择数字并按下回车(为0则退出)：" << endl;
         int choice;
-        cin.ignore();
         cin >> choice;
         system_clear();
         if (choice == 1) {
@@ -159,7 +158,6 @@ void reminder::init() {
                 }
             }while (!is_valid_time(time));
             cout << "请输入提醒内容：" << endl;
-            cin.ignore();
             cin >> content;
             do {
                 cout << "请输入优先级：" << endl;
@@ -175,7 +173,6 @@ void reminder::init() {
             string date;
             do {
                 cout << "请输入日期(YYYY-MM-DD)：" << endl;
-                cin.ignore();
                 cin >> date;
                 system_clear();
                 if (!is_valid_date(date)) {

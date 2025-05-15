@@ -27,7 +27,6 @@ int run_Command_Line_Interface(int argc, char* argv[]) {
         system_clear();
         cout << "请选择你要使用的工具：" << endl << "1.记账本" << endl << "2.提醒" << endl << "选择数字并按下回车(为0则退出)：" << endl;//选择功能
         int choice;
-        cin.ignore();
         cin >> choice;//输入功能
         system_clear();
         //提高兼容性
