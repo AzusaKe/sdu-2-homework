@@ -109,11 +109,25 @@ void reminder::display(const string &date) {
 
     reminder::sort();
 
-    for (const auto& temp : search_result){
-        cout << left << setw(17) << temp.time
-                 << "| " << setw(20) << temp.content
-                 << "| " << setw(15) << temp.priority <<endl;
-    }
+   for (const auto& temp : search_result){
+       //添加中文字符支持，避免显示错位
+       auto pad = [](const std::string& s, int width) {
+           int w = 0;
+           for (size_t i = 0; i < s.size(); ) {
+               unsigned char c = s[i];
+               if (c >= 0x80) { w += 2; i += (c >= 0xE0 ? 3 : 2); } // 粗略判断UTF-8中文宽度
+               else { w += 1; ++i; }
+           }
+           std::cout << s;
+           for (int i = w; i < width; ++i) std::cout << ' ';
+       };
+       pad(temp.time, 17);
+       std::cout << "| ";
+       pad(temp.content, 20);
+       std::cout << "| ";
+       pad(std::to_string(temp.priority), 15);
+       std::cout << std::endl;
+   }
     if (!date.empty()) {
         cout << "回车以回到提醒主页：" << endl;
         system_pause();
@@ -136,6 +150,7 @@ void reminder::init() {
             int priority;
             do {
                 cout << "请输入提醒时间(YYYY-MM-DD HH:MM)：" << endl;
+                cin.ignore();
                 getline(cin,time);
                 system_clear();
                 if (!is_valid_time(time)) {

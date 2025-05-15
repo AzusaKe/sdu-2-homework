@@ -7,31 +7,7 @@ using namespace std;
 
 bool is_valid_time(const string& time) {
     regex pattern(R"(^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])\s([01]\d|2[0-3]):([0-5]\d)$)");
-    if (!regex_match(time, pattern)) {
-            return false;
-        }
-        // 进一步解析并校验时间有效性
-    int year, month, day, hour, minute;
-    char dash1, dash2, space, colon;
-    stringstream ss(time);
-    ss >> year >> dash1 >> month >> dash2 >> day >> space >> hour >> colon >> minute;
-    if (dash1 != '-' || dash2 != '-' || space != ' ' || colon != ':') {
-        return false;
-    }
-    // 校验日期
-    int days_in_month[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    bool is_leap_year = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
-    if (is_leap_year && month == 2) {
-        days_in_month[1] = 29;
-    }
-    if (month < 1 || month > 12 || day < 1 || day > days_in_month[month - 1]) {
-        return false;
-    }
-    // 校验时间
-    if (hour < 0 || hour > 23 || minute < 0 || minute > 59) {
-        return false;
-    }
-    return true;
+    return regex_match(time, pattern);
 }
 
 bool is_valid_date(const string& date) {
