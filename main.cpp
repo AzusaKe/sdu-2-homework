@@ -1,6 +1,4 @@
-#ifdef _WIN32
-#include<windows.h>
-#endif
+#include "console_adaption.h"
 //为不同系统添加兼容代码
 
 #include<iostream>
@@ -26,19 +24,11 @@ int run_Command_Line_Interface(int argc, char* argv[]) {
 #endif
     filecheck_and_init();//检查文件是否存在并初始化
     while (true) {
-#ifdef _WIN32
-        system("cls");
-#else
-        system("clear");
-#endif
+        system_clear();
         cout << "请选择你要使用的工具：" << endl << "1.记账本" << endl << "选择数字并按下回车(为0则退出)：" << endl;//选择功能
         int choice;
         cin >> choice;//输入功能
-#ifdef _WIN32
-        system("cls");
-#else
-        system("clear");
-#endif
+        system_clear();
         //提高兼容性
         if (choice == 1) {//记账本模式
             financenote finance_note;//创建记账本对象

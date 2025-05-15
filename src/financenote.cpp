@@ -2,7 +2,8 @@
 // Created by Azusa_Ke on 25-5-13.
 //
 
-#include"notebasic.h"
+#include"console_adaption.h"
+
 #include "financenote.h"
 #include "formatcheck.h"
 #include <cstdlib>
@@ -17,7 +18,8 @@ void financenote::load_from_file(const string &filepath) {
         ofstream createFile(filepath);//重新创建文件
         if (!createFile.is_open()) {//检测文件是否存在
             cerr << "无法创建文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;//报错
-	    return;//退出
+            system_pause();//暂停
+	        return;//退出
         }
         createFile.close();//关闭
     }
@@ -41,6 +43,7 @@ void financenote::save_to_file(const string &filepath) {
         ofstream createFile(filepath);
         if (!createFile.is_open()) {//检测文件是否能够打开
             cerr << "无法创建文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;//报错
+            system_pause();
             return;//退出
         }
         createFile.close();//关闭
@@ -81,11 +84,7 @@ void financenote::close() {
 
 //显示函数
 void financenote::display(const string &month) {
-#ifdef _WIN32
-    system("cls");//windows清屏代码
-#else
-    system("clear");//linux/macos清屏代码
-#endif
+    system_clear();
     //提高兼容性
     if (month.empty()) {//如果没有传入月份参数，显示全部消费记录
         cout << "[全部消费记录]" << endl;
@@ -118,11 +117,7 @@ void financenote::display(const string &month) {
     }//如果传入搜索参数，显示返回操作
     if (!month.empty()) {
         cout << "回车以回到记账本主页：" << endl;
-        #ifdef _WIN32
-            system("pause");
-        #else
-            system("read -p 'Press any key to continue...' var");
-        #endif
+        system_pause();
         //添加兼容代码
     }
 }
@@ -137,24 +132,16 @@ void financenote::init() {
         cout << "请选择你希望的操作：" << endl << "1.添加记录" << endl << "2.按月份筛选消费记录并输出总金额"<< endl << "选择数字并按下回车(为0则退出)：" << endl;//记账本主界面
         int choice;
         cin >> choice;
-#ifdef _WIN32
-        system("cls");
-#else
-        system("clear");
-#endif
+        system_clear();
         //提高兼容性
         if (choice == 1) {
             string date;//日期
             double amount;//金额
             string category;//初始化变量
             do {
-                cout << "请输入日期：" << endl;
+                cout << "请输入日期(YYYY-MM-DD)：" << endl;
                 cin >> date;//输入日期
-#ifdef _WIN32
-                system("cls");
-#else
-                system("clear");
-#endif
+                system_clear();
                 //提高兼容性
                 if (!is_valid_date(date)) {//检验日期是否合法
                     cerr << "错误的日期格式！请重新输入！" << endl;
@@ -170,11 +157,7 @@ void financenote::init() {
             do {
                 cout << "请输入月份(YYYY-MM)：" << endl;
                 cin >> month;//搜索界面
-#ifdef _WIN32
-                system("cls");
-#else
-                system("clear");
-#endif
+                system_clear();//清屏
                 //提高兼容性
                 if (!is_valid_month(month)) {
                     cerr << "错误的日期格式！请重新输入！" << endl;
