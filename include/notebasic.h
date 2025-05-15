@@ -13,7 +13,8 @@ class notebasic {
 public:
     virtual void load_from_file(const string& filepath) = 0;
     virtual void save_to_file(const string& filepath) = 0;
-    virtual void display(const string &) const = 0;
+    virtual void display(const string &) = 0;
+    virtual void search(const string &) = 0;
     //virtual string get_type() const = 0;
     virtual void init() = 0;
     virtual void close() = 0;
