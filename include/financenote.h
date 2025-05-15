@@ -29,6 +29,7 @@ public:
     void save_to_file(const string &filepath) override;//保存到文件，继承自基类
     void display(const string&) override;//显示，继承自基类
     void search(const string& month) override;//搜索，继承自基类
+    void sort() override;//按日期排序
     //string get_type() const override;//获取类别，继承自基类
 
     void add_entry(const string& date,double amount,const string& category);//添加记录

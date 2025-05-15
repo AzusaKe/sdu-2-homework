@@ -79,6 +79,14 @@ void financenote::add_entry(const string &date, double amount, const string &cat
 void financenote::close() {
     financenote::save_to_file("./data/finance.txt");
 }
+
+//排序函数
+void financenote::sort() {
+    std::sort(search_result.begin(), search_result.end(), [](const entry& a, const entry& b) {
+        return a.date > b.date;
+    });
+}
+
 //逻辑部分结束----------------------------------------------------------------------------------------------------------------
 //命令行交互部分-------------------------------------------------------------------------------------------------------------------
 
@@ -102,6 +110,7 @@ void financenote::display(const string &month) {
     double total = 0.0;//记录总开销
     bool has_record = false;//检测是否有记录，避免误判
     //遍历总表，寻找符合要求的记录
+    financenote::sort();
     for (const auto& temp : search_result) {
         cout << left << setw(17) << temp.date//以行为单位输出记录
                  << "| " << setw(20) << fixed << setprecision(2) << temp.amount

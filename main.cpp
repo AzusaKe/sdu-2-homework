@@ -25,7 +25,7 @@ int run_Command_Line_Interface(int argc, char* argv[]) {
     filecheck_and_init();//检查文件是否存在并初始化
     while (true) {
         system_clear();
-        cout << "请选择你要使用的工具：" << endl << "1.记账本" << endl << "选择数字并按下回车(为0则退出)：" << endl;//选择功能
+        cout << "请选择你要使用的工具：" << endl << "1.记账本" << endl << "2.提醒" << endl << "选择数字并按下回车(为0则退出)：" << endl;//选择功能
         int choice;
         cin >> choice;//输入功能
         system_clear();
@@ -33,7 +33,11 @@ int run_Command_Line_Interface(int argc, char* argv[]) {
         if (choice == 1) {//记账本模式
             financenote finance_note;//创建记账本对象
             finance_note.init();//记账本初始化
-        }else {
+        }else if (choice == 2) {
+            reminder reminder_temp;
+            reminder_temp.init();
+        }
+        else {
             break;//退出代码
         }
     }
