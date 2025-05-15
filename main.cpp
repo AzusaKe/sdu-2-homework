@@ -1,6 +1,7 @@
 #ifdef _WIN32
 #include<windows.h>
 #endif
+//为不同系统添加兼容代码
 
 #include<iostream>
 #include"financenote.h"
@@ -10,18 +11,18 @@
 using namespace std;//使用标准命名空间
 
 //图形化程序入口
-void runGraphicalInterface() {
-    cout << "Running graphical interface..." << endl;
+void run_Graphical_Interface() {
+    cout << "Running graphical interface..." << endl;//调试用代码
     //图形化界面代码实现
 }
 
 //命令行程序入口
-int runCommandLineInterface(int argc, char* argv[]) {
+int run_Command_Line_Interface(int argc, char* argv[]) {
     //windows兼容代码
 #ifdef _WIN32
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
-    SetConsoleMode(GetStdHandle(STD_OUTPUT_HANDLE),ENABLE_PROCESSED_OUTPUT | ENABLE_WRAP_AT_EOL_OUTPUT);//修改控制台编码格式
+    SetConsoleMode(GetStdHandle(STD_OUTPUT_HANDLE),ENABLE_PROCESSED_OUTPUT | ENABLE_WRAP_AT_EOL_OUTPUT);//修改控制台编码格式,避免乱码
 #endif
     filecheck_and_init();//检查文件是否存在并初始化
     while (true) {
@@ -50,12 +51,12 @@ int runCommandLineInterface(int argc, char* argv[]) {
 }
 
 int main(int argc, char* argv[]) {
-    if (argc <= 1) {
+    if (argc <= 1) {//在完成图形化后记得修改为if (argc > 1)
         // 如果没有命令行参数，运行命令行界面
-        runCommandLineInterface(argc, argv);
+        run_Command_Line_Interface(argc, argv);
     } else {
         // 否则，运行图形化界面
-        runGraphicalInterface();
+        run_Graphical_Interface();
     }
     return 0;//退出
 }
