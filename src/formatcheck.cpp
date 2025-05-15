@@ -48,3 +48,7 @@ bool is_valid_month(const string& month) {
     return true;
 }
 
+bool is_valid_priority(const int& priority) {
+    return priority >= 1 && priority <= 3;
+}
+

@@ -149,6 +149,7 @@ void financenote::init() {
             string category;//初始化变量
             do {
                 cout << "请输入日期(YYYY-MM-DD)：" << endl;
+                cin.ignore();
                 cin >> date;//输入日期
                 system_clear();
                 //提高兼容性
@@ -157,14 +158,17 @@ void financenote::init() {
                 }
             }while (!is_valid_date(date));
             cout << "请输入金额：" << endl;
+            cin.ignore();
             cin >> amount;
             cout << "请输入类别：" << endl;
+            cin.ignore();
             cin >> category;
             financenote::add_entry(date,amount,category);//添加行函数
         }else if (choice == 2) {
             string month;
             do {
                 cout << "请输入月份(YYYY-MM)：" << endl;
+                cin.ignore();
                 cin >> month;//搜索界面
                 system_clear();//清屏
                 //提高兼容性

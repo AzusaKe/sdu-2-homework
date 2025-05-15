@@ -158,9 +158,17 @@ void reminder::init() {
                 }
             }while (!is_valid_time(time));
             cout << "请输入提醒内容：" << endl;
+            cin.ignore();
             cin >> content;
-            cout << "请输入优先级：" << endl;
-            cin >> priority;
+            do {
+                cout << "请输入优先级：" << endl;
+                cin.ignore();
+                cin >> priority;
+                if (!is_valid_priority(priority)) {
+                    cerr << "错误的优先级！请重新输入！" << endl;
+                }
+            }while (!is_valid_priority(priority));
+
             reminder::add_entry(time,content,priority);
         }else if (choice == 2) {
             string date;
