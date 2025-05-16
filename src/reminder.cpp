@@ -42,7 +42,7 @@ void reminder::load_from_file(const string &filepath) {
     //读取过时事件列表
     ifstream old_file("./data/old_reminder.txt");
     string old_line;
-    while (getline(file, old_line)) {
+    while (getline(old_file, old_line)) {
         stringstream ss(old_line);
         event temp;
         string date;
@@ -74,10 +74,11 @@ void reminder::save_to_file(const string &filepath) {
     }
     file.close();
     //过时事件存入
+    ofstream old_file("./data/old_reminder.txt");
     for (const auto& temp : old_entries) {
-        file << temp.time << " " << temp.content << " " << temp.priority << endl;
+        old_file << temp.time << " " << temp.content << " " << temp.priority << endl;
     }
-    file.close();
+    old_file.close();
 }
 
 //搜索函数-复用自记账本
@@ -106,21 +107,35 @@ void reminder::close() {
 
 void reminder::sort() {
     std::sort(search_result.begin(),search_result.end(),[](const event& a,const event& b) {
-        return a.time > b.time;
+        return a.time < b.time;
     });
 }
 
 //获取当前时间并将其转化为YYYY-MM-DD的形式
 void reminder::get_current_date() {
-    const time_t t = time(nullptr);//获取当前时间
-    const tm *now = localtime(&t);//转换为本地时间
-    ostringstream oss;//创建字符串流对象
-    oss << put_time(now, "%Y-%m-%d");//格式化输出时间
-    current_date = oss.str();//赋值给current_time
+    const time_t t = time(nullptr); //获取当前时间
+    if (t == -1) {
+        cerr << "无法获取当前时间" << endl;
+        current_date = "1970-01-01"; // 设置默认日期以防错误
+        cout << "调试信息：本地时间：" << current_date << endl;
+        return;
+    }
+    const tm *now = localtime(&t); //转换为本地时间
+    if (now == nullptr) {
+        cerr << "无法转换为本地时间" << endl;
+        current_date = "1970-01-01"; // 设置默认日期以防错误
+        cout << "调试信息：本地时间：" << current_date << endl;
+        return;
+    }
+    ostringstream oss; //创建字符串流对象
+    oss << put_time(now, "%Y-%m-%d"); //格式化输出时间
+    current_date = oss.str(); //赋值给current_time
+    cout << "调试信息：本地时间：" << current_date << endl;
 }
 
 void reminder::add_old_entries() {
     //遍历当前事件容器
+    reminder::get_current_date();
     for (auto it = entries.begin(); it != entries.end();) {
         //检测当前事件是否过时
         if (it->time.substr(0, 10) < current_date) {
