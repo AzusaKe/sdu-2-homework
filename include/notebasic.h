@@ -21,5 +21,6 @@ public:
     virtual void close() = 0;
     virtual ~notebasic() = default;
 };
+//考虑进一步将相似逻辑抽象出来，在基类直接写出来
 
 #endif //NOTEBASIC_H

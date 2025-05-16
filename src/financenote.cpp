@@ -6,7 +6,6 @@
 
 #include "financenote.h"
 #include "formatcheck.h"
-#include <cstdlib>
 #include <iostream>
 //逻辑部分----------------------------------------------------------------------------------------------------------------------
 //文件加载函数
@@ -63,8 +62,6 @@ void financenote::search(const string &month) {//输入搜索月份
         if (temp.date.substr(0,7) == month) {
             entry temp_search = temp;//将temp复制到temp_search
             search_result.push_back(temp_search);//加入搜索结果表
-        }else {//不符合，跳过
-            continue;
         }
     }
 }
