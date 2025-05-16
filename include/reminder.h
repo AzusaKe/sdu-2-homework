@@ -22,14 +22,17 @@ private:
         string content;
         int priority;
     };
+    string current_date;
     vector<event> entries;
     vector<event> search_result;
+    vector<event> old_entries;
 public:
     void load_from_file(const string &filepath) override;
     void save_to_file(const string &filepath) override;
     void display(const string&) override;
     void search(const string& month) override;
     void sort() override;
+    void get_current_date();
     //string get_type() const override;
 
     void add_entry(const string& time,const string& content,const int& priority);

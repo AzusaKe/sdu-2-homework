@@ -4,11 +4,12 @@
 
 #include"console_adaption.h"
 
-#include "notebasic.h"
 #include "reminder.h"
 #include "formatcheck.h"
 #include <cstdlib>
 #include <iostream>
+#include <iomanip>
+#include <ctime>
 //逻辑部分--------------------------------------------------------------------------------------------------------------------
 //文件加载函数
 void reminder::load_from_file(const string &filepath) {
@@ -30,9 +31,9 @@ void reminder::load_from_file(const string &filepath) {
         stringstream ss(line);
         event temp;
         string date;
-        string miniute;
-        ss >> date >> miniute >> temp.content >> temp.priority;
-        temp.time = date + " " + miniute;
+        string minute;
+        ss >> date >> minute >> temp.content >> temp.priority;
+        temp.time = date + " " + minute;
         if (!temp.time.empty()) {
             entries.push_back(temp);
         }
@@ -87,6 +88,14 @@ void reminder::sort() {
     std::sort(search_result.begin(),search_result.end(),[](const event& a,const event& b) {
         return a.time > b.time;
     });
+}
+
+void reminder::get_current_date() {
+    time_t t = time(nullptr);
+    tm *now = localtime(&t);
+    ostringstream oss;
+    oss << put_time(now, "%Y-%m-%d");
+    current_date = oss.str();
 }
 
 //逻辑部分结束-------------------------------------------------------------------------------------------------------------------
@@ -185,4 +194,8 @@ void reminder::init() {
         }
     }reminder::close();
 }
+//命令行交互部分结束---------------------------------------------------------------------------------------------
+//图形化交互部分------------------------------------------------------------------------------------------------------
 
+
+//图形化交互部分结束-------------------------------------------------------------------------------------------------------
