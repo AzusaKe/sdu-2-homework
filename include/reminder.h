@@ -26,6 +26,7 @@ private:
     vector<event> entries;
     vector<event> search_result;
     vector<event> old_entries;
+    bool is_in_index;
 public:
     void load_from_file(const string &filepath) override;
     void save_to_file(const string &filepath) override;

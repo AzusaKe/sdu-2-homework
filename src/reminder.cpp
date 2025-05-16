@@ -106,9 +106,16 @@ void reminder::close() {
 }
 
 void reminder::sort() {
-    std::sort(search_result.begin(),search_result.end(),[](const event& a,const event& b) {
+    if (is_in_index) {
+        std::sort(search_result.begin(),search_result.end(),[](const event& a,const event& b) {
         return a.time < b.time;
     });
+    }else {
+        std::sort(search_result.begin(),search_result.end(),[](const event& a,const event& b) {
+        return a.time > b.time;
+    });
+    }
+
 }
 
 //获取当前时间并将其转化为YYYY-MM-DD的形式
@@ -163,6 +170,7 @@ void reminder::display(const string &date) {
     } else if (date == "-") {
         cout << "[当前为回收站中过时提醒]" << endl;
         search_result = old_entries;
+        is_in_index = false;
     } else {
         cout << "[" << date << "日课程提醒]" << endl;
         reminder::search(date);
@@ -203,10 +211,12 @@ void reminder::display(const string &date) {
         cout << "回车以回到提醒主页：" << endl;
         system_pause();
     }
+    is_in_index = true;
 }
 
 //初始化函数，包含课程提醒主页
 void reminder::init() {
+    is_in_index = true;
     string path = "./data/reminder.txt";
     reminder::load_from_file(path);
     while (true) {
@@ -228,8 +238,10 @@ void reminder::init() {
                     cerr << "错误的时间格式！请重新输入！" << endl;
                 }
             }while (!is_valid_time(time));
-            cout << "请输入提醒内容：" << endl;
+            system_clear();
+            cout << "请输入提醒内容(请不要带有空格！)：" << endl;
             cin >> content;
+            system_clear();
             do {
                 cout << "请输入优先级：" << endl;
                 cin.ignore();
@@ -238,7 +250,6 @@ void reminder::init() {
                     cerr << "错误的优先级！请重新输入！" << endl;
                 }
             }while (!is_valid_priority(priority));
-
             reminder::add_entry(time,content,priority);
         }else if (choice == 2) {
             string date;
