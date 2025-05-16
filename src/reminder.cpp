@@ -25,7 +25,7 @@ void reminder::load_from_file(const string &filepath) {
         }
         createFile.close();
     }
-
+    //读取正常事件列表
     string line;
     while (getline(file, line)) {
         stringstream ss(line);
@@ -39,6 +39,21 @@ void reminder::load_from_file(const string &filepath) {
         }
     }
     file.close();
+    //读取过时事件列表
+    ifstream old_file("./data/old_reminder.txt");
+    string old_line;
+    while (getline(file, old_line)) {
+        stringstream ss(old_line);
+        event temp;
+        string date;
+        string minute;
+        ss >> date >> minute >> temp.content >> temp.priority;
+        temp.time = date + " " + minute;
+        if (!temp.time.empty()) {
+            old_entries.push_back(temp);
+        }
+    }
+    old_file.close();
 }
 //文件写入函数-复用自记账本
 void reminder::save_to_file(const string &filepath) {
@@ -53,8 +68,13 @@ void reminder::save_to_file(const string &filepath) {
         }
         createFile.close();//关闭
     }
-
+    //正常事件存入
     for (const auto& temp : entries) {
+        file << temp.time << " " << temp.content << " " << temp.priority << endl;
+    }
+    file.close();
+    //过时事件存入
+    for (const auto& temp : old_entries) {
         file << temp.time << " " << temp.content << " " << temp.priority << endl;
     }
     file.close();
@@ -158,14 +178,16 @@ void reminder::display(const string &date) {
        pad(to_string(temp.priority), 15);
        cout << endl;
    }
-    if (date.empty()) {
-        cout << "似乎当前条件没有满足的提醒..." << endl;
-        if (date != "-") {
-            cout << "去回收站试试？" << endl;
+    if (!date.empty()) {
+        if (search_result.empty()) {
+            cout << "似乎当前条件没有满足的提醒..." << endl;
+            if (date != "-") {
+                cout << "去回收站试试？" << endl;
+            }
         }
+        cout << "回车以回到提醒主页：" << endl;
+        system_pause();
     }
-    cout << "回车以回到提醒主页：" << endl;
-    system_pause();
 }
 
 //初始化函数，包含课程提醒主页
@@ -174,7 +196,7 @@ void reminder::init() {
     reminder::load_from_file(path);
     while (true) {
         reminder::display("");
-        cout << "请选择你希望的操作：" << endl << "1.添加提醒" << endl << "2.按日期筛选提醒并输出"<< endl << "选择数字并按下回车(为0则退出)：" << endl;
+        cout << "请选择你希望的操作：" << endl << "1.添加提醒" << endl << "2.按日期筛选提醒并输出" << endl << "3.将过时事件移入回收站" << endl << "选择数字并按下回车(为0则退出)：" << endl;
         int choice;
         cin >> choice;
         system_clear();
@@ -214,6 +236,11 @@ void reminder::init() {
                 }
             }while (!is_valid_date(date));
             reminder::display(date);
+        }else if (choice == 3) {
+            reminder::add_old_entries();
+            system_clear();
+            cout << "已将过时的提醒加入回收站！" << endl;
+            system_pause();
         }else {
             break;
         }

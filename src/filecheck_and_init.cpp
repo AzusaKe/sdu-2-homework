@@ -19,4 +19,7 @@ void filecheck_and_init() {
     if (!filesystem::exists("./data/password.txt")) {
         ofstream file("./data/password.txt");//密码管理
     }
+    if (!filesystem::exists("./data/old_reminder.txt")) {
+        ofstream file("./data/old_reminder.txt");//过时提醒
+    }
 }
