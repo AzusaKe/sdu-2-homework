@@ -211,7 +211,7 @@ void reminder::init() {
     reminder::load_from_file(path);
     while (true) {
         reminder::display("");
-        cout << "请选择你希望的操作：" << endl << "1.添加提醒" << endl << "2.按日期筛选提醒并输出" << endl << "3.将过时事件移入回收站" << endl << "选择数字并按下回车(为0则退出)：" << endl;
+        cout << "请选择你希望的操作：" << endl << "1.添加提醒" << endl << "2.按日期筛选提醒并输出" << endl << "3.将过时事件移入回收站" << endl << "4.查看回收站" << endl << "选择数字并按下回车(为0则退出)：" << endl;
         int choice;
         cin >> choice;
         system_clear();
@@ -256,6 +256,8 @@ void reminder::init() {
             system_clear();
             cout << "已将过时的提醒加入回收站！" << endl;
             system_pause();
+        }else if (choice == 4) {
+            reminder::display("-");
         }else {
             break;
         }
