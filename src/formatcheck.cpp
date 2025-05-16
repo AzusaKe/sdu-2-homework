@@ -5,6 +5,10 @@
 #include "formatcheck.h"
 using namespace std;
 
+bool is_valid_time(const string& time) {
+    regex pattern(R"(^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])\s([01]\d|2[0-3]):([0-5]\d)$)");
+    return regex_match(time, pattern);
+}
 
 bool is_valid_date(const string& date) {
     regex pattern(R"(^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$)");

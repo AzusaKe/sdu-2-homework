@@ -29,7 +29,10 @@ void reminder::load_from_file(const string &filepath) {
     while (getline(file, line)) {
         stringstream ss(line);
         event temp;
-        ss >> temp.time >> temp.content >> temp.priority;
+        string date;
+        string miniute;
+        ss >> date >> miniute >> temp.content >> temp.priority;
+        temp.time = date + " " + miniute;
         if (!temp.time.empty()) {
             entries.push_back(temp);
         }
@@ -41,13 +44,13 @@ void reminder::save_to_file(const string &filepath) {
     ofstream file(filepath);
     if (!file.is_open()) {
         cerr << "无法修改目标文件：" << filepath << "，即将自动创建新文件" << endl;
-        ofstream createFile(filepath);
-        if (!createFile.is_open()) {
+        file.close();
+        file.open(filepath,std::ios::out);
+        if (!file.is_open()) {
             cerr << "无法创建文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;
             system_pause();
             return;
         }
-        createFile.close();
     }
 
     for (const auto& temp : entries) {
@@ -135,10 +138,10 @@ void reminder::init() {
                 cout << "请输入提醒时间(YYYY-MM-DD HH:MM)：" << endl;
                 cin >> time;
                 system_clear();
-                if (!is_valid_date(time)) {
+                if (!is_valid_time(time)) {
                     cerr << "错误的时间格式！请重新输入！" << endl;
                 }
-            }while (!is_valid_date(time));
+            }while (!is_valid_time(time));
             cout << "请输入提醒内容：" << endl;
             cin >> content;
             cout << "请输入优先级：" << endl;
