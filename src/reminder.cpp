@@ -104,6 +104,8 @@ void reminder::display(const string &date) {
          << setw(15) << "| 优先级" << endl;
     cout << string(55,'-') << endl;
 
+    reminder::sort();
+
     for (const auto& temp : search_result){
         cout << left << setw(17) << temp.time
                  << "| " << setw(20) << temp.content
@@ -134,7 +136,7 @@ void reminder::init() {
                 cin >> time;
                 system_clear();
                 if (!is_valid_date(time)) {
-                    cerr << "错误的日期格式！请重新输入！" << endl;
+                    cerr << "错误的时间格式！请重新输入！" << endl;
                 }
             }while (!is_valid_date(time));
             cout << "请输入提醒内容：" << endl;
@@ -156,7 +158,7 @@ void reminder::init() {
         }else {
             break;
         }
-        reminder::close();
-    }
+
+    }reminder::close();
 }
 
