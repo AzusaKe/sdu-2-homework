@@ -125,6 +125,9 @@ void reminder::display(const string &date) {
     if (date.empty()) {
         cout << "[全部课程提醒]" << endl;
         search_result = entries;
+    } else if (date == "-") {
+        cout << "[当前为回收站中过时提醒]" << endl;
+        search_result = old_entries;
     } else {
         cout << "[" << date << "日课程提醒]" << endl;
         reminder::search(date);
@@ -149,16 +152,20 @@ void reminder::display(const string &date) {
            for (int i = w; i < width; ++i) std::cout << ' ';
        };
        pad(temp.time, 17);
-       std::cout << "| ";
+       cout << "| ";
        pad(temp.content, 20);
-       std::cout << "| ";
-       pad(std::to_string(temp.priority), 15);
-       std::cout << std::endl;
+       cout << "| ";
+       pad(to_string(temp.priority), 15);
+       cout << endl;
    }
-    if (!date.empty()) {
-        cout << "回车以回到提醒主页：" << endl;
-        system_pause();
+    if (date.empty()) {
+        cout << "似乎当前条件没有满足的提醒..." << endl;
+        if (date != "-") {
+            cout << "去回收站试试？" << endl;
+        }
     }
+    cout << "回车以回到提醒主页：" << endl;
+    system_pause();
 }
 
 //初始化函数，包含课程提醒主页
