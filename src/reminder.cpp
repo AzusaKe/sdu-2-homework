@@ -99,6 +99,23 @@ void reminder::get_current_date() {
     current_date = oss.str();//赋值给current_time
 }
 
+void reminder::add_old_entries() {
+    //遍历当前事件容器
+    for (auto it = entries.begin(); it != entries.end();) {
+        //检测当前事件是否过时
+        if (it->time.substr(0, 10) < current_date) {
+            //如果过时，加入过时事件
+            old_entries.push_back(*it);
+            //从当前事件容器中删除过时事件
+            it = entries.erase(it);
+        } else {
+            //如果不过时，继续遍历
+            ++it;
+        }
+    }
+}
+
+
 //逻辑部分结束-------------------------------------------------------------------------------------------------------------------
 //命令行交互部分----------------------------------------------------------------------------------------------------------------
 

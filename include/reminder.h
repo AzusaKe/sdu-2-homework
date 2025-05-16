@@ -33,6 +33,7 @@ public:
     void search(const string& month) override;
     void sort() override;
     void get_current_date();
+    void add_old_entries();
     //string get_type() const override;
 
     void add_entry(const string& time,const string& content,const int& priority);
