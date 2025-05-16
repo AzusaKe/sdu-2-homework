@@ -11,7 +11,7 @@
 #include <iomanip>
 #include <ctime>
 //逻辑部分--------------------------------------------------------------------------------------------------------------------
-//文件加载函数
+//文件加载函数-复用自记账本
 void reminder::load_from_file(const string &filepath) {
     entries.clear();
     ifstream file(filepath);
@@ -40,7 +40,7 @@ void reminder::load_from_file(const string &filepath) {
     }
     file.close();
 }
-//文件写入函数
+//文件写入函数-复用自记账本
 void reminder::save_to_file(const string &filepath) {
     ofstream file(filepath);//创建文件输出流
     if (!file.is_open()) {//检测文件是否可写
@@ -60,7 +60,7 @@ void reminder::save_to_file(const string &filepath) {
     file.close();
 }
 
-//搜索函数
+//搜索函数-复用自记账本
 void reminder::search(const string &date) {
     search_result.clear();
     for (const auto& temp : entries) {
@@ -73,13 +73,13 @@ void reminder::search(const string &date) {
     }
 }
 
-//记录添加函数
+//记录添加函数-复用自记账本
 void reminder::add_entry(const string &time,const string& content, const int &priority) {
     entries.push_back({time,content,priority});
     reminder::save_to_file("./data/reminder.txt");
 }
 
-//关闭函数，避免错误保存
+//关闭函数，避免错误保存-复用自记账本
 void reminder::close() {
     reminder::save_to_file("./data/reminder.txt");
 }
@@ -90,12 +90,13 @@ void reminder::sort() {
     });
 }
 
+//获取当前时间并将其转化为YYYY-MM-DD的形式
 void reminder::get_current_date() {
-    time_t t = time(nullptr);
-    tm *now = localtime(&t);
-    ostringstream oss;
-    oss << put_time(now, "%Y-%m-%d");
-    current_date = oss.str();
+    const time_t t = time(nullptr);//获取当前时间
+    const tm *now = localtime(&t);//转换为本地时间
+    ostringstream oss;//创建字符串流对象
+    oss << put_time(now, "%Y-%m-%d");//格式化输出时间
+    current_date = oss.str();//赋值给current_time
 }
 
 //逻辑部分结束-------------------------------------------------------------------------------------------------------------------
