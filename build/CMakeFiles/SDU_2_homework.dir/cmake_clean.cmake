@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/SDU_2_homework.dir/link.d"
   "CMakeFiles/SDU_2_homework.dir/main.cpp.o"
   "CMakeFiles/SDU_2_homework.dir/main.cpp.o.d"
+  "CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o"
+  "CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o.d"
   "CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.o"
   "CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.o.d"
   "CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.o"

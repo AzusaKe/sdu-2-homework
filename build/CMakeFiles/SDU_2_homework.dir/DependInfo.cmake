@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/root/sdu-2-homework/main.cpp" "CMakeFiles/SDU_2_homework.dir/main.cpp.o" "gcc" "CMakeFiles/SDU_2_homework.dir/main.cpp.o.d"
+  "/root/sdu-2-homework/src/console_adaption.cpp" "CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o" "gcc" "CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o.d"
   "/root/sdu-2-homework/src/filecheck_and_init.cpp" "CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.o" "gcc" "CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.o.d"
   "/root/sdu-2-homework/src/financenote.cpp" "CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.o" "gcc" "CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.o.d"
   "/root/sdu-2-homework/src/formatcheck.cpp" "CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.o" "gcc" "CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.o.d"

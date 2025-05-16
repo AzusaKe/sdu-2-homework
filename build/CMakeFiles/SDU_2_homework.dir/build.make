@@ -86,10 +86,24 @@ CMakeFiles/SDU_2_homework.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SDU_2_homework.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/sdu-2-homework/main.cpp -o CMakeFiles/SDU_2_homework.dir/main.cpp.s
 
+CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o: CMakeFiles/SDU_2_homework.dir/flags.make
+CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o: /root/sdu-2-homework/src/console_adaption.cpp
+CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o: CMakeFiles/SDU_2_homework.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/sdu-2-homework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o -MF CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o.d -o CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o -c /root/sdu-2-homework/src/console_adaption.cpp
+
+CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/sdu-2-homework/src/console_adaption.cpp > CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.i
+
+CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/sdu-2-homework/src/console_adaption.cpp -o CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.s
+
 CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.o: CMakeFiles/SDU_2_homework.dir/flags.make
 CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.o: /root/sdu-2-homework/src/filecheck_and_init.cpp
 CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.o: CMakeFiles/SDU_2_homework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/sdu-2-homework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/sdu-2-homework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.o -MF CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.o.d -o CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.o -c /root/sdu-2-homework/src/filecheck_and_init.cpp
 
 CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.i: cmake_force
@@ -103,7 +117,7 @@ CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.s: cmake_force
 CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.o: CMakeFiles/SDU_2_homework.dir/flags.make
 CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.o: /root/sdu-2-homework/src/financenote.cpp
 CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.o: CMakeFiles/SDU_2_homework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/sdu-2-homework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/sdu-2-homework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.o -MF CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.o.d -o CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.o -c /root/sdu-2-homework/src/financenote.cpp
 
 CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.i: cmake_force
@@ -117,7 +131,7 @@ CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.s: cmake_force
 CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.o: CMakeFiles/SDU_2_homework.dir/flags.make
 CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.o: /root/sdu-2-homework/src/formatcheck.cpp
 CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.o: CMakeFiles/SDU_2_homework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/sdu-2-homework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/sdu-2-homework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.o -MF CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.o.d -o CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.o -c /root/sdu-2-homework/src/formatcheck.cpp
 
 CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.i: cmake_force
@@ -131,7 +145,7 @@ CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.s: cmake_force
 CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.o: CMakeFiles/SDU_2_homework.dir/flags.make
 CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.o: /root/sdu-2-homework/src/notebasic.cpp
 CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.o: CMakeFiles/SDU_2_homework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/sdu-2-homework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/sdu-2-homework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.o -MF CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.o.d -o CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.o -c /root/sdu-2-homework/src/notebasic.cpp
 
 CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.i: cmake_force
@@ -145,7 +159,7 @@ CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.s: cmake_force
 CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.o: CMakeFiles/SDU_2_homework.dir/flags.make
 CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.o: /root/sdu-2-homework/src/passwordmanager.cpp
 CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.o: CMakeFiles/SDU_2_homework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/sdu-2-homework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/sdu-2-homework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.o -MF CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.o.d -o CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.o -c /root/sdu-2-homework/src/passwordmanager.cpp
 
 CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.i: cmake_force
@@ -159,7 +173,7 @@ CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.s: cmake_force
 CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.o: CMakeFiles/SDU_2_homework.dir/flags.make
 CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.o: /root/sdu-2-homework/src/reminder.cpp
 CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.o: CMakeFiles/SDU_2_homework.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/sdu-2-homework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/root/sdu-2-homework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.o -MF CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.o.d -o CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.o -c /root/sdu-2-homework/src/reminder.cpp
 
 CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.i: cmake_force
@@ -173,6 +187,7 @@ CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.s: cmake_force
 # Object files for target SDU_2_homework
 SDU_2_homework_OBJECTS = \
 "CMakeFiles/SDU_2_homework.dir/main.cpp.o" \
+"CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o" \
 "CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.o" \
 "CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.o" \
 "CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.o" \
@@ -184,6 +199,7 @@ SDU_2_homework_OBJECTS = \
 SDU_2_homework_EXTERNAL_OBJECTS =
 
 SDU_2_homework: CMakeFiles/SDU_2_homework.dir/main.cpp.o
+SDU_2_homework: CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o
 SDU_2_homework: CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.o
 SDU_2_homework: CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.o
 SDU_2_homework: CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.o
@@ -193,7 +209,7 @@ SDU_2_homework: CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.o
 SDU_2_homework: CMakeFiles/SDU_2_homework.dir/build.make
 SDU_2_homework: CMakeFiles/SDU_2_homework.dir/compiler_depend.ts
 SDU_2_homework: CMakeFiles/SDU_2_homework.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/root/sdu-2-homework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable SDU_2_homework"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/root/sdu-2-homework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable SDU_2_homework"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SDU_2_homework.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

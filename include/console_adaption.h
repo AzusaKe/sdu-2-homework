@@ -7,6 +7,7 @@
 #ifdef _WIN32
 #include<windows.h>
 #endif
+#include<cstdlib>
 using namespace std;
 
 void system_clear();

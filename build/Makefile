@@ -159,6 +159,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/console_adaption.o: src/console_adaption.cpp.o
+.PHONY : src/console_adaption.o
+
+# target to build an object file
+src/console_adaption.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o
+.PHONY : src/console_adaption.cpp.o
+
+src/console_adaption.i: src/console_adaption.cpp.i
+.PHONY : src/console_adaption.i
+
+# target to preprocess a source file
+src/console_adaption.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.i
+.PHONY : src/console_adaption.cpp.i
+
+src/console_adaption.s: src/console_adaption.cpp.s
+.PHONY : src/console_adaption.s
+
+# target to generate assembly for a file
+src/console_adaption.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.s
+.PHONY : src/console_adaption.cpp.s
+
 src/filecheck_and_init.o: src/filecheck_and_init.cpp.o
 .PHONY : src/filecheck_and_init.o
 
@@ -315,6 +339,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/console_adaption.o"
+	@echo "... src/console_adaption.i"
+	@echo "... src/console_adaption.s"
 	@echo "... src/filecheck_and_init.o"
 	@echo "... src/filecheck_and_init.i"
 	@echo "... src/filecheck_and_init.s"

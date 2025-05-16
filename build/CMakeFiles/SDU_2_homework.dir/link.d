@@ -3,6 +3,7 @@ SDU_2_homework: \
   /usr/lib/gcc/aarch64-linux-gnu/13/../../../aarch64-linux-gnu/crti.o \
   /usr/lib/gcc/aarch64-linux-gnu/13/crtbeginT.o \
   CMakeFiles/SDU_2_homework.dir/main.cpp.o \
+  CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o \
   CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.o \
   CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.o \
   CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.o \
@@ -28,6 +29,8 @@ SDU_2_homework: \
 /usr/lib/gcc/aarch64-linux-gnu/13/crtbeginT.o:
 
 CMakeFiles/SDU_2_homework.dir/main.cpp.o:
+
+CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o:
 
 CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.o:
 

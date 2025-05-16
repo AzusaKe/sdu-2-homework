@@ -85,12 +85,12 @@ clean: CMakeFiles/SDU_2_homework.dir/clean
 CMakeFiles/SDU_2_homework.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/root/sdu-2-homework/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target SDU_2_homework"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/root/sdu-2-homework/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target SDU_2_homework"
 .PHONY : CMakeFiles/SDU_2_homework.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/SDU_2_homework.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/sdu-2-homework/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/sdu-2-homework/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/SDU_2_homework.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/sdu-2-homework/build/CMakeFiles 0
 .PHONY : CMakeFiles/SDU_2_homework.dir/rule
