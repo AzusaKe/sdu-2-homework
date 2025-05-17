@@ -1,17 +1,4 @@
 "D:\Program Files\JetBrains\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=D:/Program Files/JetBrains/CLion 2024.2.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S F:\SDU-2-homework -B F:\SDU-2-homework\cmake-build-debug
-CMake Error at CMakeLists.txt:10 (add_subdirectory):
-  add_subdirectory given source "F:/SDU-2-homework/third_party_lib/openssl"
-  which is not an existing directory.
-
-
-CMake Error at D:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake:233 (message):
-  Could NOT find OpenSSL, try to set the path to OpenSSL root folder in the
-  system variable OPENSSL_ROOT_DIR (missing: OPENSSL_CRYPTO_LIBRARY
-  OPENSSL_INCLUDE_DIR)
-Call Stack (most recent call first):
-  D:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake:603 (_FPHSA_FAILURE_MESSAGE)
-  D:/Program Files/JetBrains/CLion 2024.2.2/bin/cmake/win/x64/share/cmake-3.31/Modules/FindOpenSSL.cmake:691 (find_package_handle_standard_args)
-  CMakeLists.txt:12 (find_package)
-
-
--- Configuring incomplete, errors occurred!
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: F:/SDU-2-homework/cmake-build-debug
