@@ -8,15 +8,17 @@
 #include "passwordmanager.h"
 #include "financenote.h"
 #include "formatcheck.h"
+#include "SHA_256.h"
 #include <iostream>
 #include <cmath>
 
 
-#define AES_BLOCK_SIZE 128
+#define HASH_BLOCK_SIZE 128
 //逻辑部分--------------------------------------------------------------------------------------------------------------------
 //文件加载函数-复用自记账本
 void passwordmanager::load_from_file(const string &filepath) {
     entries.clear();
+    is_new_user = false;
     ifstream file(filepath);
     if (!file.is_open()) {
         cerr << "无法打开目标文件：" << filepath << "，即将自动创建新文件" << endl;
@@ -28,8 +30,15 @@ void passwordmanager::load_from_file(const string &filepath) {
         }
         createFile.close();
     }
+    if (file.peek() == ifstream::traits_type::eof()) {
+        is_new_user = true;
+        return;
+    }
 
     string line;
+    if (getline(file, line)) {
+        correct_key_sha_256 = line;
+    }
     while (getline(file, line)) {
         stringstream ss(line);
         record temp;
@@ -40,7 +49,7 @@ void passwordmanager::load_from_file(const string &filepath) {
     }
     file.close();
 }
-//文件写入函数
+//文件写入函数-复用自记账本
 void passwordmanager::save_to_file(const string &filepath) {
     ofstream file(filepath);
     if (!file.is_open()) {
@@ -54,6 +63,7 @@ void passwordmanager::save_to_file(const string &filepath) {
         createFile.close();
     }
 
+    file << correct_key_sha_256 << endl;
     for (const auto& temp : entries) {
         file << temp.site_name << " " << temp.username << " " << temp.password << endl;
     }
@@ -62,9 +72,9 @@ void passwordmanager::save_to_file(const string &filepath) {
 
 //搜索函数
 void passwordmanager::search(const string &site_name) {
-    //内建相似度计算函数，用于辅助搜索
+    //内建相似度计算函数，用于辅助搜索，输入被比较字符串，输出双精度浮点数用于评判两字符串是否相似
     auto calculate_similarity = [](const string &a, const string &b) -> double {
-        int len_a = a.size(), len_b = b.size();
+        int len_a = a.size(), len_b = b.size();//获取字符串长度
         vector<vector<int> > dp(len_a + 1, vector<int>(len_b + 1, 0));
         for (int i = 0; i <= len_a; ++i) dp[i][0] = i;
         for (int j = 0; j <= len_b; ++j) dp[0][j] = j;
@@ -101,6 +111,9 @@ void passwordmanager::search(const string &site_name) {
     });
 }
 
+
+//
+
 //加密函数
 
 
@@ -110,6 +123,24 @@ string passwordmanager::encoder(const string &this_password) {
         encrypted_password[i] ^= key[i % key.size()];
     }
     return encrypted_password;
+}
+
+//解密函数
+string passwordmanager::decoder(const string &this_password) {
+    string decrypted_password = this_password;
+    for (size_t i = 0; i < decrypted_password.size(); ++i) {
+        decrypted_password[i] ^= key[i % key.size()];
+    }
+    return decrypted_password;
+}
+//检测密码是否已经存在
+bool passwordmanager::is_already_exist(const string &site_name, const string &username, const string &password) {
+    for (const auto &entry: entries) {
+        if (entry.site_name == site_name && entry.username == username && entry.password == password) {
+            return true;
+        }
+    }
+    return false;
 }
 
 
@@ -129,4 +160,131 @@ void passwordmanager::sort() {
     std::sort(search_result.begin(), search_result.end(), [](const search_record &a, const search_record &b) {
         return a.similarity > b.similarity;
     });
+}
+
+//运算符重载，用于将不同类型的值先呵护转化
+vector<passwordmanager::search_record> passwordmanager::operator=(const vector<record> & entries) {
+    vector<search_record> result;
+    for (const auto &entry : entries) {
+        result.push_back({entry.site_name, entry.username, entry.password, 1.0});
+    }
+    return result;
+}
+
+bool passwordmanager::is_correct_key(const string &tested_key) {
+    return tested_key == correct_key_sha_256;
+}
+
+
+
+//逻辑交互部分结束-----------------------------------------------------------------------------------------------------------
+//命令行交互部分---------------------------------------------------------------------------------------------------------------
+void passwordmanager::display(const string &site_name) {
+    system_clear();
+    if (site_name.empty()) {
+        cout << "[全部密码记录]" << endl;
+        search_result = *this = entries;
+        passwordmanager::sort();
+    } else {
+        cout << "[" << site_name << "搜索结果]" << endl;
+        passwordmanager::search(site_name);
+    }
+    cout << left << setw(31) << "网站名"
+         << setw(25) << "| 用户名"
+         << setw(15) << "| 密码" << endl;
+    cout << string(55, '-') << endl;
+
+    for (const auto &temp: search_result) {
+        //添加中文字符支持，避免显示错位
+        auto pad = [](const std::string& s, int width) {
+            int w = 0;
+            for (size_t i = 0; i < s.size(); ) {
+                unsigned char c = s[i];
+                if (c >= 0x80) { w += 2; i += (c >= 0xE0 ? 3 : 2); } // 粗略判断UTF-8中文宽度
+                else { w += 1; ++i; }
+            }
+            std::cout << s;
+            for (int i = w; i < width; ++i) std::cout << ' ';
+        };
+        pad(temp.site_name, 28);
+        cout << "| ";
+        pad(temp.username, 20);
+        cout << "| ";
+        pad(decoder(temp.password), 15);
+        cout << endl;
+    }
+    if (search_result.empty()) {
+        cout << "似乎当前没有满足条件的密码记录..." << endl;
+    }
+    if (!site_name.empty()) {
+        cout << "回车以回到密码管理器主页：" << endl;
+        system_pause();
+    }
+}
+
+//初始化函数
+void passwordmanager::init() {
+    string temp_key;
+    string path = "./data/password.txt";
+    passwordmanager::load_from_file(path);
+    do {
+        if (is_new_user) {
+            cout << "欢迎使用密码管理器！" << endl;
+            cout << "请创建你用于登录密码管理系统的总密码，" << endl << "注意，此密码是你用于查看密码记录的唯一凭据，请勿丢失！" << endl << "一旦丢失不可恢复，需删除旧的密码记录！" << endl;
+            cout << "输入密码凭据：" << endl;
+            cin.ignore();
+            cin >> key;
+            correct_key_sha_256 = SHA256::sha_256(key);
+            passwordmanager::save_to_file(path);
+            cout << "你的密码凭据已创建，请牢记！回车以进入密码管理器！" << endl;
+            system_pause();
+            is_new_user = false;
+        }else {
+            cout << "请输入你的加密密钥以访问密码管理器：" << endl;
+            cin.ignore();
+            cin >> key;
+
+        }
+        temp_key = SHA256::sha_256(key);
+        if (temp_key != correct_key_sha_256) {
+            cerr << "密码错误！请重新输入！" << endl;
+            system_pause();
+            system_clear();
+        }
+    }while (!is_correct_key(temp_key));
+    while (true) {
+        passwordmanager::display("");
+        cout << "请选择你希望的操作：" << endl << "1.添加密码" << endl << "2.按网站名筛选密码并输出" << endl << "选择数字并按下回车(为0则退出)：" << endl;
+        int choice;
+        cin >> choice;
+        system_clear();
+        if (choice == 1) {
+            string site_name;
+            string username;
+            string password;
+            cout << "请输入网站名（形如www.google.com）：" << endl;
+            cin >> site_name;
+            system_clear();
+            cout << "请输入用户名（形如user123,请勿夹杂空格）：" << endl;
+            cin >> username;
+            system_clear();
+            cout << "请输入密码（形如password123,请勿夹杂空格）：" << endl;
+            cin >> password;
+            password = encoder(password);
+            if (passwordmanager::is_already_exist(site_name, username, password)) {
+                cout << "该记录已经存在！" << endl;
+                system_pause();
+            } else {
+                passwordmanager::add_entry(site_name, username, password);
+            }
+        }else if (choice == 2) {
+            string search_site_name;
+            cout << "请输入需要搜索的网站名（形如www.google.com）：" << endl;
+            cin >> search_site_name;
+            system_clear();
+            passwordmanager::display(search_site_name);
+        }else {
+            break;
+        }
+    }passwordmanager::close();
 }

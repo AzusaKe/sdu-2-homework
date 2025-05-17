@@ -31,6 +31,8 @@ private:
     vector<record> entries;
     vector<search_record> search_result;
     string key;
+    string correct_key_sha_256;
+    bool is_new_user;
 public:
     void load_from_file(const string &filepath) override;
     void save_to_file(const string &filepath) override;
@@ -39,9 +41,11 @@ public:
     void sort() override;
     string decoder(const string& this_password);//解密函数
     string encoder(const string& this_password);//加密函数
+    vector<search_record> operator=(const vector<record> & entries);
     //string get_type() const override;
 
     bool is_already_exist(const string& site_name,const string& username,const string& password);
+    bool is_correct_key(const string & tested_key);
     void add_entry(const string& site_name,const string& username,const string& password);
     void init() override;
     void close() override;

@@ -6,13 +6,16 @@
 #include"passwordmanager.h"
 #include"reminder.h"
 #include"filecheck_and_init.h"
+#include "SHA_256.h"
 using namespace std;//使用标准命名空间
 
 //图形化程序入口
 void run_Graphical_Interface() {
     cout << "Running graphical interface..." << endl;//调试用代码
     reminder a;
+    passwordmanager b;
     a.get_current_date();
+    cout << "SHA256::sha_256(123)= " << SHA256::sha_256("123") << endl;
     //图形化界面代码实现
 }
 
@@ -20,7 +23,7 @@ void run_Graphical_Interface() {
 int run_Command_Line_Interface(int argc, char* argv[]) {
     while (true) {
         system_clear();
-        cout << "请选择你要使用的工具：" << endl << "1.记账本" << endl << "2.提醒" << endl << "选择数字并按下回车(为0则退出)：" << endl;//选择功能
+        cout << "请选择你要使用的工具：" << endl << "1.记账本" << endl << "2.提醒" << endl << "3.密码管理器" << endl << "选择数字并按下回车(为0则退出)：" << endl;//选择功能
         int choice;
         cin >> choice;//输入功能
         system_clear();
@@ -32,7 +35,10 @@ int run_Command_Line_Interface(int argc, char* argv[]) {
             reminder reminder_temp;
             reminder_temp.init();
         }
-        else {
+        else if (choice == 3) {
+            passwordmanager password_manager;
+            password_manager.init();
+        }else {
             break;//退出代码
         }
     }

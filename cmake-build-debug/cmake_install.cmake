@@ -34,7 +34,7 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "D:/Program Files/JetBrains/CLion 2024.2.2/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "D:/CLion2024.2.2/bin/mingw/bin/objdump.exe")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
