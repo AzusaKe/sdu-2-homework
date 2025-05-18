@@ -100,6 +100,7 @@ void passwordmanager::search(const string &site_name) {
         }
         return 1.0 / (1.0 + dp[len_a][len_b]);
     };
+    search_result.clear();
     //对于每一个记录，计算相似度，将相似的记录加入搜索结果
     for (const auto &entry: entries) {
         double similarity = calculate_similarity(entry.site_name, site_name);
