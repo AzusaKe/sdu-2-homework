@@ -48,27 +48,27 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /usr/local/bin/cmake
+CMAKE_COMMAND = /home/tiny/cmake-3.31/bin/cmake
 
 # The command to remove a file.
-RM = /usr/local/bin/cmake -E rm -f
+RM = /home/tiny/cmake-3.31/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /root/sdu-2-homework
+CMAKE_SOURCE_DIR = /home/tiny/AZ_projects/sdu-2-homework
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /root/sdu-2-homework/build
+CMAKE_BINARY_DIR = /home/tiny/AZ_projects/sdu-2-homework/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
+	/home/tiny/cmake-3.31/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/usr/local/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/tiny/cmake-3.31/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/sdu-2-homework/build/CMakeFiles /root/sdu-2-homework/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tiny/AZ_projects/sdu-2-homework/build/CMakeFiles /home/tiny/AZ_projects/sdu-2-homework/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/sdu-2-homework/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/tiny/AZ_projects/sdu-2-homework/build/CMakeFiles 0
 .PHONY : all
 
 # The main codegen target
@@ -158,6 +158,30 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+src/SHA_256.o: src/SHA_256.cpp.o
+.PHONY : src/SHA_256.o
+
+# target to build an object file
+src/SHA_256.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/SHA_256.cpp.o
+.PHONY : src/SHA_256.cpp.o
+
+src/SHA_256.i: src/SHA_256.cpp.i
+.PHONY : src/SHA_256.i
+
+# target to preprocess a source file
+src/SHA_256.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/SHA_256.cpp.i
+.PHONY : src/SHA_256.cpp.i
+
+src/SHA_256.s: src/SHA_256.cpp.s
+.PHONY : src/SHA_256.s
+
+# target to generate assembly for a file
+src/SHA_256.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/SHA_256.cpp.s
+.PHONY : src/SHA_256.cpp.s
 
 src/console_adaption.o: src/console_adaption.cpp.o
 .PHONY : src/console_adaption.o
@@ -339,6 +363,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/SHA_256.o"
+	@echo "... src/SHA_256.i"
+	@echo "... src/SHA_256.s"
 	@echo "... src/console_adaption.o"
 	@echo "... src/console_adaption.i"
 	@echo "... src/console_adaption.s"

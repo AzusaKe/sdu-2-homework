@@ -1,6 +1,8 @@
-CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.o: \
- /home/tiny/AZ_projects/sdu-2-homework/src/notebasic.cpp \
- /usr/aarch64-linux-gnu/include/stdc-predef.h /usr/include/c++/12/string \
+CMakeFiles/SDU_2_homework.dir/src/SHA_256.cpp.o: \
+ /home/tiny/AZ_projects/sdu-2-homework/src/SHA_256.cpp \
+ /usr/aarch64-linux-gnu/include/stdc-predef.h \
+ /home/tiny/AZ_projects/sdu-2-homework/include/SHA_256.h \
+ /usr/include/c++/12/iostream \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/os_defines.h \
  /usr/aarch64-linux-gnu/include/features.h \
@@ -12,12 +14,11 @@ CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.o: \
  /usr/aarch64-linux-gnu/include/gnu/stubs.h \
  /usr/aarch64-linux-gnu/include/gnu/stubs-lp64.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/cpu_defines.h \
- /usr/include/c++/12/pstl/pstl_config.h \
+ /usr/include/c++/12/pstl/pstl_config.h /usr/include/c++/12/ostream \
+ /usr/include/c++/12/ios /usr/include/c++/12/iosfwd \
  /usr/include/c++/12/bits/stringfwd.h \
- /usr/include/c++/12/bits/memoryfwd.h \
- /usr/include/c++/12/bits/char_traits.h \
- /usr/include/c++/12/bits/postypes.h /usr/include/c++/12/cwchar \
- /usr/aarch64-linux-gnu/include/wchar.h \
+ /usr/include/c++/12/bits/memoryfwd.h /usr/include/c++/12/bits/postypes.h \
+ /usr/include/c++/12/cwchar /usr/aarch64-linux-gnu/include/wchar.h \
  /usr/aarch64-linux-gnu/include/bits/libc-header-start.h \
  /usr/aarch64-linux-gnu/include/bits/floatn.h \
  /usr/aarch64-linux-gnu/include/bits/floatn-common.h \
@@ -31,10 +32,16 @@ CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.o: \
  /usr/aarch64-linux-gnu/include/bits/types/FILE.h \
  /usr/aarch64-linux-gnu/include/bits/types/locale_t.h \
  /usr/aarch64-linux-gnu/include/bits/types/__locale_t.h \
- /usr/include/c++/12/type_traits /usr/include/c++/12/compare \
+ /usr/include/c++/12/exception /usr/include/c++/12/bits/exception.h \
+ /usr/include/c++/12/bits/exception_ptr.h \
+ /usr/include/c++/12/bits/exception_defines.h \
+ /usr/include/c++/12/bits/cxxabi_init_exception.h \
+ /usr/include/c++/12/typeinfo /usr/include/c++/12/bits/hash_bytes.h \
+ /usr/include/c++/12/new /usr/include/c++/12/bits/move.h \
+ /usr/include/c++/12/type_traits \
+ /usr/include/c++/12/bits/nested_exception.h \
+ /usr/include/c++/12/bits/char_traits.h /usr/include/c++/12/compare \
  /usr/include/c++/12/concepts /usr/include/c++/12/bits/stl_construct.h \
- /usr/include/c++/12/new /usr/include/c++/12/bits/exception.h \
- /usr/include/c++/12/bits/move.h \
  /usr/include/c++/12/bits/stl_iterator_base_types.h \
  /usr/include/c++/12/bits/iterator_concepts.h \
  /usr/include/c++/12/bits/ptr_traits.h \
@@ -49,19 +56,50 @@ CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.o: \
  /usr/aarch64-linux-gnu/include/bits/time64.h \
  /usr/aarch64-linux-gnu/include/bits/stdint-intn.h \
  /usr/aarch64-linux-gnu/include/bits/stdint-uintn.h \
+ /usr/include/c++/12/bits/localefwd.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/c++locale.h \
+ /usr/include/c++/12/clocale /usr/aarch64-linux-gnu/include/locale.h \
+ /usr/aarch64-linux-gnu/include/bits/locale.h /usr/include/c++/12/cctype \
+ /usr/aarch64-linux-gnu/include/ctype.h \
+ /usr/aarch64-linux-gnu/include/bits/endian.h \
+ /usr/aarch64-linux-gnu/include/bits/endianness.h \
+ /usr/include/c++/12/bits/ios_base.h /usr/include/c++/12/ext/atomicity.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/gthr.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/gthr-default.h \
+ /usr/aarch64-linux-gnu/include/pthread.h \
+ /usr/aarch64-linux-gnu/include/sched.h \
+ /usr/aarch64-linux-gnu/include/bits/types/time_t.h \
+ /usr/aarch64-linux-gnu/include/bits/types/struct_timespec.h \
+ /usr/aarch64-linux-gnu/include/bits/sched.h \
+ /usr/aarch64-linux-gnu/include/bits/types/struct_sched_param.h \
+ /usr/aarch64-linux-gnu/include/bits/cpu-set.h \
+ /usr/aarch64-linux-gnu/include/time.h \
+ /usr/aarch64-linux-gnu/include/bits/time.h \
+ /usr/aarch64-linux-gnu/include/bits/timex.h \
+ /usr/aarch64-linux-gnu/include/bits/types/struct_timeval.h \
+ /usr/aarch64-linux-gnu/include/bits/types/clock_t.h \
+ /usr/aarch64-linux-gnu/include/bits/types/struct_tm.h \
+ /usr/aarch64-linux-gnu/include/bits/types/clockid_t.h \
+ /usr/aarch64-linux-gnu/include/bits/types/timer_t.h \
+ /usr/aarch64-linux-gnu/include/bits/types/struct_itimerspec.h \
+ /usr/aarch64-linux-gnu/include/bits/pthreadtypes.h \
+ /usr/aarch64-linux-gnu/include/bits/thread-shared-types.h \
+ /usr/aarch64-linux-gnu/include/bits/pthreadtypes-arch.h \
+ /usr/aarch64-linux-gnu/include/bits/atomic_wide_counter.h \
+ /usr/aarch64-linux-gnu/include/bits/struct_mutex.h \
+ /usr/aarch64-linux-gnu/include/bits/struct_rwlock.h \
+ /usr/aarch64-linux-gnu/include/bits/setjmp.h \
+ /usr/aarch64-linux-gnu/include/bits/types/__sigset_t.h \
+ /usr/aarch64-linux-gnu/include/bits/types/struct___jmp_buf_tag.h \
+ /usr/aarch64-linux-gnu/include/bits/pthread_stack_min-dynamic.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/atomic_word.h \
+ /usr/aarch64-linux-gnu/include/sys/single_threaded.h \
+ /usr/include/c++/12/bits/locale_classes.h /usr/include/c++/12/string \
  /usr/include/c++/12/bits/allocator.h \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++allocator.h \
  /usr/include/c++/12/bits/new_allocator.h \
  /usr/include/c++/12/bits/functexcept.h \
- /usr/include/c++/12/bits/exception_defines.h \
  /usr/include/c++/12/bits/cpp_type_traits.h \
- /usr/include/c++/12/bits/localefwd.h \
- /usr/include/aarch64-linux-gnu/c++/12/bits/c++locale.h \
- /usr/include/c++/12/clocale /usr/aarch64-linux-gnu/include/locale.h \
- /usr/aarch64-linux-gnu/include/bits/locale.h /usr/include/c++/12/iosfwd \
- /usr/include/c++/12/cctype /usr/aarch64-linux-gnu/include/ctype.h \
- /usr/aarch64-linux-gnu/include/bits/endian.h \
- /usr/aarch64-linux-gnu/include/bits/endianness.h \
  /usr/include/c++/12/bits/ostream_insert.h \
  /usr/include/c++/12/bits/cxxabi_forced.h \
  /usr/include/c++/12/bits/stl_iterator.h \
@@ -80,7 +118,6 @@ CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.o: \
  /usr/include/c++/12/ext/alloc_traits.h \
  /usr/include/c++/12/bits/alloc_traits.h /usr/include/c++/12/string_view \
  /usr/include/c++/12/bits/functional_hash.h \
- /usr/include/c++/12/bits/hash_bytes.h \
  /usr/include/c++/12/bits/ranges_base.h \
  /usr/include/c++/12/bits/max_size_type.h /usr/include/c++/12/numbers \
  /usr/include/c++/12/bits/string_view.tcc \
@@ -89,25 +126,12 @@ CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.o: \
  /usr/aarch64-linux-gnu/include/bits/waitflags.h \
  /usr/aarch64-linux-gnu/include/bits/waitstatus.h \
  /usr/aarch64-linux-gnu/include/sys/types.h \
- /usr/aarch64-linux-gnu/include/bits/types/clock_t.h \
- /usr/aarch64-linux-gnu/include/bits/types/clockid_t.h \
- /usr/aarch64-linux-gnu/include/bits/types/time_t.h \
- /usr/aarch64-linux-gnu/include/bits/types/timer_t.h \
  /usr/aarch64-linux-gnu/include/endian.h \
  /usr/aarch64-linux-gnu/include/bits/byteswap.h \
  /usr/aarch64-linux-gnu/include/bits/uintn-identity.h \
  /usr/aarch64-linux-gnu/include/sys/select.h \
  /usr/aarch64-linux-gnu/include/bits/select.h \
  /usr/aarch64-linux-gnu/include/bits/types/sigset_t.h \
- /usr/aarch64-linux-gnu/include/bits/types/__sigset_t.h \
- /usr/aarch64-linux-gnu/include/bits/types/struct_timeval.h \
- /usr/aarch64-linux-gnu/include/bits/types/struct_timespec.h \
- /usr/aarch64-linux-gnu/include/bits/pthreadtypes.h \
- /usr/aarch64-linux-gnu/include/bits/thread-shared-types.h \
- /usr/aarch64-linux-gnu/include/bits/pthreadtypes-arch.h \
- /usr/aarch64-linux-gnu/include/bits/atomic_wide_counter.h \
- /usr/aarch64-linux-gnu/include/bits/struct_mutex.h \
- /usr/aarch64-linux-gnu/include/bits/struct_rwlock.h \
  /usr/aarch64-linux-gnu/include/alloca.h \
  /usr/aarch64-linux-gnu/include/bits/stdlib-float.h \
  /usr/include/c++/12/bits/std_abs.h /usr/include/c++/12/cstdio \
@@ -126,4 +150,33 @@ CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.o: \
  /usr/aarch64-linux-gnu/include/bits/types/error_t.h \
  /usr/include/c++/12/bits/charconv.h \
  /usr/include/c++/12/bits/basic_string.tcc \
- /home/tiny/AZ_projects/sdu-2-homework/include/notebasic.h
+ /usr/include/c++/12/bits/locale_classes.tcc \
+ /usr/include/c++/12/system_error \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/error_constants.h \
+ /usr/include/c++/12/stdexcept /usr/include/c++/12/streambuf \
+ /usr/include/c++/12/bits/streambuf.tcc \
+ /usr/include/c++/12/bits/basic_ios.h \
+ /usr/include/c++/12/bits/locale_facets.h /usr/include/c++/12/cwctype \
+ /usr/aarch64-linux-gnu/include/wctype.h \
+ /usr/aarch64-linux-gnu/include/bits/wctype-wchar.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/ctype_base.h \
+ /usr/include/c++/12/bits/streambuf_iterator.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/ctype_inline.h \
+ /usr/include/c++/12/bits/locale_facets.tcc \
+ /usr/include/c++/12/bits/basic_ios.tcc \
+ /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
+ /usr/include/c++/12/bits/istream.tcc /usr/include/c++/12/sstream \
+ /usr/include/c++/12/bits/sstream.tcc /usr/include/c++/12/iomanip \
+ /usr/include/c++/12/locale \
+ /usr/include/c++/12/bits/locale_facets_nonio.h /usr/include/c++/12/ctime \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/time_members.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/messages_members.h \
+ /usr/aarch64-linux-gnu/include/libintl.h \
+ /usr/include/c++/12/bits/codecvt.h \
+ /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/12/bits/locale_conv.h \
+ /usr/include/c++/12/bits/quoted_string.h /usr/include/c++/12/vector \
+ /usr/include/c++/12/bits/stl_uninitialized.h \
+ /usr/include/c++/12/bits/stl_vector.h \
+ /usr/include/c++/12/bits/stl_bvector.h \
+ /usr/include/c++/12/bits/vector.tcc
