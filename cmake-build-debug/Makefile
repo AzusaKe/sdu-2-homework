@@ -160,6 +160,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/SHA_256.o: src/SHA_256.cpp.o
+.PHONY : src/SHA_256.o
+
+# target to build an object file
+src/SHA_256.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/SHA_256.cpp.o
+.PHONY : src/SHA_256.cpp.o
+
+src/SHA_256.i: src/SHA_256.cpp.i
+.PHONY : src/SHA_256.i
+
+# target to preprocess a source file
+src/SHA_256.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/SHA_256.cpp.i
+.PHONY : src/SHA_256.cpp.i
+
+src/SHA_256.s: src/SHA_256.cpp.s
+.PHONY : src/SHA_256.s
+
+# target to generate assembly for a file
+src/SHA_256.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/SHA_256.cpp.s
+.PHONY : src/SHA_256.cpp.s
+
 src/console_adaption.o: src/console_adaption.cpp.o
 .PHONY : src/console_adaption.o
 
@@ -341,6 +365,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/SHA_256.o"
+	@echo "... src/SHA_256.i"
+	@echo "... src/SHA_256.s"
 	@echo "... src/console_adaption.o"
 	@echo "... src/console_adaption.i"
 	@echo "... src/console_adaption.s"

@@ -13,7 +13,9 @@ else ()
 endif ()
 
 #寻找Qt5包
+if (WIN32)
 find_package(Qt5 COMPONENTS Core Gui Widgets REQUIRED)
+endif()
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
@@ -24,4 +26,6 @@ file(GLOB SRC_LIST ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 add_executable(SDU_2_homework ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp  ${SRC_LIST})
 
 #链接Qt5库
+if(WIN32)
 target_link_libraries(SDU_2_homework Qt5::Core Qt5::Gui Qt5::Widgets)
+endif()
