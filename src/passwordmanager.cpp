@@ -12,8 +12,6 @@
 #include <iostream>
 #include <cmath>
 
-
-#define HASH_BLOCK_SIZE 128
 //逻辑部分--------------------------------------------------------------------------------------------------------------------
 //文件加载函数-复用自记账本
 void passwordmanager::load_from_file(const string &filepath) {
@@ -31,7 +29,7 @@ void passwordmanager::load_from_file(const string &filepath) {
         createFile.close();
     }
     if (file.peek() == ifstream::traits_type::eof()) {
-        is_new_user = true;
+        is_new_user = true;//检测是否为新用户
         return;
     }
 
@@ -175,7 +173,9 @@ bool passwordmanager::is_correct_key(const string &tested_key) {
     return tested_key == correct_key_sha_256;
 }
 
-
+/*void passwordmanager::set_key(const string& k) {
+    key = k;
+}*/
 
 //逻辑交互部分结束-----------------------------------------------------------------------------------------------------------
 //命令行交互部分---------------------------------------------------------------------------------------------------------------

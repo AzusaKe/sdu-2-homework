@@ -16,6 +16,10 @@ void run_Graphical_Interface() {
     passwordmanager b;
     a.get_current_date();
     cout << "SHA256::sha_256(123)= " << SHA256::sha_256("123") << endl;
+    cout << "SHA256::sha_256(123456)= " << SHA256::sha_256("123456") << endl;
+    cout << "SHA256::sha_256(123456789)= " << SHA256::sha_256("123456789") << endl;
+    string key = "h28uherf723u";
+    string password = "ajd38uq3hrudu" ;
     //图形化界面代码实现
 }
 

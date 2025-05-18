@@ -39,8 +39,8 @@ public:
     void display(const string&) override;
     void search(const string& site_name) override;
     void sort() override;
-    string decoder(const string& this_password);//解密函数
-    string encoder(const string& this_password);//加密函数
+    string decoder(const string& this_password);//普通解密函数
+    string encoder(const string& this_password);//普通加密函数
     vector<search_record> operator=(const vector<record> & entries);
     //string get_type() const override;
 
@@ -49,6 +49,9 @@ public:
     void add_entry(const string& site_name,const string& username,const string& password);
     void init() override;
     void close() override;
+
+    //临时测hi用
+    //void set_key(const string& k);
 };
 
 #endif //PASSWORDMANAGER_H
