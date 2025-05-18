@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 #添加Qt5库
 if (WIN32)
-    set(Qt5_DIR "F:/Qt/5.15.18/msvc2019_64/lib/cmake/Qt5")
+    set(Qt5_DIR "F:/Qt/5.15.18/mingw81_64/lib/cmake/Qt5")
 elseif (UNIX AND NOT APPLE)
 
 else ()
@@ -13,13 +13,12 @@ else ()
 endif ()
 
 #寻找Qt5包
-if (WIN32 OR UNIX AND NOT APPLE)
 find_package(Qt5 COMPONENTS Core Gui Widgets REQUIRED)
-endif()
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
 #set(CMAKE_EXE_LINKER_FLAGS "-static")
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
