@@ -72,6 +72,20 @@ void passwordmanager::save_to_file(const string &filepath) {
 void passwordmanager::search(const string &site_name) {
     //内建相似度计算函数，用于辅助搜索，输入被比较字符串，输出双精度浮点数用于评判两字符串是否相似
     auto calculate_similarity = [](const string &a, const string &b) -> double {
+        //检测是否有共有的字母，没有相似度直接判零
+        bool has_common_char = false;
+        for (char c : a) {
+            if (b.find(c) != string::npos) {
+                has_common_char = true;
+                break;
+            }
+        }
+
+        // 如果没有共有的字母，直接返回相似度为零
+        if (!has_common_char) {
+            return 0.0;
+        }
+
         int len_a = a.size(), len_b = b.size();//获取字符串长度
         vector<vector<int> > dp(len_a + 1, vector<int>(len_b + 1, 0));
         for (int i = 0; i <= len_a; ++i) dp[i][0] = i;
