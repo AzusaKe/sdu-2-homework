@@ -7,10 +7,14 @@
 #include"reminder.h"
 #include"filecheck_and_init.h"
 #include "SHA_256.h"
+
+#include <QApplication>
+#include <QLabel>
+
 using namespace std;//使用标准命名空间
 
 //图形化程序入口
-void run_Graphical_Interface() {
+int run_Graphical_Interface(int argc, char* argv[]) {
     cout << "Running graphical interface..." << endl;//调试用代码
     reminder a;
     passwordmanager b;
@@ -21,6 +25,13 @@ void run_Graphical_Interface() {
     string key = "h28uherf723u";
     string password = "ajd38uq3hrudu" ;
     //图形化界面代码实现
+    QApplication app(argc,argv);
+    QLabel label("Hello, World!");
+    label.setWindowTitle("Hello");
+    label.resize(200, 100);
+    label.show();
+
+    return app.exec();
 }
 
 //命令行程序入口
@@ -62,7 +73,7 @@ int main(int argc, char* argv[]) {
         run_Command_Line_Interface(argc, argv);
     } else {
         // 否则，运行图形化界面
-        run_Graphical_Interface();
+        run_Graphical_Interface(argc, argv);
     }
     return 0;//退出
 }
