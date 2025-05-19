@@ -15,6 +15,7 @@ using namespace std;//使用标准命名空间
 
 //图形化程序入口
 int run_Graphical_Interface(int argc, char* argv[]) {
+    is_graphic = true;
     cout << "Running graphical interface..." << endl;//调试用代码
     reminder a;
     passwordmanager b;
@@ -22,13 +23,11 @@ int run_Graphical_Interface(int argc, char* argv[]) {
     cout << "SHA256::sha_256(123)= " << SHA256::sha_256("123") << endl;
     cout << "SHA256::sha_256(123456)= " << SHA256::sha_256("123456") << endl;
     cout << "SHA256::sha_256(123456789)= " << SHA256::sha_256("123456789") << endl;
-    string key = "h28uherf723u";
-    string password = "ajd38uq3hrudu" ;
     //图形化界面代码实现
     QApplication app(argc,argv);
     QLabel label("Hello, World!");
     label.setWindowTitle("Hello");
-    label.resize(200, 100);
+    label.resize(2000, 1000);
     label.show();
 
     return app.exec();
@@ -36,6 +35,7 @@ int run_Graphical_Interface(int argc, char* argv[]) {
 
 //命令行程序入口
 int run_Command_Line_Interface(int argc, char* argv[]) {
+    is_graphic = false;
     while (true) {
         system_clear();
         cout << "请选择你要使用的工具：" << endl << "1.记账本" << endl << "2.提醒" << endl << "3.密码管理器" << endl << "选择数字并按下回车(为0则退出)：" << endl;//选择功能
@@ -68,7 +68,7 @@ int main(int argc, char* argv[]) {
     SetConsoleMode(GetStdHandle(STD_OUTPUT_HANDLE),ENABLE_PROCESSED_OUTPUT | ENABLE_WRAP_AT_EOL_OUTPUT);//修改控制台编码格式,避免乱码
 #endif
     filecheck_and_init();//检查文件是否存在并初始化
-    if (argc <= 1) {//在完成图形化后记得修改为if (argc > 1)
+    if (argc > 1) {//在完成图形化后记得修改为if (argc > 1)
         // 如果没有命令行参数，运行命令行界面
         run_Command_Line_Interface(argc, argv);
     } else {

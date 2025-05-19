@@ -10,6 +10,7 @@
 #include<cstdlib>
 using namespace std;
 
+bool is_graphic = false;
 void system_clear();
 void system_pause();
 

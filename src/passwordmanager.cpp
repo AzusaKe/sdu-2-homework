@@ -12,6 +12,8 @@
 #include <iostream>
 #include <cmath>
 
+static string file_path = "./data/password.txt";
+
 //逻辑部分--------------------------------------------------------------------------------------------------------------------
 //文件加载函数-复用自记账本
 void passwordmanager::load_from_file(const string &filepath) {
@@ -46,6 +48,9 @@ void passwordmanager::load_from_file(const string &filepath) {
         }
     }
     file.close();
+    if (is_graphic){
+        cout << "已读取文件：" << file_path << endl;
+    }
 }
 //文件写入函数-复用自记账本
 void passwordmanager::save_to_file(const string &filepath) {
