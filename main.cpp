@@ -27,13 +27,18 @@ int run_Graphical_Interface(int argc, char* argv[]) {
     cout << "SHA256::sha_256(123456)= " << SHA256::sha_256("123456") << endl;
     cout << "SHA256::sha_256(123456789)= " << SHA256::sha_256("123456789") << endl;
     //图形化界面代码实现
-    QApplication app(argc,argv);
-    QLabel label("Hello, World!");
-    label.setWindowTitle("Hello");
-    label.resize(1280, 800);
-    label.show();
+    try {
+        QApplication app(argc, argv);
+        QLabel label("Hello, World!");
+        label.setWindowTitle("Hello");
+        label.resize(1280, 800);
+        label.show();
+        return app.exec();
+    } catch (const std::exception& e) {
+        cerr << "Error: " << e.what() << endl;
+        return -1;
+    }
 
-    return app.exec();
 }
 
 //命令行程序入口

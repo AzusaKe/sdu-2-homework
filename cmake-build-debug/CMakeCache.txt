@@ -300,18 +300,6 @@ QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH:STRING=
 //Additional directories where find(Qt6 ...) components are searched
 QT_ADDITIONAL_PACKAGES_PREFIX_PATH:STRING=
 
-//The directory containing a CMake configuration file for Qt5Core.
-Qt5Core_DIR:PATH=F:/Qt/5.15.18/msvc2019_64/lib/cmake/Qt5Core
-
-//The directory containing a CMake configuration file for Qt5Gui.
-Qt5Gui_DIR:PATH=F:/Qt/5.15.18/mingw81_64/lib/cmake/Qt5Gui
-
-//The directory containing a CMake configuration file for Qt5Widgets.
-Qt5Widgets_DIR:PATH=F:/Qt/5.15.18/mingw81_64/lib/cmake/Qt5Widgets
-
-//The directory containing a CMake configuration file for Qt5.
-Qt5_DIR:PATH=F:/Qt/5.15.18/msvc2019_64/lib/cmake/Qt5
-
 //The directory containing a CMake configuration file for Qt6CoreTools.
 Qt6CoreTools_DIR:PATH=F:/Qt/6.7.3/mingw_64/lib/cmake/Qt6CoreTools
 
@@ -361,7 +349,7 @@ Vulkan_INCLUDE_DIR:PATH=Vulkan_INCLUDE_DIR-NOTFOUND
 Vulkan_LIBRARY:FILEPATH=Vulkan_LIBRARY-NOTFOUND
 
 //Path to a program.
-WINDEPLOYQT_EXECUTABLE:FILEPATH=F:/Qt/6.7.3/msvc2019_64/bin/windeployqt.exe
+WINDEPLOYQT_EXECUTABLE:FILEPATH=F:/Qt/6.7.3/mingw_64/bin/windeployqt.exe
 
 
 ########################
@@ -824,8 +812,6 @@ QT_FEATURE_gtk3:INTERNAL=OFF
 QT_FEATURE_gui:INTERNAL=ON
 //Qt feature: harfbuzz (from target Qt6::Gui)
 QT_FEATURE_harfbuzz:INTERNAL=ON
-//Qt feature: headersclean (from target Qt6::Core)
-QT_FEATURE_headersclean:INTERNAL=ON
 //Qt feature: highdpiscaling (from target Qt6::Gui)
 QT_FEATURE_highdpiscaling:INTERNAL=ON
 //Qt feature: hijricalendar (from target Qt6::Core)
@@ -932,8 +918,6 @@ QT_FEATURE_mips_dsp:INTERNAL=OFF
 QT_FEATURE_mips_dspr2:INTERNAL=OFF
 //Qt feature: movie (from target Qt6::Gui)
 QT_FEATURE_movie:INTERNAL=ON
-//Qt feature: msvc_obj_debug_info (from target Qt6::Core)
-QT_FEATURE_msvc_obj_debug_info:INTERNAL=ON
 //Qt feature: mtdev (from target Qt6::Gui)
 QT_FEATURE_mtdev:INTERNAL=OFF
 //Qt feature: multiprocess (from target Qt6::Gui)
