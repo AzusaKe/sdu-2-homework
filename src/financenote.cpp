@@ -7,16 +7,30 @@
 #include "financenote.h"
 #include "formatcheck.h"
 #include <iostream>
+
+financenote::financenote(){
+    financenote::load_from_file();
+    if (is_graphic){
+        cout << "记账本构造成功！" << endl;
+    }
+}
+
+financenote::~financenote(){
+    financenote::close();
+    if (is_graphic){
+        cout << "记账本析构成功！" << endl;
+    }
+}
 //逻辑部分----------------------------------------------------------------------------------------------------------------------
 //文件加载函数
-void financenote::load_from_file(const string &filepath) {
+void financenote::load_from_file() {
     entries.clear();//清除之前内存里的记录
-    ifstream file(filepath);//获取文件路径
+    ifstream file(file_path);//获取文件路径
     if (!file.is_open()) {//检测文件是否可读
-        cerr << "无法打开目标文件：" << filepath << "，即将自动创建新文件" << endl;//报错
-        ofstream createFile(filepath);//重新创建文件
+        cerr << "无法打开目标文件：" << file_path << "，即将自动创建新文件" << endl;//报错
+        ofstream createFile(file_path);//重新创建文件
         if (!createFile.is_open()) {//检测文件是否存在
-            cerr << "无法创建文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;//报错
+            cerr << "无法创建文件：" << file_path << "，请检查数据文件夹是否损坏" << endl;//报错
             system_pause();//暂停
 	        return;//退出
         }
@@ -35,13 +49,13 @@ void financenote::load_from_file(const string &filepath) {
     file.close();//关闭文件占用
 }
 //文件写入函数
-void financenote::save_to_file(const string &filepath) {
-    ofstream file(filepath);//创建文件输出流
+void financenote::save_to_file() {
+    ofstream file(file_path);//创建文件输出流
     if (!file.is_open()) {//检测文件是否可写
-        cerr << "无法修改目标文件：" << filepath << "，即将自动创建新文件" << endl;//报错
-        ofstream createFile(filepath);
+        cerr << "无法修改目标文件：" << file_path << "，即将自动创建新文件" << endl;//报错
+        ofstream createFile(file_path);
         if (!createFile.is_open()) {//检测文件是否能够打开
-            cerr << "无法创建文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;//报错
+            cerr << "无法创建文件：" << file_path << "，请检查数据文件夹是否损坏" << endl;//报错
             system_pause();
             return;//退出
         }
@@ -69,12 +83,12 @@ void financenote::search(const string &month) {//输入搜索月份
 //记录添加函数
 void financenote::add_entry(const string &date, double amount, const string &category) {
     entries.push_back({date, amount, category});//将数据添加进总表
-    financenote::save_to_file("./data/finance.txt");//每添加一次记录就保存一次，避免出错
+    financenote::save_to_file();//每添加一次记录就保存一次，避免出错
 }
 
 //关闭函数，避免错误保存
 void financenote::close() {
-    financenote::save_to_file("./data/finance.txt");
+    financenote::save_to_file();
 }
 
 //排序函数
@@ -131,8 +145,7 @@ void financenote::display(const string &month) {
 
 //初始化函数，包含记账本主页
 void financenote::init() {
-    string path = "./data/finance.txt";
-    financenote::load_from_file(path);//加载数据
+    financenote::load_from_file();//加载数据
     while (true) {//循环输入选项
         financenote::display("");
         cout << "请选择你希望的操作：" << endl << "1.添加记录" << endl << "2.按月份筛选消费记录并输出总金额"<< endl << "选择数字并按下回车(为0则退出)：" << endl;//记账本主界面
@@ -153,8 +166,10 @@ void financenote::init() {
                     cerr << "错误的日期格式！请重新输入！" << endl;
                 }
             }while (!is_valid_date(date));
+            system_clear();
             cout << "请输入金额：" << endl;
             cin >> amount;
+            system_clear();
             cout << "请输入类别：" << endl;
             cin >> category;
             financenote::add_entry(date,amount,category);//添加行函数

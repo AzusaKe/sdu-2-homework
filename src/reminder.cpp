@@ -9,16 +9,31 @@
 #include <iostream>
 #include <iomanip>
 #include <ctime>
+
+reminder::reminder(){
+    reminder::load_from_file();
+    if (is_graphic){
+        cout << "日程提醒构造成功！" << endl;
+    }
+}
+
+reminder::~reminder(){
+    reminder::close();
+    if (is_graphic){
+        cout << "日程提醒析构成功！" << endl;
+    }
+}
+
 //逻辑部分--------------------------------------------------------------------------------------------------------------------
 //文件加载函数-复用自记账本
-void reminder::load_from_file(const string &filepath) {
+void reminder::load_from_file() {
     entries.clear();
-    ifstream file(filepath);
+    ifstream file(file_path);
     if (!file.is_open()) {
-        cerr << "无法打开目标文件：" << filepath << "，即将自动创建新文件" << endl;
-        ofstream createFile(filepath);
+        cerr << "无法打开目标文件：" << file_path << "，即将自动创建新文件" << endl;
+        ofstream createFile(file_path);
         if (!createFile.is_open()) {
-            cerr << "无法创建文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;
+            cerr << "无法创建文件：" << file_path << "，请检查数据文件夹是否损坏" << endl;
             system_pause();
             return;
         }
@@ -38,8 +53,11 @@ void reminder::load_from_file(const string &filepath) {
         }
     }
     file.close();
+    if (is_graphic){
+        cout << "正常提醒已读取！" << endl;
+    }
     //读取过时事件列表
-    ifstream old_file("./data/old_reminder.txt");
+    ifstream old_file(old_file_path);
     string old_line;
     while (getline(old_file, old_line)) {
         stringstream ss(old_line);
@@ -53,15 +71,18 @@ void reminder::load_from_file(const string &filepath) {
         }
     }
     old_file.close();
+    if (is_graphic){
+        cout << "过时提醒已读取！" << endl;
+    }
 }
 //文件写入函数-复用自记账本
-void reminder::save_to_file(const string &filepath) {
-    ofstream file(filepath);//创建文件输出流
+void reminder::save_to_file() {
+    ofstream file(file_path);//创建文件输出流
     if (!file.is_open()) {//检测文件是否可写
-        cerr << "无法修改目标文件：" << filepath << "，即将自动创建新文件" << endl;//报错
-        ofstream createFile(filepath);
+        cerr << "无法修改目标文件：" << file_path << "，即将自动创建新文件" << endl;//报错
+        ofstream createFile(file_path);
         if (!createFile.is_open()) {//检测文件是否能够打开
-            cerr << "无法创建文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;//报错
+            cerr << "无法创建文件：" << file_path << "，请检查数据文件夹是否损坏" << endl;//报错
             system_pause();
             return;//退出
         }
@@ -72,12 +93,18 @@ void reminder::save_to_file(const string &filepath) {
         file << temp.time << " " << temp.content << " " << temp.priority << endl;
     }
     file.close();
+    if (is_graphic){
+        cout << "正常提醒已保存！" << endl;
+    }
     //过时事件存入
-    ofstream old_file("./data/old_reminder.txt");
+    ofstream old_file(old_file_path);
     for (const auto& temp : old_entries) {
         old_file << temp.time << " " << temp.content << " " << temp.priority << endl;
     }
     old_file.close();
+    if (is_graphic){
+        cout << "过时提醒已保存！" << endl;
+    }
 }
 
 //搜索函数-复用自记账本
@@ -91,17 +118,26 @@ void reminder::search(const string &date) {
             continue;
         }
     }
+    if (is_graphic){
+        cout << "[ " << date << " ]搜索完成！" << endl;
+    }
 }
 
 //记录添加函数-复用自记账本
 void reminder::add_entry(const string &time,const string& content, const int &priority) {
     entries.push_back({time,content,priority});
-    reminder::save_to_file("./data/reminder.txt");
+    reminder::save_to_file();
+    if (is_graphic){
+        cout << "已将记录： " << time << "、" << content << "、" << priority << " 添加至列表！" << endl;
+    }
 }
 
 //关闭函数，避免错误保存-复用自记账本
 void reminder::close() {
-    reminder::save_to_file("./data/reminder.txt");
+    reminder::save_to_file();
+    if (is_graphic){
+        cout << "已关闭这个记账本实例！" << endl;
+    }
 }
 
 void reminder::sort() {
@@ -114,7 +150,9 @@ void reminder::sort() {
         return a.time > b.time;
     });
     }
-
+    if (is_graphic){
+        cout << "已完成排序！" << endl;
+    }
 }
 
 //获取当前时间并将其转化为YYYY-MM-DD的形式
@@ -124,6 +162,7 @@ void reminder::get_current_date() {
         cerr << "无法获取当前时间" << endl;
         current_date = "1970-01-01"; // 设置默认日期以防错误
         cout << "调试信息：本地时间：" << current_date << endl;
+        system_pause();
         return;
     }
     const tm *now = localtime(&t); //转换为本地时间
@@ -131,12 +170,15 @@ void reminder::get_current_date() {
         cerr << "无法转换为本地时间" << endl;
         current_date = "1970-01-01"; // 设置默认日期以防错误
         cout << "调试信息：本地时间：" << current_date << endl;
+        system_pause();
         return;
     }
     ostringstream oss; //创建字符串流对象
     oss << put_time(now, "%Y-%m-%d"); //格式化输出时间
     current_date = oss.str(); //赋值给current_time
-    cout << "调试信息：本地时间：" << current_date << endl;
+    if (is_graphic){
+        cout << "调试信息：本地时间：" << current_date << endl;
+    }
 }
 
 void reminder::add_old_entries() {
@@ -216,8 +258,7 @@ void reminder::display(const string &date) {
 //初始化函数，包含课程提醒主页
 void reminder::init() {
     is_in_index = true;
-    string path = "./data/reminder.txt";
-    reminder::load_from_file(path);
+    reminder::load_from_file();
     while (true) {
         reminder::display("");
         cout << "请选择你希望的操作：" << endl << "1.添加提醒" << endl << "2.按日期筛选提醒并输出" << endl << "3.将过时事件移入回收站" << endl << "4.查看回收站" << endl << "选择数字并按下回车(为0则退出)：" << endl;
@@ -228,9 +269,9 @@ void reminder::init() {
             string time;
             string content;
             int priority;
+            cin.ignore();
             do {
                 cout << "请输入提醒时间(YYYY-MM-DD HH:MM)：" << endl;
-                cin.ignore();
                 getline(cin,time);
                 system_clear();
                 if (!is_valid_time(time)) {

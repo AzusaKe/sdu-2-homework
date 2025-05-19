@@ -24,9 +24,12 @@ private:
     };
     vector<entry> entries;//创建向量用于存储记录
     vector<entry> search_result;
+    string file_path = "./data/finance.txt";
 public:
-    void load_from_file(const string &filepath) override;//从文件加载，继承自基类
-    void save_to_file(const string &filepath) override;//保存到文件，继承自基类
+    financenote();
+    ~financenote();
+    void load_from_file() override;//从文件加载，继承自基类
+    void save_to_file() override;//保存到文件，继承自基类
     void display(const string&) override;//显示，继承自基类
     void search(const string& month) override;//搜索，继承自基类
     void sort() override;//按日期排序

@@ -33,9 +33,10 @@ private:
     string key;
     string correct_key_sha_256;
     bool is_new_user;
+    string file_path = "./data/password.txt";
 public:
-    void load_from_file(const string &filepath) override;
-    void save_to_file(const string &filepath) override;
+    void load_from_file() override;
+    void save_to_file() override;
     void display(const string&) override;
     void search(const string& site_name) override;
     void sort() override;

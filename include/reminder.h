@@ -27,9 +27,13 @@ private:
     vector<event> search_result;
     vector<event> old_entries;
     bool is_in_index;
+    string file_path = "./data/reminder.txt";
+    string old_file_path = "./data/old_reminder.txt";
 public:
-    void load_from_file(const string &filepath) override;
-    void save_to_file(const string &filepath) override;
+    reminder();
+    ~reminder();
+    void load_from_file() override;
+    void save_to_file() override;
     void display(const string&) override;
     void search(const string& month) override;
     void sort() override;

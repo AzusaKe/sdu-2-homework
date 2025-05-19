@@ -12,19 +12,17 @@
 #include <iostream>
 #include <cmath>
 
-static string file_path = "./data/password.txt";
-
 //逻辑部分--------------------------------------------------------------------------------------------------------------------
 //文件加载函数-复用自记账本
-void passwordmanager::load_from_file(const string &filepath) {
+void passwordmanager::load_from_file() {
     entries.clear();
     is_new_user = false;
-    ifstream file(filepath);
+    ifstream file(file_path);
     if (!file.is_open()) {
-        cerr << "无法打开目标文件：" << filepath << "，即将自动创建新文件" << endl;
-        ofstream createFile(filepath);
+        cerr << "无法打开目标文件：" << file_path << "，即将自动创建新文件" << endl;
+        ofstream createFile(file_path);
         if (!createFile.is_open()) {
-            cerr << "无法创建文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;
+            cerr << "无法创建文件：" << file_path << "，请检查数据文件夹是否损坏" << endl;
             system_pause();
             return;
         }
@@ -49,17 +47,17 @@ void passwordmanager::load_from_file(const string &filepath) {
     }
     file.close();
     if (is_graphic){
-        cout << "已读取文件：" << file_path << endl;
+        cout << "已读取文件：" << passwordmanager::file_path << endl;
     }
 }
 //文件写入函数-复用自记账本
-void passwordmanager::save_to_file(const string &filepath) {
-    ofstream file(filepath);
+void passwordmanager::save_to_file() {
+    ofstream file(file_path);
     if (!file.is_open()) {
-        cerr << "无法修改目标文件：" << filepath << "，即将自动创建新文件" << endl;
-        ofstream createFile(filepath);
+        cerr << "无法修改目标文件：" << file_path << "，即将自动创建新文件" << endl;
+        ofstream createFile(file_path);
         if (!createFile.is_open()) {
-            cerr << "无法创建文件：" << filepath << "，请检查数据文件夹是否损坏" << endl;
+            cerr << "无法创建文件：" << file_path << "，请检查数据文件夹是否损坏" << endl;
             system_pause();
             return;
         }
@@ -71,6 +69,9 @@ void passwordmanager::save_to_file(const string &filepath) {
         file << temp.site_name << " " << temp.username << " " << temp.password << endl;
     }
     file.close();
+    if (is_graphic){
+        cout << "已写入文件：" << passwordmanager::file_path;
+    }
 }
 
 //搜索函数
@@ -127,18 +128,20 @@ void passwordmanager::search(const string &site_name) {
         }
         return a.similarity > b.similarity;
     });
+    if (is_graphic){
+        cout << "[ " << site_name << " ]搜索已完成！" << endl;
+    }
 }
 
-
-//
-
 //加密函数
-
 
 string passwordmanager::encoder(const string &this_password) {
     string encrypted_password = this_password;
     for (size_t i = 0; i < encrypted_password.size(); ++i) {
         encrypted_password[i] ^= key[i % key.size()];
+    }
+    if (is_graphic){
+        cout << "密码已加密为：" << encrypted_password;
     }
     return encrypted_password;
 }
@@ -149,12 +152,18 @@ string passwordmanager::decoder(const string &this_password) {
     for (size_t i = 0; i < decrypted_password.size(); ++i) {
         decrypted_password[i] ^= key[i % key.size()];
     }
+    if (is_graphic){
+        cout << this_password << "已解密。" << endl;
+    }
     return decrypted_password;
 }
 //检测密码是否已经存在
 bool passwordmanager::is_already_exist(const string &site_name, const string &username, const string &password) {
     for (const auto &entry: entries) {
         if (entry.site_name == site_name && entry.username == username && entry.password == password) {
+            if (is_graphic){
+                cout << "记录已存在！" << endl;
+            }
             return true;
         }
     }
@@ -165,12 +174,18 @@ bool passwordmanager::is_already_exist(const string &site_name, const string &us
 //记录添加函数
 void passwordmanager::add_entry(const string &site_name, const string &username, const string &password) {
     entries.push_back({site_name, username, password});
-    passwordmanager::save_to_file("./data/password.txt");
+    passwordmanager::save_to_file();
+    if (is_graphic){
+        cout << "记录已添加！" << endl;
+    }
 }
 
 //关闭函数，避免错误保存
 void passwordmanager::close() {
-    passwordmanager::save_to_file("./data/password.txt");
+    passwordmanager::save_to_file();
+    if (is_graphic){
+        cout << "密码管理器已关闭！" << endl;
+    }
 }
 
 //排序函数
@@ -178,6 +193,9 @@ void passwordmanager::sort() {
     std::sort(search_result.begin(), search_result.end(), [](const search_record &a, const search_record &b) {
         return a.similarity > b.similarity;
     });
+    if (is_graphic){
+        cout << "记录已排序" << endl;
+    }
 }
 
 //运算符重载，用于将不同类型的值先呵护转化
@@ -186,10 +204,16 @@ vector<passwordmanager::search_record> passwordmanager::operator=(const vector<r
     for (const auto &entry : entries) {
         result.push_back({entry.site_name, entry.username, entry.password, 1.0});
     }
+    if (is_graphic){
+        cout << "已将record向量组转化为search_record类型！" << endl;
+    }
     return result;
 }
 
 bool passwordmanager::is_correct_key(const string &tested_key) {
+    if (is_graphic){
+        cout << "凭证已校验:" << (tested_key == correct_key_sha_256 ? "已通过！" : "未通过...") << endl;
+    }
     return tested_key == correct_key_sha_256;
 }
 
@@ -245,8 +269,7 @@ void passwordmanager::display(const string &site_name) {
 //初始化函数
 void passwordmanager::init() {
     string temp_key;
-    string path = "./data/password.txt";
-    passwordmanager::load_from_file(path);
+    passwordmanager::load_from_file();
     do {
         if (is_new_user) {
             cout << "欢迎使用密码管理器！" << endl;
@@ -255,7 +278,7 @@ void passwordmanager::init() {
             cin.ignore();
             cin >> key;
             correct_key_sha_256 = SHA256::sha_256(key);
-            passwordmanager::save_to_file(path);
+            passwordmanager::save_to_file();
             cout << "你的密码凭据已创建，请牢记！回车以进入密码管理器！" << endl;
             system_pause();
             is_new_user = false;
@@ -266,7 +289,7 @@ void passwordmanager::init() {
 
         }
         temp_key = SHA256::sha_256(key);
-        if (temp_key != correct_key_sha_256) {
+        if (!is_correct_key(temp_key)) {
             cerr << "密码错误！请重新输入！" << endl;
             system_pause();
             system_clear();

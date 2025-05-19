@@ -19,6 +19,7 @@ int run_Graphical_Interface(int argc, char* argv[]) {
     cout << "Running graphical interface..." << endl;//调试用代码
     reminder a;
     passwordmanager b;
+    cout <<"is_graphic = " << (is_graphic ? "True" : "False") << endl;
     a.get_current_date();
     cout << "SHA256::sha_256(123)= " << SHA256::sha_256("123") << endl;
     cout << "SHA256::sha_256(123456)= " << SHA256::sha_256("123456") << endl;
