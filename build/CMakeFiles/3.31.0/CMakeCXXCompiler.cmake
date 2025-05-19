@@ -87,9 +87,9 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/usr/include/c++/12;/usr/include/aarch64-linux-gnu/c++/12;/usr/include/c++/12/backward;/usr/lib/gcc/aarch64-linux-gnu/12/include;/usr/local/include;/usr/include/aarch64-linux-gnu;/usr/include")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/usr/include/c++/12;/usr/include/aarch64-linux-gnu/c++/12;/usr/include/c++/12/backward;/usr/lib/gcc/aarch64-linux-gnu/12/include;/usr/local/include;/usr/aarch64-linux-gnu/include;/usr/include/aarch64-linux-gnu;/usr/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;m;gcc_s;gcc;c;gcc_s;gcc")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/aarch64-linux-gnu/12;/usr/lib/aarch64-linux-gnu;/usr/lib;/lib/aarch64-linux-gnu;/lib")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/aarch64-linux-gnu/12;/usr/aarch64-linux-gnu/lib;/usr/lib/aarch64-linux-gnu;/usr/lib;/lib/aarch64-linux-gnu;/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
 set(CMAKE_CXX_COMPILER_CLANG_RESOURCE_DIR "")
 

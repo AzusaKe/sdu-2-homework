@@ -7,13 +7,13 @@ set(CMAKE_CXX_STANDARD 20)
 if (WIN32)
     set(Qt5_DIR "F:/Qt/5.15.18/mingw81_64/lib/cmake/Qt5")
 elseif (UNIX AND NOT APPLE)
-
+    set(Qt6_DIR "/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6")
 else ()
 
 endif ()
 
 #寻找Qt5包
-find_package(Qt5 COMPONENTS Core Gui Widgets REQUIRED)
+find_package(Qt6 COMPONENTS Core Gui Widgets REQUIRED)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
@@ -29,5 +29,5 @@ add_executable(SDU_2_homework ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp  ${SRC_LIST})
 
 #链接Qt5库
 if(WIN32 OR UNIX AND NOT APPLE)
-target_link_libraries(SDU_2_homework Qt5::Core Qt5::Gui Qt5::Widgets)
+target_link_libraries(SDU_2_homework Qt6::Core Qt6::Gui Qt6::Widgets)
 endif()

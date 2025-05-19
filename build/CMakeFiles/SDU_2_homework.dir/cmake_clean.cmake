@@ -17,8 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.o.d"
   "CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.o"
   "CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.o.d"
-  "SDU_2_homework"
-  "SDU_2_homework.pdb"
+  "bin/SDU_2_homework"
+  "bin/SDU_2_homework.pdb"
 )
 
 # Per-language clean rules from dependency scanning.
