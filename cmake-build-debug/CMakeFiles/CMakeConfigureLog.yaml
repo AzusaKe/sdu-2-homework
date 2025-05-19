@@ -1681,3 +1681,73 @@ events:
       Running the CXX compiler's linker: "D:/CLion2024.2.2/bin/mingw/bin/ld.exe" "-v"
       GNU ld (GNU Binutils) 2.40
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/CLion2024.2.2/bin/cmake/win/x64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "D:/CLion2024.2.2/bin/cmake/win/x64/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "D:/CLion2024.2.2/bin/cmake/win/x64/share/cmake-3.31/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "D:/CLion2024.2.2/bin/cmake/win/x64/share/cmake-3.31/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "D:/CLion2024.2.2/bin/cmake/win/x64/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "F:/Qt/6.7.3/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "F:/Qt/6.7.3/msvc2019_64/lib/cmake/Qt6/Qt6Dependencies.cmake:27 (_qt_internal_find_third_party_dependencies)"
+      - "F:/Qt/6.7.3/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake:124 (include)"
+      - "CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "F:/SDU-2-homework/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-be8bgm"
+      binary: "F:/SDU-2-homework/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-be8bgm"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "F:/Qt/6.7.3/msvc2019_64/lib/cmake/Qt6;F:/Qt/6.7.3/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;F:/Qt/6.7.3/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/SDU-2-homework/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-be8bgm'
+        
+        Run Build Command(s): D:/CLion2024.2.2/bin/ninja/win/x64/ninja.exe -v cmTC_33dce
+        [1/2] D:\\CLion2024.2.2\\bin\\mingw\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD  -fdiagnostics-color=always -o CMakeFiles/cmTC_33dce.dir/src.c.obj -c F:/SDU-2-homework/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-be8bgm/src.c
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\CLion2024.2.2\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_33dce.dir/src.c.obj -o cmTC_33dce.exe -Wl,--out-implib,libcmTC_33dce.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/CLion2024.2.2/bin/cmake/win/x64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "D:/CLion2024.2.2/bin/cmake/win/x64/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "F:/Qt/6.7.3/msvc2019_64/lib/cmake/Qt6/FindWrapAtomic.cmake:36 (check_cxx_source_compiles)"
+      - "D:/CLion2024.2.2/bin/cmake/win/x64/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "F:/Qt/6.7.3/msvc2019_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake:36 (find_dependency)"
+      - "F:/Qt/6.7.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake:33 (_qt_internal_find_third_party_dependencies)"
+      - "F:/Qt/6.7.3/msvc2019_64/lib/cmake/Qt6Core/Qt6CoreConfig.cmake:45 (include)"
+      - "F:/Qt/6.7.3/msvc2019_64/lib/cmake/Qt6/Qt6Config.cmake:169 (find_package)"
+      - "CMakeLists.txt:16 (find_package)"
+    checks:
+      - "Performing Test HAVE_STDATOMIC"
+    directories:
+      source: "F:/SDU-2-homework/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xx0ww7"
+      binary: "F:/SDU-2-homework/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xx0ww7"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "F:/Qt/6.7.3/msvc2019_64/lib/cmake/Qt6;F:/Qt/6.7.3/msvc2019_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;F:/Qt/6.7.3/msvc2019_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_STDATOMIC"
+      cached: true
+      stdout: |
+        Change Dir: 'F:/SDU-2-homework/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xx0ww7'
+        
+        Run Build Command(s): D:/CLion2024.2.2/bin/ninja/win/x64/ninja.exe -v cmTC_ade19
+        [1/2] D:\\CLion2024.2.2\\bin\\mingw\\bin\\g++.exe -DHAVE_STDATOMIC  -std=gnu++20 -fdiagnostics-color=always -o CMakeFiles/cmTC_ade19.dir/src.cxx.obj -c F:/SDU-2-homework/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-xx0ww7/src.cxx
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && D:\\CLion2024.2.2\\bin\\mingw\\bin\\g++.exe   CMakeFiles/cmTC_ade19.dir/src.cxx.obj -o cmTC_ade19.exe -Wl,--out-implib,libcmTC_ade19.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+...
