@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 #添加Qt5库
 if (WIN32)
-    set(Qt5_DIR "F:/Qt/5.15.18/mingw81_64/lib/cmake/Qt5")
+    set(Qt6_DIR "F:/Qt/6.7.3/mingw81_64/lib/cmake/Qt5")
 elseif (UNIX AND NOT APPLE)
     set(Qt6_DIR "/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6")
 else ()
