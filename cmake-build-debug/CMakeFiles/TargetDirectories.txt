@@ -1,5 +1,0 @@
-F:/SDU-2-homework/cmake-build-debug/CMakeFiles/SDU_2_homework.dir
-F:/SDU-2-homework/cmake-build-debug/CMakeFiles/edit_cache.dir
-F:/SDU-2-homework/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-F:/SDU-2-homework/cmake-build-debug/CMakeFiles/SDU_2_homework_autogen_timestamp_deps.dir
-F:/SDU-2-homework/cmake-build-debug/CMakeFiles/SDU_2_homework_autogen.dir
