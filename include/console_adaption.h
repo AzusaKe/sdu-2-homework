@@ -5,6 +5,13 @@
 #ifndef CONSOLE_ADAPTION_H
 #define CONSOLE_ADAPTION_H
 
+#include <QApplication>
+#include <QLabel>
+#include <QLineEdit>
+#include <QPushButton>
+#include <QHBoxLayout>
+#include <QVBoxLayout>
+#include <QWidget>
 #include <QtCore/qglobal.h>
 
 #ifdef Q_OS_WIN

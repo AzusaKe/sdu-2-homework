@@ -2,6 +2,10 @@ CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o: \
  /home/tiny/AZ_projects/sdu-2-homework/src/console_adaption.cpp \
  /usr/aarch64-linux-gnu/include/stdc-predef.h \
  /home/tiny/AZ_projects/sdu-2-homework/include/console_adaption.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QApplication \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qapplication.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qtwidgetsglobal.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtguiglobal.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qglobal.h \
  /usr/include/c++/12/type_traits \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
@@ -250,6 +254,209 @@ CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o: \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qtresource.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qttranslation.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qversiontagging.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtgui-config.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtguiexports.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qtwidgets-config.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qtwidgetsexports.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qcoreapplication.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qstring.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qchar.h \
+ /usr/include/c++/12/functional /usr/include/c++/12/bits/std_function.h \
+ /usr/include/c++/12/unordered_map \
+ /usr/include/c++/12/ext/aligned_buffer.h \
+ /usr/include/c++/12/bits/hashtable.h \
+ /usr/include/c++/12/bits/hashtable_policy.h \
+ /usr/include/c++/12/bits/node_handle.h \
+ /usr/include/c++/12/bits/unordered_map.h \
+ /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/vector \
+ /usr/include/c++/12/bits/stl_uninitialized.h \
+ /usr/include/c++/12/bits/stl_vector.h \
+ /usr/include/c++/12/bits/stl_bvector.h \
+ /usr/include/c++/12/bits/vector.tcc /usr/include/c++/12/array \
+ /usr/include/c++/12/bits/stl_algo.h \
+ /usr/include/c++/12/bits/algorithmfwd.h \
+ /usr/include/c++/12/bits/stl_heap.h \
+ /usr/include/c++/12/bits/stl_tempbuf.h \
+ /usr/include/c++/12/bits/uniform_int_dist.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qstringview.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qbytearray.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qrefcount.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qnamespace.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qtmetamacros.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qarraydata.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qpair.h \
+ /usr/aarch64-linux-gnu/include/string.h \
+ /usr/aarch64-linux-gnu/include/strings.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qarraydatapointer.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qarraydataops.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qcontainertools_impl.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qxptype_traits.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/q20type_traits.h \
+ /usr/include/c++/12/cstring /usr/include/c++/12/iterator \
+ /usr/include/c++/12/bits/stream_iterator.h \
+ /usr/include/c++/12/bits/streambuf_iterator.h \
+ /usr/include/c++/12/streambuf /usr/include/c++/12/bits/ios_base.h \
+ /usr/include/c++/12/ext/atomicity.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/atomic_word.h \
+ /usr/aarch64-linux-gnu/include/sys/single_threaded.h \
+ /usr/include/c++/12/bits/locale_classes.h \
+ /usr/include/c++/12/bits/locale_classes.tcc \
+ /usr/include/c++/12/bits/streambuf.tcc /usr/include/c++/12/memory \
+ /usr/include/c++/12/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/12/bits/align.h /usr/include/c++/12/bit \
+ /usr/include/c++/12/bits/unique_ptr.h /usr/include/c++/12/ostream \
+ /usr/include/c++/12/ios /usr/include/c++/12/bits/basic_ios.h \
+ /usr/include/c++/12/bits/locale_facets.h /usr/include/c++/12/cwctype \
+ /usr/aarch64-linux-gnu/include/wctype.h \
+ /usr/aarch64-linux-gnu/include/bits/wctype-wchar.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/ctype_base.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/ctype_inline.h \
+ /usr/include/c++/12/bits/locale_facets.tcc \
+ /usr/include/c++/12/bits/basic_ios.tcc \
+ /usr/include/c++/12/bits/ostream.tcc \
+ /usr/include/c++/12/bits/shared_ptr.h \
+ /usr/include/c++/12/bits/shared_ptr_base.h \
+ /usr/include/c++/12/bits/allocated_ptr.h \
+ /usr/include/c++/12/ext/concurrence.h \
+ /usr/include/c++/12/bits/shared_ptr_atomic.h \
+ /usr/include/c++/12/backward/auto_ptr.h \
+ /usr/include/c++/12/bits/ranges_uninitialized.h \
+ /usr/include/c++/12/bits/ranges_algobase.h \
+ /usr/include/c++/12/bits/uses_allocator_args.h \
+ /usr/include/c++/12/pstl/glue_memory_defs.h \
+ /usr/include/c++/12/pstl/execution_defs.h /usr/include/c++/12/algorithm \
+ /usr/include/c++/12/bits/ranges_algo.h \
+ /usr/include/c++/12/bits/ranges_util.h \
+ /usr/include/c++/12/pstl/glue_algorithm_defs.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/q20functional.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/q20memory.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qbytearrayalgorithms.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qbytearrayview.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qstringfwd.h \
+ /usr/include/c++/12/stdlib.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qstringliteral.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qstringalgorithms.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qlatin1stringview.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qanystringview.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qutf8stringview.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qstringtokenizer.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qstringbuilder.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qstringconverter.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qstringconverter_base.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qcoreevent.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qobjectdefs.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qobjectdefs_impl.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qfunctionaltools_impl.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qdeadlinetimer.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qelapsedtimer.h \
+ /usr/include/c++/12/chrono /usr/include/c++/12/bits/chrono.h \
+ /usr/include/c++/12/ratio /usr/include/c++/12/ctime \
+ /usr/include/c++/12/sstream /usr/include/c++/12/istream \
+ /usr/include/c++/12/bits/istream.tcc \
+ /usr/include/c++/12/bits/sstream.tcc \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qmetatype.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qcompare.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qcomparehelpers.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qdatastream.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qscopedpointer.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qiodevicebase.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qfloat16.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qhashfunctions.h \
+ /usr/include/c++/12/numeric /usr/include/c++/12/bits/stl_numeric.h \
+ /usr/include/c++/12/pstl/glue_numeric_defs.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qmath.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qalgorithms.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qiterable.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qmetacontainer.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qcontainerinfo.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qtaggedpointer.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qscopeguard.h \
+ /usr/include/c++/12/list /usr/include/c++/12/bits/stl_list.h \
+ /usr/include/c++/12/bits/list.tcc /usr/include/c++/12/map \
+ /usr/include/c++/12/bits/stl_tree.h /usr/include/c++/12/bits/stl_map.h \
+ /usr/include/c++/12/bits/stl_multimap.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qeventloop.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qobject.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qlist.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qiterator.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qbytearraylist.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qstringlist.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qstringmatcher.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qobject_impl.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qbindingstorage.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qnativeinterface.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qdebug.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qtextstream.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qcontiguouscache.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qsharedpointer.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qshareddata.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qsharedpointer_impl.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qmap.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qshareddata_impl.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qset.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qhash.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qvarlengtharray.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qcoreapplication_platform.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qwindowdefs.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qpoint.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/q23utility.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qsize.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qmargins.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qcursor.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qbitmap.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qpixmap.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qpaintdevice.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qrect.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qcolor.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qrgb.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qrgba64.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qimage.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qpixelformat.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtransform.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qpolygon.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qregion.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qline.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qguiapplication.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qinputmethod.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qlocale.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qvariant.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qguiapplication_platform.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QLabel \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qlabel.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qframe.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qwidget.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qaction.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qkeysequence.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qicon.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qpalette.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qbrush.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qfont.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qendian.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qfontmetrics.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qfontinfo.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qsizepolicy.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qpicture.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qiodevice.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtextdocument.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qurl.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QLineEdit \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qlineedit.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtextcursor.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtextformat.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qpen.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtextoption.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QPushButton \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qpushbutton.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qabstractbutton.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QHBoxLayout \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qboxlayout.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qlayout.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qlayoutitem.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qboxlayout.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qgridlayout.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QVBoxLayout \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QWidget \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qwidget.h \
  /usr/aarch64-linux-gnu/include/termios.h \
  /usr/aarch64-linux-gnu/include/bits/termios.h \
  /usr/aarch64-linux-gnu/include/bits/termios-struct.h \
@@ -262,22 +469,4 @@ CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.o: \
  /usr/aarch64-linux-gnu/include/bits/termios-tcflow.h \
  /usr/aarch64-linux-gnu/include/bits/termios-misc.h \
  /usr/aarch64-linux-gnu/include/sys/ttydefaults.h \
- /usr/include/c++/12/iostream /usr/include/c++/12/ostream \
- /usr/include/c++/12/ios /usr/include/c++/12/bits/ios_base.h \
- /usr/include/c++/12/ext/atomicity.h \
- /usr/include/aarch64-linux-gnu/c++/12/bits/atomic_word.h \
- /usr/aarch64-linux-gnu/include/sys/single_threaded.h \
- /usr/include/c++/12/bits/locale_classes.h \
- /usr/include/c++/12/bits/locale_classes.tcc \
- /usr/include/c++/12/streambuf /usr/include/c++/12/bits/streambuf.tcc \
- /usr/include/c++/12/bits/basic_ios.h \
- /usr/include/c++/12/bits/locale_facets.h /usr/include/c++/12/cwctype \
- /usr/aarch64-linux-gnu/include/wctype.h \
- /usr/aarch64-linux-gnu/include/bits/wctype-wchar.h \
- /usr/include/aarch64-linux-gnu/c++/12/bits/ctype_base.h \
- /usr/include/c++/12/bits/streambuf_iterator.h \
- /usr/include/aarch64-linux-gnu/c++/12/bits/ctype_inline.h \
- /usr/include/c++/12/bits/locale_facets.tcc \
- /usr/include/c++/12/bits/basic_ios.tcc \
- /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
- /usr/include/c++/12/bits/istream.tcc
+ /usr/include/c++/12/iostream

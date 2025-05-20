@@ -2,6 +2,10 @@ CMakeFiles/SDU_2_homework.dir/main.cpp.o: \
  /home/tiny/AZ_projects/sdu-2-homework/main.cpp \
  /usr/aarch64-linux-gnu/include/stdc-predef.h \
  /home/tiny/AZ_projects/sdu-2-homework/include/console_adaption.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QApplication \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qapplication.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qtwidgetsglobal.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtguiglobal.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qglobal.h \
  /usr/include/c++/12/type_traits \
  /usr/include/aarch64-linux-gnu/c++/12/bits/c++config.h \
@@ -250,64 +254,6 @@ CMakeFiles/SDU_2_homework.dir/main.cpp.o: \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qtresource.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qttranslation.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qversiontagging.h \
- /usr/aarch64-linux-gnu/include/termios.h \
- /usr/aarch64-linux-gnu/include/bits/termios.h \
- /usr/aarch64-linux-gnu/include/bits/termios-struct.h \
- /usr/aarch64-linux-gnu/include/bits/termios-c_cc.h \
- /usr/aarch64-linux-gnu/include/bits/termios-c_iflag.h \
- /usr/aarch64-linux-gnu/include/bits/termios-c_oflag.h \
- /usr/aarch64-linux-gnu/include/bits/termios-baud.h \
- /usr/aarch64-linux-gnu/include/bits/termios-c_cflag.h \
- /usr/aarch64-linux-gnu/include/bits/termios-c_lflag.h \
- /usr/aarch64-linux-gnu/include/bits/termios-tcflow.h \
- /usr/aarch64-linux-gnu/include/bits/termios-misc.h \
- /usr/aarch64-linux-gnu/include/sys/ttydefaults.h \
- /usr/include/c++/12/iostream /usr/include/c++/12/ostream \
- /usr/include/c++/12/ios /usr/include/c++/12/bits/ios_base.h \
- /usr/include/c++/12/ext/atomicity.h \
- /usr/include/aarch64-linux-gnu/c++/12/bits/atomic_word.h \
- /usr/aarch64-linux-gnu/include/sys/single_threaded.h \
- /usr/include/c++/12/bits/locale_classes.h \
- /usr/include/c++/12/bits/locale_classes.tcc \
- /usr/include/c++/12/streambuf /usr/include/c++/12/bits/streambuf.tcc \
- /usr/include/c++/12/bits/basic_ios.h \
- /usr/include/c++/12/bits/locale_facets.h /usr/include/c++/12/cwctype \
- /usr/aarch64-linux-gnu/include/wctype.h \
- /usr/aarch64-linux-gnu/include/bits/wctype-wchar.h \
- /usr/include/aarch64-linux-gnu/c++/12/bits/ctype_base.h \
- /usr/include/c++/12/bits/streambuf_iterator.h \
- /usr/include/aarch64-linux-gnu/c++/12/bits/ctype_inline.h \
- /usr/include/c++/12/bits/locale_facets.tcc \
- /usr/include/c++/12/bits/basic_ios.tcc \
- /usr/include/c++/12/bits/ostream.tcc /usr/include/c++/12/istream \
- /usr/include/c++/12/bits/istream.tcc \
- /home/tiny/AZ_projects/sdu-2-homework/include/financenote.h \
- /home/tiny/AZ_projects/sdu-2-homework/include/notebasic.h \
- /usr/include/c++/12/vector /usr/include/c++/12/bits/stl_uninitialized.h \
- /usr/include/c++/12/bits/stl_vector.h \
- /usr/include/c++/12/bits/stl_bvector.h \
- /usr/include/c++/12/bits/vector.tcc /usr/include/c++/12/iomanip \
- /usr/include/c++/12/locale \
- /usr/include/c++/12/bits/locale_facets_nonio.h /usr/include/c++/12/ctime \
- /usr/include/aarch64-linux-gnu/c++/12/bits/time_members.h \
- /usr/include/aarch64-linux-gnu/c++/12/bits/messages_members.h \
- /usr/aarch64-linux-gnu/include/libintl.h \
- /usr/include/c++/12/bits/codecvt.h \
- /usr/include/c++/12/bits/locale_facets_nonio.tcc \
- /usr/include/c++/12/bits/locale_conv.h \
- /usr/include/c++/12/bits/quoted_string.h /usr/include/c++/12/sstream \
- /usr/include/c++/12/bits/sstream.tcc /usr/include/c++/12/fstream \
- /usr/include/aarch64-linux-gnu/c++/12/bits/basic_file.h \
- /usr/include/aarch64-linux-gnu/c++/12/bits/c++io.h \
- /usr/include/c++/12/bits/fstream.tcc \
- /home/tiny/AZ_projects/sdu-2-homework/include/passwordmanager.h \
- /home/tiny/AZ_projects/sdu-2-homework/include/reminder.h \
- /home/tiny/AZ_projects/sdu-2-homework/include/filecheck_and_init.h \
- /home/tiny/AZ_projects/sdu-2-homework/include/SHA_256.h \
- /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QApplication \
- /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qapplication.h \
- /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qtwidgetsglobal.h \
- /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtguiglobal.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtgui-config.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtguiexports.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qtwidgets-config.h \
@@ -322,7 +268,11 @@ CMakeFiles/SDU_2_homework.dir/main.cpp.o: \
  /usr/include/c++/12/bits/hashtable_policy.h \
  /usr/include/c++/12/bits/node_handle.h \
  /usr/include/c++/12/bits/unordered_map.h \
- /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/array \
+ /usr/include/c++/12/bits/erase_if.h /usr/include/c++/12/vector \
+ /usr/include/c++/12/bits/stl_uninitialized.h \
+ /usr/include/c++/12/bits/stl_vector.h \
+ /usr/include/c++/12/bits/stl_bvector.h \
+ /usr/include/c++/12/bits/vector.tcc /usr/include/c++/12/array \
  /usr/include/c++/12/bits/stl_algo.h \
  /usr/include/c++/12/bits/algorithmfwd.h \
  /usr/include/c++/12/bits/stl_heap.h \
@@ -343,10 +293,27 @@ CMakeFiles/SDU_2_homework.dir/main.cpp.o: \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qxptype_traits.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/q20type_traits.h \
  /usr/include/c++/12/cstring /usr/include/c++/12/iterator \
- /usr/include/c++/12/bits/stream_iterator.h /usr/include/c++/12/memory \
+ /usr/include/c++/12/bits/stream_iterator.h \
+ /usr/include/c++/12/bits/streambuf_iterator.h \
+ /usr/include/c++/12/streambuf /usr/include/c++/12/bits/ios_base.h \
+ /usr/include/c++/12/ext/atomicity.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/atomic_word.h \
+ /usr/aarch64-linux-gnu/include/sys/single_threaded.h \
+ /usr/include/c++/12/bits/locale_classes.h \
+ /usr/include/c++/12/bits/locale_classes.tcc \
+ /usr/include/c++/12/bits/streambuf.tcc /usr/include/c++/12/memory \
  /usr/include/c++/12/bits/stl_raw_storage_iter.h \
  /usr/include/c++/12/bits/align.h /usr/include/c++/12/bit \
- /usr/include/c++/12/bits/unique_ptr.h \
+ /usr/include/c++/12/bits/unique_ptr.h /usr/include/c++/12/ostream \
+ /usr/include/c++/12/ios /usr/include/c++/12/bits/basic_ios.h \
+ /usr/include/c++/12/bits/locale_facets.h /usr/include/c++/12/cwctype \
+ /usr/aarch64-linux-gnu/include/wctype.h \
+ /usr/aarch64-linux-gnu/include/bits/wctype-wchar.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/ctype_base.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/ctype_inline.h \
+ /usr/include/c++/12/bits/locale_facets.tcc \
+ /usr/include/c++/12/bits/basic_ios.tcc \
+ /usr/include/c++/12/bits/ostream.tcc \
  /usr/include/c++/12/bits/shared_ptr.h \
  /usr/include/c++/12/bits/shared_ptr_base.h \
  /usr/include/c++/12/bits/allocated_ptr.h \
@@ -383,7 +350,10 @@ CMakeFiles/SDU_2_homework.dir/main.cpp.o: \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qdeadlinetimer.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qelapsedtimer.h \
  /usr/include/c++/12/chrono /usr/include/c++/12/bits/chrono.h \
- /usr/include/c++/12/ratio \
+ /usr/include/c++/12/ratio /usr/include/c++/12/ctime \
+ /usr/include/c++/12/sstream /usr/include/c++/12/istream \
+ /usr/include/c++/12/bits/istream.tcc \
+ /usr/include/c++/12/bits/sstream.tcc \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qmetatype.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qcompare.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qcomparehelpers.h \
@@ -468,4 +438,53 @@ CMakeFiles/SDU_2_homework.dir/main.cpp.o: \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qpicture.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qiodevice.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtextdocument.h \
- /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qurl.h
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qurl.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QLineEdit \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qlineedit.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtextcursor.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtextformat.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qpen.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtextoption.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QPushButton \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qpushbutton.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qabstractbutton.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QHBoxLayout \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qboxlayout.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qlayout.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qlayoutitem.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qboxlayout.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qgridlayout.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QVBoxLayout \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QWidget \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qwidget.h \
+ /usr/aarch64-linux-gnu/include/termios.h \
+ /usr/aarch64-linux-gnu/include/bits/termios.h \
+ /usr/aarch64-linux-gnu/include/bits/termios-struct.h \
+ /usr/aarch64-linux-gnu/include/bits/termios-c_cc.h \
+ /usr/aarch64-linux-gnu/include/bits/termios-c_iflag.h \
+ /usr/aarch64-linux-gnu/include/bits/termios-c_oflag.h \
+ /usr/aarch64-linux-gnu/include/bits/termios-baud.h \
+ /usr/aarch64-linux-gnu/include/bits/termios-c_cflag.h \
+ /usr/aarch64-linux-gnu/include/bits/termios-c_lflag.h \
+ /usr/aarch64-linux-gnu/include/bits/termios-tcflow.h \
+ /usr/aarch64-linux-gnu/include/bits/termios-misc.h \
+ /usr/aarch64-linux-gnu/include/sys/ttydefaults.h \
+ /usr/include/c++/12/iostream \
+ /home/tiny/AZ_projects/sdu-2-homework/include/financenote.h \
+ /home/tiny/AZ_projects/sdu-2-homework/include/notebasic.h \
+ /usr/include/c++/12/iomanip /usr/include/c++/12/locale \
+ /usr/include/c++/12/bits/locale_facets_nonio.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/time_members.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/messages_members.h \
+ /usr/aarch64-linux-gnu/include/libintl.h \
+ /usr/include/c++/12/bits/codecvt.h \
+ /usr/include/c++/12/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/12/bits/locale_conv.h \
+ /usr/include/c++/12/bits/quoted_string.h /usr/include/c++/12/fstream \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/basic_file.h \
+ /usr/include/aarch64-linux-gnu/c++/12/bits/c++io.h \
+ /usr/include/c++/12/bits/fstream.tcc \
+ /home/tiny/AZ_projects/sdu-2-homework/include/passwordmanager.h \
+ /home/tiny/AZ_projects/sdu-2-homework/include/reminder.h \
+ /home/tiny/AZ_projects/sdu-2-homework/include/filecheck_and_init.h \
+ /home/tiny/AZ_projects/sdu-2-homework/include/SHA_256.h
