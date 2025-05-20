@@ -24,7 +24,7 @@
 #include<string>
 #include<cstdlib>
 #include<iostream>
-#include"Qtwindows.h"
+#include"Mainwindows.h"
 using namespace std;
 
 #pragma once
