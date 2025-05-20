@@ -15,10 +15,10 @@
 ########################
 
 //Path to a program.
-CMAKE_ADDR2LINE:FILEPATH=D:/CLion2024.2.2/bin/mingw/bin/addr2line.exe
+CMAKE_ADDR2LINE:FILEPATH=F:/Qt/Tools/mingw1120_64/bin/addr2line.exe
 
 //Path to a program.
-CMAKE_AR:FILEPATH=D:/CLion2024.2.2/bin/mingw/bin/ar.exe
+CMAKE_AR:FILEPATH=F:/Qt/Tools/mingw1120_64/bin/ar.exe
 
 //Choose the type of build, options are: None Debug Release RelWithDebInfo
 // MinSizeRel ...
@@ -27,16 +27,16 @@ CMAKE_BUILD_TYPE:STRING=Debug
 //Enable colored diagnostics throughout.
 CMAKE_COLOR_DIAGNOSTICS:BOOL=ON
 
-//CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=D:/CLion2024.2.2/bin/mingw/bin/g++.exe
+//No help, variable specified on the command line.
+CMAKE_CXX_COMPILER:UNINITIALIZED=F:/Qt/Tools/mingw1120_64/bin/g++.exe
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_AR:FILEPATH=D:/CLion2024.2.2/bin/mingw/bin/gcc-ar.exe
+CMAKE_CXX_COMPILER_AR:FILEPATH=F:/Qt/Tools/mingw1120_64/bin/gcc-ar.exe
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_RANLIB:FILEPATH=D:/CLion2024.2.2/bin/mingw/bin/gcc-ranlib.exe
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=F:/Qt/Tools/mingw1120_64/bin/gcc-ranlib.exe
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -56,16 +56,16 @@ CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 //Libraries linked by default with all C++ applications.
 CMAKE_CXX_STANDARD_LIBRARIES:STRING=-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
 
-//C compiler
-CMAKE_C_COMPILER:FILEPATH=D:/CLion2024.2.2/bin/mingw/bin/gcc.exe
+//No help, variable specified on the command line.
+CMAKE_C_COMPILER:UNINITIALIZED=F:/Qt/Tools/mingw1120_64/bin/gcc.exe
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_C_COMPILER_AR:FILEPATH=D:/CLion2024.2.2/bin/mingw/bin/gcc-ar.exe
+CMAKE_C_COMPILER_AR:FILEPATH=F:/Qt/Tools/mingw1120_64/bin/gcc-ar.exe
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_C_COMPILER_RANLIB:FILEPATH=D:/CLion2024.2.2/bin/mingw/bin/gcc-ranlib.exe
+CMAKE_C_COMPILER_RANLIB:FILEPATH=F:/Qt/Tools/mingw1120_64/bin/gcc-ranlib.exe
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -86,7 +86,7 @@ CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 CMAKE_C_STANDARD_LIBRARIES:STRING=-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
 
 //Path to a program.
-CMAKE_DLLTOOL:FILEPATH=D:/CLion2024.2.2/bin/mingw/bin/dlltool.exe
+CMAKE_DLLTOOL:FILEPATH=F:/Qt/Tools/mingw1120_64/bin/dlltool.exe
 
 //Flags used by the linker during all build types.
 CMAKE_EXE_LINKER_FLAGS:STRING=
@@ -167,7 +167,7 @@ CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
 CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 
 //Path to a program.
-CMAKE_LINKER:FILEPATH=D:/CLion2024.2.2/bin/mingw/bin/ld.exe
+CMAKE_LINKER:FILEPATH=F:/Qt/Tools/mingw1120_64/bin/ld.exe
 
 //No help, variable specified on the command line.
 CMAKE_MAKE_PROGRAM:UNINITIALIZED=D:/CLion2024.2.2/bin/ninja/win/x64/ninja.exe
@@ -193,13 +193,13 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_NM:FILEPATH=D:/CLion2024.2.2/bin/mingw/bin/nm.exe
+CMAKE_NM:FILEPATH=F:/Qt/Tools/mingw1120_64/bin/nm.exe
 
 //Path to a program.
-CMAKE_OBJCOPY:FILEPATH=D:/CLion2024.2.2/bin/mingw/bin/objcopy.exe
+CMAKE_OBJCOPY:FILEPATH=F:/Qt/Tools/mingw1120_64/bin/objcopy.exe
 
 //Path to a program.
-CMAKE_OBJDUMP:FILEPATH=D:/CLion2024.2.2/bin/mingw/bin/objdump.exe
+CMAKE_OBJDUMP:FILEPATH=F:/Qt/Tools/mingw1120_64/bin/objdump.exe
 
 //Value Computed by CMake
 CMAKE_PROJECT_DESCRIPTION:STATIC=
@@ -211,10 +211,10 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=SDU_2_homework
 
 //Path to a program.
-CMAKE_RANLIB:FILEPATH=D:/CLion2024.2.2/bin/mingw/bin/ranlib.exe
+CMAKE_RANLIB:FILEPATH=F:/Qt/Tools/mingw1120_64/bin/ranlib.exe
 
 //RC compiler
-CMAKE_RC_COMPILER:FILEPATH=D:/CLion2024.2.2/bin/mingw/bin/windres.exe
+CMAKE_RC_COMPILER:FILEPATH=F:/Qt/Tools/mingw1120_64/bin/windres.exe
 
 //Flags for Windows Resource Compiler during all build types.
 CMAKE_RC_FLAGS:STRING=
@@ -232,7 +232,7 @@ CMAKE_RC_FLAGS_RELEASE:STRING=
 CMAKE_RC_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_READELF:FILEPATH=D:/CLion2024.2.2/bin/mingw/bin/readelf.exe
+CMAKE_READELF:FILEPATH=F:/Qt/Tools/mingw1120_64/bin/readelf.exe
 
 //Flags used by the linker during the creation of shared libraries
 // during all build types.
@@ -282,7 +282,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_STRIP:FILEPATH=D:/CLion2024.2.2/bin/mingw/bin/strip.exe
+CMAKE_STRIP:FILEPATH=F:/Qt/Tools/mingw1120_64/bin/strip.exe
 
 //Path to a program.
 CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
@@ -1287,9 +1287,9 @@ Vulkan_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: Vulkan_LIBRARY
 Vulkan_LIBRARY-ADVANCED:INTERNAL=1
 //linker supports push/pop state
-_CMAKE_CXX_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
+_CMAKE_CXX_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=FALSE
 //linker supports push/pop state
-_CMAKE_C_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
+_CMAKE_C_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=FALSE
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 //CMAKE_INSTALL_PREFIX during last run
