@@ -8,9 +8,6 @@
 #include"filecheck_and_init.h"
 #include "SHA_256.h"
 
-#include <QApplication>
-#include <QLabel>
-
 using namespace std;//使用标准命名空间
 
 bool is_graphic = false;//是否为图形化界面
@@ -29,10 +26,42 @@ int run_Graphical_Interface(int argc, char* argv[]) {
     //图形化界面代码实现
     try {
         QApplication app(argc, argv);
-        QLabel label("Hello, World!");
-        label.setWindowTitle("Hello");
-        label.resize(1280, 800);
-        label.show();
+        QLabel *info_label = new QLabel;
+        QLabel *whelcome_label = new QLabel;
+        QLabel *choice_info_label = new QLabel;
+        QPushButton *financenote_button = new QPushButton;
+        QPushButton *reminder_button = new QPushButton;
+        QPushButton *passwordmanager_button = new QPushButton;
+        QPushButton *exit_button = new QPushButton;
+        QHBoxLayout *choice_layout = new QHBoxLayout;
+        QHBoxLayout *exit_layout = new QHBoxLayout;
+        QVBoxLayout *main_layout = new QVBoxLayout;
+
+        whelcome_label -> setText("欢迎");
+        choice_info_label -> setText("任选一个功能以继续：");
+        financenote_button -> setText("记账本");
+        reminder_button -> setText("日程提醒");
+        passwordmanager_button -> setText("密码管理器");
+        exit_button -> setText("退出");
+        
+        choice_layout -> addWidget(financenote_button);
+        choice_layout -> addWidget(reminder_button);
+        choice_layout -> addWidget(passwordmanager_button);
+
+        exit_layout -> addWidget(exit_button);
+
+        main_layout -> addWidget(whelcome_label);
+        main_layout -> addWidget(choice_info_label);
+        main_layout -> addLayout(choice_layout);
+        main_layout -> addLayout(exit_layout);
+
+        QWidget *index = new QWidget;
+        index -> setLayout(main_layout);
+
+        index -> setWindowTitle("桌面工具");
+
+        index -> show();
+
         return app.exec();
     } catch (const std::exception& e) {
         cerr << "Error: " << e.what() << endl;
