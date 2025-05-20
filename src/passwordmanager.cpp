@@ -289,24 +289,21 @@ void passwordmanager::init() {
             cout << "欢迎使用密码管理器！" << endl;
             cout << "请创建你用于登录密码管理系统的总密码，" << endl << "注意，此密码是你用于查看密码记录的唯一凭据，请勿丢失！" << endl << "一旦丢失不可恢复，需删除旧的密码记录！" << endl;
             cout << "输入密码凭据：" << endl;
-            cin.ignore();
-            cin >> key;
+            key = system_get_hidden_input();
             correct_key_sha_256 = SHA256::sha_256(key);
             passwordmanager::save_to_file();
-            cout << "你的密码凭据已创建，请牢记！回车以进入密码管理器！" << endl;
+            cout << "你的密码凭据已创建并保存，请牢记！回车以进入密码管理器！" << endl;
             system_pause();
             is_new_user = false;
         }else {
             cout << "请输入你的加密密钥以访问密码管理器：" << endl;
-            cin.ignore();
-            cin >> key;
+            key = system_get_hidden_input();
 
         }
+        system_clear();
         temp_key = SHA256::sha_256(key);
         if (!is_correct_key(temp_key)) {
             cerr << "密码错误！请重新输入！" << endl;
-            system_pause();
-            system_clear();
         }
     }while (!is_correct_key(temp_key));
     while (true) {

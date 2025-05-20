@@ -65,7 +65,8 @@ int run_Command_Line_Interface(int argc, char* argv[]) {
 
 int main(int argc, char* argv[]) {
     //windows兼容代码
-#ifdef _WIN32
+#ifdef Q_OS_WIN
+    //设置控制台输出为UTF-8编码
     SetConsoleOutputCP(CP_UTF8);
     SetConsoleCP(CP_UTF8);
     SetConsoleMode(GetStdHandle(STD_OUTPUT_HANDLE),ENABLE_PROCESSED_OUTPUT | ENABLE_WRAP_AT_EOL_OUTPUT);//修改控制台编码格式,避免乱码
