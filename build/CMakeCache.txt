@@ -339,6 +339,9 @@ Qt6WidgetsTools_DIR:PATH=/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Widgets
 //The directory containing a CMake configuration file for Qt6Widgets.
 Qt6Widgets_DIR:PATH=/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Widgets
 
+//The directory containing a CMake configuration file for Qt6.
+Qt6_DIR:PATH=/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6
+
 //Value Computed by CMake
 SDU_2_homework_BINARY_DIR:STATIC=/home/tiny/AZ_projects/sdu-2-homework/build
 
