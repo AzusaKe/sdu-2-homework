@@ -35,6 +35,8 @@ private:
     bool is_new_user;
     string file_path = "./data/password.txt";
 public:
+    passwordmanager();
+    ~passwordmanager();
     void load_from_file() override;
     void save_to_file() override;
     void display(const string&) override;

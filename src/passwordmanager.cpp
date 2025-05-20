@@ -12,6 +12,20 @@
 #include <iostream>
 #include <cmath>
 
+passwordmanager::passwordmanager() {
+    passwordmanager::load_from_file();
+    if (is_graphic){
+        cout << "密码管理器构造成功！" << endl;
+    }
+}
+
+passwordmanager::~passwordmanager() {
+    passwordmanager::close();
+    if (is_graphic){
+        cout << "密码管理器析构成功！" << endl;
+    }
+}
+
 //逻辑部分--------------------------------------------------------------------------------------------------------------------
 //文件加载函数-复用自记账本
 void passwordmanager::load_from_file() {
@@ -70,7 +84,7 @@ void passwordmanager::save_to_file() {
     }
     file.close();
     if (is_graphic){
-        cout << "已写入文件：" << passwordmanager::file_path;
+        cout << "已写入文件：" << passwordmanager::file_path << endl;;
     }
 }
 
@@ -184,7 +198,7 @@ void passwordmanager::add_entry(const string &site_name, const string &username,
 void passwordmanager::close() {
     passwordmanager::save_to_file();
     if (is_graphic){
-        cout << "密码管理器已关闭！" << endl;
+        cout << "已关闭这个密码管理器实例！" << endl;
     }
 }
 

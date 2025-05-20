@@ -13,6 +13,8 @@
 
 using namespace std;//使用标准命名空间
 
+bool is_graphic = false;//是否为图形化界面
+
 //图形化程序入口
 int run_Graphical_Interface(int argc, char* argv[]) {
     is_graphic = true;
@@ -28,7 +30,7 @@ int run_Graphical_Interface(int argc, char* argv[]) {
     QApplication app(argc,argv);
     QLabel label("Hello, World!");
     label.setWindowTitle("Hello");
-    label.resize(2000, 1000);
+    label.resize(1280, 800);
     label.show();
 
     return app.exec();

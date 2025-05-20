@@ -10,7 +10,8 @@
 #include<cstdlib>
 using namespace std;
 
-static bool is_graphic = false;
+#pragma once
+extern bool is_graphic;
 void system_clear();
 void system_pause();
 
