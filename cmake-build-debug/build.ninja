@@ -65,6 +65,14 @@ build CMakeFiles/SDU_2_homework.dir/main.cpp.obj: CXX_COMPILER__SDU_2_homework_u
   OBJECT_DIR = CMakeFiles\SDU_2_homework.dir
   OBJECT_FILE_DIR = CMakeFiles\SDU_2_homework.dir
 
+build CMakeFiles/SDU_2_homework.dir/src/Mainwindows.cpp.obj: CXX_COMPILER__SDU_2_homework_unscanned_Debug F$:/SDU-2-homework/src/Mainwindows.cpp || cmake_object_order_depends_target_SDU_2_homework
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\SDU_2_homework.dir\src\Mainwindows.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IF:/SDU-2-homework/include -IF:/SDU-2-homework/cmake-build-debug -isystem F:/SDU-2-homework/cmake-build-debug/SDU_2_homework_autogen/include -isystem F:/Qt/6.7.3/mingw_64/include/QtCore -isystem F:/Qt/6.7.3/mingw_64/include -isystem F:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -isystem F:/Qt/6.7.3/mingw_64/include/QtGui -isystem F:/Qt/6.7.3/mingw_64/include/QtWidgets
+  OBJECT_DIR = CMakeFiles\SDU_2_homework.dir
+  OBJECT_FILE_DIR = CMakeFiles\SDU_2_homework.dir\src
+
 build CMakeFiles/SDU_2_homework.dir/src/SHA_256.cpp.obj: CXX_COMPILER__SDU_2_homework_unscanned_Debug F$:/SDU-2-homework/src/SHA_256.cpp || cmake_object_order_depends_target_SDU_2_homework
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\SDU_2_homework.dir\src\SHA_256.cpp.obj.d
@@ -105,14 +113,6 @@ build CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.obj: CXX_COMPILER__SDU_2
   OBJECT_DIR = CMakeFiles\SDU_2_homework.dir
   OBJECT_FILE_DIR = CMakeFiles\SDU_2_homework.dir\src
 
-build CMakeFiles/SDU_2_homework.dir/src/mainwindow.cpp.obj: CXX_COMPILER__SDU_2_homework_unscanned_Debug F$:/SDU-2-homework/src/mainwindow.cpp || cmake_object_order_depends_target_SDU_2_homework
-  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\SDU_2_homework.dir\src\mainwindow.cpp.obj.d
-  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -IF:/SDU-2-homework/include -IF:/SDU-2-homework/cmake-build-debug -isystem F:/SDU-2-homework/cmake-build-debug/SDU_2_homework_autogen/include -isystem F:/Qt/6.7.3/mingw_64/include/QtCore -isystem F:/Qt/6.7.3/mingw_64/include -isystem F:/Qt/6.7.3/mingw_64/mkspecs/win32-g++ -isystem F:/Qt/6.7.3/mingw_64/include/QtGui -isystem F:/Qt/6.7.3/mingw_64/include/QtWidgets
-  OBJECT_DIR = CMakeFiles\SDU_2_homework.dir
-  OBJECT_FILE_DIR = CMakeFiles\SDU_2_homework.dir\src
-
 build CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.obj: CXX_COMPILER__SDU_2_homework_unscanned_Debug F$:/SDU-2-homework/src/notebasic.cpp || cmake_object_order_depends_target_SDU_2_homework
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\SDU_2_homework.dir\src\notebasic.cpp.obj.d
@@ -145,7 +145,7 @@ build CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.obj: CXX_COMPILER__SDU_2_ho
 #############################################
 # Link the executable bin\SDU_2_homework.exe
 
-build bin/SDU_2_homework.exe: CXX_EXECUTABLE_LINKER__SDU_2_homework_Debug CMakeFiles/SDU_2_homework.dir/SDU_2_homework_autogen/mocs_compilation.cpp.obj CMakeFiles/SDU_2_homework.dir/main.cpp.obj CMakeFiles/SDU_2_homework.dir/src/SHA_256.cpp.obj CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.obj CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.obj CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.obj CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.obj CMakeFiles/SDU_2_homework.dir/src/mainwindow.cpp.obj CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.obj CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.obj CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.obj | F$:/Qt/6.7.3/mingw_64/lib/libQt6Widgets.a F$:/Qt/6.7.3/mingw_64/lib/libQt6Gui.a F$:/Qt/6.7.3/mingw_64/lib/libQt6Core.a || SDU_2_homework_autogen SDU_2_homework_autogen_timestamp_deps
+build bin/SDU_2_homework.exe: CXX_EXECUTABLE_LINKER__SDU_2_homework_Debug CMakeFiles/SDU_2_homework.dir/SDU_2_homework_autogen/mocs_compilation.cpp.obj CMakeFiles/SDU_2_homework.dir/main.cpp.obj CMakeFiles/SDU_2_homework.dir/src/Mainwindows.cpp.obj CMakeFiles/SDU_2_homework.dir/src/SHA_256.cpp.obj CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.obj CMakeFiles/SDU_2_homework.dir/src/filecheck_and_init.cpp.obj CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.obj CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.obj CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.obj CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.obj CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.obj | F$:/Qt/6.7.3/mingw_64/lib/libQt6Widgets.a F$:/Qt/6.7.3/mingw_64/lib/libQt6Gui.a F$:/Qt/6.7.3/mingw_64/lib/libQt6Core.a || SDU_2_homework_autogen SDU_2_homework_autogen_timestamp_deps
   FLAGS = -g
   LINK_LIBRARIES = F:/Qt/6.7.3/mingw_64/lib/libQt6Widgets.a  F:/Qt/6.7.3/mingw_64/lib/libQt6Gui.a  F:/Qt/6.7.3/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\SDU_2_homework.dir
