@@ -3,16 +3,16 @@ project(SDU_2_homework)
 
 set(CMAKE_CXX_STANDARD 20)
 
-#添加Qt5库
-if (WIN32)
-    set(Qt6_DIR "F:/Qt/6.7.3/mingw81_64/lib/cmake/Qt6")
-elseif (UNIX AND NOT APPLE)
+#添加Qt5库(已弃用)
+#if (WIN32)
+    #set(Qt6_DIR "F:/Qt/6.7.3/mingw81_64/lib/cmake/Qt6")
+#elseif (UNIX AND NOT APPLE)
 
-else ()
+#else ()
 
-endif ()
+#endif ()
 
-#寻找Qt5包
+#寻找Qt6包
 find_package(Qt6 COMPONENTS Core Gui Widgets REQUIRED)
 
 include_directories(${PROJECT_SOURCE_DIR}/include)
@@ -27,7 +27,7 @@ file(GLOB SRC_LIST ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 
 add_executable(SDU_2_homework ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp  ${SRC_LIST})
 
-#链接Qt5库
+#链接Qt6库
 if(WIN32 OR UNIX AND NOT APPLE)
 target_link_libraries(SDU_2_homework Qt6::Core Qt6::Gui Qt6::Widgets)
 endif()
