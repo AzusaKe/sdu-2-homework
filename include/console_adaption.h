@@ -24,7 +24,7 @@
 #include<string>
 #include<cstdlib>
 #include<iostream>
-#include"Mainwindows.h"
+#include"mainwindow.h"
 using namespace std;
 
 #pragma once

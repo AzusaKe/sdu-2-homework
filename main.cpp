@@ -8,6 +8,8 @@
 #include"filecheck_and_init.h"
 #include "SHA_256.h"
 
+#include "r_add_record_window.h"
+
 using namespace std;//使用标准命名空间
 
 bool is_graphic = false;//是否为图形化界面
