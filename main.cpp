@@ -8,7 +8,9 @@
 #include"filecheck_and_init.h"
 #include "SHA_256.h"
 
-#include "r_add_record_window.h"
+#include"mainwindow.h"
+#include<QTranslator>
+#include<QLocale>
 
 using namespace std;//使用标准命名空间
 
@@ -25,8 +27,22 @@ int run_Graphical_Interface(int argc, char* argv[]) {
     cout << "SHA256::sha_256(123)= " << SHA256::sha_256("123") << endl;
     cout << "SHA256::sha_256(123456)= " << SHA256::sha_256("123456") << endl;
     cout << "SHA256::sha_256(123456789)= " << SHA256::sha_256("123456789") << endl;
+    QApplication app(argc,argv);
+
+    QTranslator translator;
+    const QStringList uiLanguages = QLocale::system().uiLanguages();
+    for (const QString &locale : uiLanguages) {
+        const QString baseName = "main_ui_" + QLocale(locale).name();
+        if (translator.load(":/i18n/" + baseName)) {
+            app.installTranslator(&translator);
+            break;
+        }
+    }
+    MainWindow w;
+    w.show();
+    return app.exec();
     //图形化界面代码实现
-    try {
+    /*try {
         QApplication app(argc, argv);
         QLabel *info_label = new QLabel;
         QLabel *whelcome_label = new QLabel;
@@ -68,7 +84,7 @@ int run_Graphical_Interface(int argc, char* argv[]) {
     } catch (const std::exception& e) {
         cerr << "Error: " << e.what() << endl;
         return -1;
-    }
+    }*/
 
 }
 
