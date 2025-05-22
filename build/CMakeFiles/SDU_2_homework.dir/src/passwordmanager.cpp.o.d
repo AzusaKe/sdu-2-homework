@@ -470,6 +470,10 @@ CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.o: \
  /usr/aarch64-linux-gnu/include/bits/termios-misc.h \
  /usr/aarch64-linux-gnu/include/sys/ttydefaults.h \
  /usr/include/c++/12/iostream \
+ /home/tiny/AZ_projects/sdu-2-homework/include/Mainwindows.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QMainWindow \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qmainwindow.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qtabwidget.h \
  /home/tiny/AZ_projects/sdu-2-homework/include/notebasic.h \
  /home/tiny/AZ_projects/sdu-2-homework/include/passwordmanager.h \
  /home/tiny/AZ_projects/sdu-2-homework/include/notebasic.h \

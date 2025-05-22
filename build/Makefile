@@ -135,6 +135,43 @@ SDU_2_homework/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/build
 .PHONY : SDU_2_homework/fast
 
+#=============================================================================
+# Target rules for targets named SDU_2_homework_autogen
+
+# Build rule for target.
+SDU_2_homework_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SDU_2_homework_autogen
+.PHONY : SDU_2_homework_autogen
+
+# fast build rule for target.
+SDU_2_homework_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework_autogen.dir/build.make CMakeFiles/SDU_2_homework_autogen.dir/build
+.PHONY : SDU_2_homework_autogen/fast
+
+SDU_2_homework_autogen/mocs_compilation.o: SDU_2_homework_autogen/mocs_compilation.cpp.o
+.PHONY : SDU_2_homework_autogen/mocs_compilation.o
+
+# target to build an object file
+SDU_2_homework_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/SDU_2_homework_autogen/mocs_compilation.cpp.o
+.PHONY : SDU_2_homework_autogen/mocs_compilation.cpp.o
+
+SDU_2_homework_autogen/mocs_compilation.i: SDU_2_homework_autogen/mocs_compilation.cpp.i
+.PHONY : SDU_2_homework_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+SDU_2_homework_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/SDU_2_homework_autogen/mocs_compilation.cpp.i
+.PHONY : SDU_2_homework_autogen/mocs_compilation.cpp.i
+
+SDU_2_homework_autogen/mocs_compilation.s: SDU_2_homework_autogen/mocs_compilation.cpp.s
+.PHONY : SDU_2_homework_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+SDU_2_homework_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/SDU_2_homework_autogen/mocs_compilation.cpp.s
+.PHONY : SDU_2_homework_autogen/mocs_compilation.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -158,6 +195,30 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+src/Mainwindows.o: src/Mainwindows.cpp.o
+.PHONY : src/Mainwindows.o
+
+# target to build an object file
+src/Mainwindows.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/Mainwindows.cpp.o
+.PHONY : src/Mainwindows.cpp.o
+
+src/Mainwindows.i: src/Mainwindows.cpp.i
+.PHONY : src/Mainwindows.i
+
+# target to preprocess a source file
+src/Mainwindows.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/Mainwindows.cpp.i
+.PHONY : src/Mainwindows.cpp.i
+
+src/Mainwindows.s: src/Mainwindows.cpp.s
+.PHONY : src/Mainwindows.s
+
+# target to generate assembly for a file
+src/Mainwindows.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/Mainwindows.cpp.s
+.PHONY : src/Mainwindows.cpp.s
 
 src/SHA_256.o: src/SHA_256.cpp.o
 .PHONY : src/SHA_256.o
@@ -254,6 +315,30 @@ src/financenote.s: src/financenote.cpp.s
 src/financenote.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/financenote.cpp.s
 .PHONY : src/financenote.cpp.s
+
+src/financenote_window.o: src/financenote_window.cpp.o
+.PHONY : src/financenote_window.o
+
+# target to build an object file
+src/financenote_window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/financenote_window.cpp.o
+.PHONY : src/financenote_window.cpp.o
+
+src/financenote_window.i: src/financenote_window.cpp.i
+.PHONY : src/financenote_window.i
+
+# target to preprocess a source file
+src/financenote_window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/financenote_window.cpp.i
+.PHONY : src/financenote_window.cpp.i
+
+src/financenote_window.s: src/financenote_window.cpp.s
+.PHONY : src/financenote_window.s
+
+# target to generate assembly for a file
+src/financenote_window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/financenote_window.cpp.s
+.PHONY : src/financenote_window.cpp.s
 
 src/formatcheck.o: src/formatcheck.cpp.o
 .PHONY : src/formatcheck.o
@@ -359,10 +444,17 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... SDU_2_homework_autogen"
 	@echo "... SDU_2_homework"
+	@echo "... SDU_2_homework_autogen/mocs_compilation.o"
+	@echo "... SDU_2_homework_autogen/mocs_compilation.i"
+	@echo "... SDU_2_homework_autogen/mocs_compilation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/Mainwindows.o"
+	@echo "... src/Mainwindows.i"
+	@echo "... src/Mainwindows.s"
 	@echo "... src/SHA_256.o"
 	@echo "... src/SHA_256.i"
 	@echo "... src/SHA_256.s"
@@ -375,6 +467,9 @@ help:
 	@echo "... src/financenote.o"
 	@echo "... src/financenote.i"
 	@echo "... src/financenote.s"
+	@echo "... src/financenote_window.o"
+	@echo "... src/financenote_window.i"
+	@echo "... src/financenote_window.s"
 	@echo "... src/formatcheck.o"
 	@echo "... src/formatcheck.i"
 	@echo "... src/formatcheck.s"

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/g++
 CXX_DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
 
-CXX_INCLUDES = -I/home/tiny/AZ_projects/sdu-2-homework/include -isystem /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore -isystem /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include -isystem /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/mkspecs/linux-g++ -isystem /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui -isystem /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets
+CXX_INCLUDES = -I/home/tiny/AZ_projects/sdu-2-homework/include -I/home/tiny/AZ_projects/sdu-2-homework/build -isystem /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/include -isystem /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore -isystem /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include -isystem /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/mkspecs/linux-g++ -isystem /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui -isystem /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets
 
 CXX_FLAGS = -std=gnu++20
 

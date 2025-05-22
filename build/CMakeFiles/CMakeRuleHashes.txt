@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+24a35338ff946d6f2f85f9e498026aed CMakeFiles/SDU_2_homework_autogen
+dcbc928f6ad7c61fbae77df33401a116 SDU_2_homework_autogen/timestamp
+592c1fba6eb55b31e92633e5ea6f3414 ui_financenote_window.h
+eca68aad72c179658df52bf399638cc2 ui_mainwindow.h
