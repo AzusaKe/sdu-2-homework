@@ -22,6 +22,7 @@ include_directories(${PROJECT_SOURCE_DIR}/include)
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 file(GLOB UI_HEADERS_UI ${PROJECT_SOURCE_DIR}/src/*.ui)
+file(GLOB UI_HEADERS_INCLUDE ${PROJECT_SOURCE_DIR}/include/*window.h)
 
 qt6_wrap_ui(UI_HEADERS ${UI_HEADERS_UI})
 
@@ -34,7 +35,7 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 file(GLOB SRC_LIST ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 
 set(HEADERS
-        include/mainwindow.h
+        ${UI_HEADERS_INCLUDE}
     ${UI_HEADERS})
 
 add_executable(SDU_2_homework ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp  ${SRC_LIST} ${HEADERS})
