@@ -50,7 +50,7 @@ public:
     {
         if (Financenote_Window->objectName().isEmpty())
             Financenote_Window->setObjectName("Financenote_Window");
-        Financenote_Window->resize(258, 327);
+        Financenote_Window->resize(329, 386);
         centralwidget = new QWidget(Financenote_Window);
         centralwidget->setObjectName("centralwidget");
         verticalLayout_2 = new QVBoxLayout(centralwidget);
@@ -115,7 +115,7 @@ public:
         Financenote_Window->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Financenote_Window);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 258, 17));
+        menubar->setGeometry(QRect(0, 0, 329, 17));
         Financenote_Window->setMenuBar(menubar);
         statusbar = new QStatusBar(Financenote_Window);
         statusbar->setObjectName("statusbar");

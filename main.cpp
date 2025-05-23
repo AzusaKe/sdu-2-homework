@@ -12,8 +12,13 @@
 #include"financenote_window.h"
 #include"reminder_window.h"
 #include"passwordmanager_window.h"
+#include"f_add_record_window.h"
+#include"r_add_record_window.h"
+#include"p_add_record_window.h"
+#include"passwordauth_window.h"
 #include<QTranslator>
 #include<QLocale>
+#include<QIcon>
 
 using namespace std;//使用标准命名空间
 
@@ -32,6 +37,8 @@ int run_Graphical_Interface(int argc, char* argv[]) {
     cout << "SHA256::sha_256(123456789)= " << SHA256::sha_256("123456789") << endl;
     QApplication app(argc,argv);
 
+    app.setWindowIcon(QIcon(":/icons/icon.ico"));
+
     QTranslator translator;
     const QStringList uiLanguages = QLocale::system().uiLanguages();
     for (const QString &locale : uiLanguages) {
@@ -45,10 +52,18 @@ int run_Graphical_Interface(int argc, char* argv[]) {
     Financenote_Window f;
     Reminder_Window r;
     Passwordmanager_Window p;
+    f_add_record_Window f_a;
+    r_add_record_Window r_a;
+    p_add_record_Window p_a;
+    Passwordauth_Window p_auth;
     w.show();
     f.show();
     r.show();
     p.show();
+    f_a.show();
+    r_a.show();
+    p_a.show();
+    p_auth.show();
     return app.exec();
     //图形化界面代码实现
     /*try {
