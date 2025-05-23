@@ -37,9 +37,9 @@ int run_Graphical_Interface(int argc, char* argv[]) {
     cout << "SHA256::sha_256(123456789)= " << SHA256::sha_256("123456789") << endl;
     QApplication app(argc,argv);
 
-    app.setWindowIcon(QIcon(":/icons/icon.png"));
+    app.setWindowIcon(QIcon(":/icons/icon.ico"));
 
-    QPixmap pixmap(":/icons/icon.png");
+    QPixmap pixmap(":/icons/icon.ico");
     if (pixmap.isNull()) {
         cerr << "加载图标失败！" << endl;
     }
