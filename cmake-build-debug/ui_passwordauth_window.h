@@ -32,6 +32,7 @@ public:
     QVBoxLayout *verticalLayout;
     QLabel *label;
     QLineEdit *auth_lineEdit;
+    QSpacerItem *verticalSpacer;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QPushButton *confirm_Button;
@@ -62,6 +63,10 @@ public:
         auth_lineEdit->setEchoMode(QLineEdit::EchoMode::Password);
 
         verticalLayout->addWidget(auth_lineEdit);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
