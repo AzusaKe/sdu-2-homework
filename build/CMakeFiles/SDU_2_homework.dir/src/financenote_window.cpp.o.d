@@ -437,11 +437,54 @@ CMakeFiles/SDU_2_homework.dir/src/financenote_window.cpp.o: \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qinputmethod.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qlocale.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qguiapplication_platform.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QHBoxLayout \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qboxlayout.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qlayout.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qlayoutitem.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qboxlayout.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qgridlayout.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QHeaderView \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qheaderview.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qabstractitemview.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qabstractscrollarea.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qframe.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qabstractitemmodel.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qitemselectionmodel.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qabstractitemdelegate.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qstyleoption.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qabstractspinbox.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qvalidator.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qregularexpression.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qslider.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qabstractslider.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qstyle.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qtabbar.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qrubberband.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QLabel \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qlabel.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qpicture.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qiodevice.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtextdocument.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qurl.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QLineEdit \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qlineedit.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtextcursor.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtextformat.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qpen.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtextoption.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QMainWindow \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QMenuBar \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qmenubar.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qmenu.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QPushButton \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qpushbutton.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qabstractbutton.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QSpacerItem \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qlayoutitem.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QStatusBar \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qstatusbar.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QTableView \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qtableview.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QVBoxLayout \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QWidget \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qwidget.h
