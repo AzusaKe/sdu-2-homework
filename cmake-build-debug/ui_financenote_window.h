@@ -36,7 +36,7 @@ public:
     QLineEdit *search_lineEdit;
     QPushButton *search_Button;
     QTableView *financenote_record_table;
-    QLabel *total_money_label;
+    QLabel *display_label;
     QHBoxLayout *horizontalLayout_3;
     QSpacerItem *horizontalSpacer_2;
     QPushButton *add_record_Button;
@@ -50,7 +50,7 @@ public:
     {
         if (Financenote_Window->objectName().isEmpty())
             Financenote_Window->setObjectName("Financenote_Window");
-        Financenote_Window->resize(533, 531);
+        Financenote_Window->resize(258, 327);
         centralwidget = new QWidget(Financenote_Window);
         centralwidget->setObjectName("centralwidget");
         verticalLayout_2 = new QVBoxLayout(centralwidget);
@@ -77,10 +77,10 @@ public:
 
         verticalLayout->addWidget(financenote_record_table);
 
-        total_money_label = new QLabel(centralwidget);
-        total_money_label->setObjectName("total_money_label");
+        display_label = new QLabel(centralwidget);
+        display_label->setObjectName("display_label");
 
-        verticalLayout->addWidget(total_money_label);
+        verticalLayout->addWidget(display_label);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName("horizontalLayout_3");
@@ -115,7 +115,7 @@ public:
         Financenote_Window->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Financenote_Window);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 533, 17));
+        menubar->setGeometry(QRect(0, 0, 258, 17));
         Financenote_Window->setMenuBar(menubar);
         statusbar = new QStatusBar(Financenote_Window);
         statusbar->setObjectName("statusbar");
@@ -130,7 +130,7 @@ public:
     {
         Financenote_Window->setWindowTitle(QCoreApplication::translate("Financenote_Window", "Financenote_Window", nullptr));
         search_Button->setText(QCoreApplication::translate("Financenote_Window", "\346\220\234\347\264\242", nullptr));
-        total_money_label->setText(QCoreApplication::translate("Financenote_Window", "\346\200\273\351\207\221\351\242\235\357\274\232", nullptr));
+        display_label->setText(QCoreApplication::translate("Financenote_Window", "\346\200\273\351\207\221\351\242\235\357\274\232", nullptr));
         add_record_Button->setText(QCoreApplication::translate("Financenote_Window", "\346\267\273\345\212\240\344\270\200\346\235\241\350\264\246\345\215\225\350\256\260\345\275\225", nullptr));
         exit_Button->setText(QCoreApplication::translate("Financenote_Window", "\351\200\200\345\207\272", nullptr));
     } // retranslateUi

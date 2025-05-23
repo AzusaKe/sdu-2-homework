@@ -6,6 +6,7 @@ r_add_record_Window::r_add_record_Window(QWidget *parent)
     , ui(new Ui::r_add_record_Window)
 {
     ui->setupUi(this);
+    setWindowTitle("添加一条日程提醒...");
 }
 
 r_add_record_Window::~r_add_record_Window()

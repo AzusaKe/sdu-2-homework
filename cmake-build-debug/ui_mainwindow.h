@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -30,8 +31,9 @@ public:
     QVBoxLayout *verticalLayout_2;
     QVBoxLayout *verticalLayout;
     QTextBrowser *textBrowser;
-    QTextBrowser *textBrowser_2;
     QSpacerItem *verticalSpacer_2;
+    QLabel *display_label;
+    QSpacerItem *verticalSpacer_4;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *financenote_Button;
@@ -55,7 +57,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(374, 289);
+        MainWindow->resize(374, 304);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         QSizePolicy sizePolicy(QSizePolicy::Policy::Preferred, QSizePolicy::Policy::Preferred);
@@ -74,14 +76,18 @@ public:
 
         verticalLayout->addWidget(textBrowser);
 
-        textBrowser_2 = new QTextBrowser(centralwidget);
-        textBrowser_2->setObjectName("textBrowser_2");
-
-        verticalLayout->addWidget(textBrowser_2);
-
         verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
         verticalLayout->addItem(verticalSpacer_2);
+
+        display_label = new QLabel(centralwidget);
+        display_label->setObjectName("display_label");
+
+        verticalLayout->addWidget(display_label);
+
+        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer_4);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
@@ -181,14 +187,7 @@ public:
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'MiSans'; font-size:9pt; font-weight:330; font-style:normal;\">\n"
 "<p align=\"center\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Microsoft YaHei UI'; font-size:22pt; font-weight:400;\">\346\254\242\350\277\216\344\275\277\347\224\250\346\241\214\351\235\242\345\267\245\345\205\267</span></p></body></html>", nullptr));
-        textBrowser_2->setHtml(QCoreApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"hr { height: 1px; border-width: 0; }\n"
-"li.unchecked::marker { content: \"\\2610\"; }\n"
-"li.checked::marker { content: \"\\2612\"; }\n"
-"</style></head><body style=\" font-family:'Microsoft YaHei UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\344\273\273\351\200\211\344\270\200\344\270\252\346\250\241\345\235\227\344\273\245\347\273\247\347\273\255</p></body></html>", nullptr));
+        display_label->setText(QCoreApplication::translate("MainWindow", "\344\273\273\351\200\211\344\270\200\344\270\252\346\250\241\345\235\227\344\273\245\347\273\247\347\273\255", nullptr));
         financenote_Button->setText(QCoreApplication::translate("MainWindow", "\350\256\260\350\264\246\346\234\254", nullptr));
         reminder_Button->setText(QCoreApplication::translate("MainWindow", "\346\227\245\347\250\213\346\217\220\351\206\222", nullptr));
         passwordmanager_Button->setText(QCoreApplication::translate("MainWindow", "\345\257\206\347\240\201\347\256\241\347\220\206\345\231\250", nullptr));

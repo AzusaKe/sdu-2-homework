@@ -6,6 +6,7 @@ f_add_record_Window::f_add_record_Window(QWidget *parent)
     , ui(new Ui::f_add_record_Window)
 {
     ui->setupUi(this);
+    setWindowTitle("添加一条账单记录...");
 }
 
 f_add_record_Window::~f_add_record_Window()

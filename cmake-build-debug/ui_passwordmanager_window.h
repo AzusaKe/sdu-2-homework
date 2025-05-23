@@ -18,8 +18,10 @@
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableView>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -28,13 +30,19 @@ class Ui_Passwordmanager_Window
 {
 public:
     QWidget *centralwidget;
-    QWidget *horizontalLayoutWidget;
+    QVBoxLayout *verticalLayout_2;
+    QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout;
     QLineEdit *search_lineEdit;
     QPushButton *search_Button;
-    QTableView *record_table;
+    QTableView *passwordmanager_record_table;
     QLabel *display_label;
+    QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *horizontalSpacer;
     QPushButton *add_record_Button;
+    QSpacerItem *horizontalSpacer_2;
+    QPushButton *exit_Button;
+    QSpacerItem *horizontalSpacer_3;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -42,38 +50,72 @@ public:
     {
         if (Passwordmanager_Window->objectName().isEmpty())
             Passwordmanager_Window->setObjectName("Passwordmanager_Window");
-        Passwordmanager_Window->resize(1065, 831);
+        Passwordmanager_Window->resize(326, 393);
         centralwidget = new QWidget(Passwordmanager_Window);
         centralwidget->setObjectName("centralwidget");
-        horizontalLayoutWidget = new QWidget(centralwidget);
-        horizontalLayoutWidget->setObjectName("horizontalLayoutWidget");
-        horizontalLayoutWidget->setGeometry(QRect(270, 90, 160, 80));
-        horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
+        verticalLayout_2 = new QVBoxLayout(centralwidget);
+        verticalLayout_2->setObjectName("verticalLayout_2");
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName("verticalLayout");
+        horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        search_lineEdit = new QLineEdit(horizontalLayoutWidget);
+        search_lineEdit = new QLineEdit(centralwidget);
         search_lineEdit->setObjectName("search_lineEdit");
 
         horizontalLayout->addWidget(search_lineEdit);
 
-        search_Button = new QPushButton(horizontalLayoutWidget);
+        search_Button = new QPushButton(centralwidget);
         search_Button->setObjectName("search_Button");
 
         horizontalLayout->addWidget(search_Button);
 
-        record_table = new QTableView(centralwidget);
-        record_table->setObjectName("record_table");
-        record_table->setGeometry(QRect(270, 190, 256, 192));
+
+        verticalLayout->addLayout(horizontalLayout);
+
+        passwordmanager_record_table = new QTableView(centralwidget);
+        passwordmanager_record_table->setObjectName("passwordmanager_record_table");
+
+        verticalLayout->addWidget(passwordmanager_record_table);
+
         display_label = new QLabel(centralwidget);
         display_label->setObjectName("display_label");
-        display_label->setGeometry(QRect(280, 390, 40, 12));
+
+        verticalLayout->addWidget(display_label);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer);
+
         add_record_Button = new QPushButton(centralwidget);
         add_record_Button->setObjectName("add_record_Button");
-        add_record_Button->setGeometry(QRect(270, 430, 80, 18));
+
+        horizontalLayout_2->addWidget(add_record_Button);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_2);
+
+        exit_Button = new QPushButton(centralwidget);
+        exit_Button->setObjectName("exit_Button");
+
+        horizontalLayout_2->addWidget(exit_Button);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_3);
+
+
+        verticalLayout->addLayout(horizontalLayout_2);
+
+
+        verticalLayout_2->addLayout(verticalLayout);
+
         Passwordmanager_Window->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Passwordmanager_Window);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1065, 17));
+        menubar->setGeometry(QRect(0, 0, 326, 17));
         Passwordmanager_Window->setMenuBar(menubar);
         statusbar = new QStatusBar(Passwordmanager_Window);
         statusbar->setObjectName("statusbar");
@@ -90,6 +132,7 @@ public:
         search_Button->setText(QCoreApplication::translate("Passwordmanager_Window", "\346\220\234\347\264\242", nullptr));
         display_label->setText(QString());
         add_record_Button->setText(QCoreApplication::translate("Passwordmanager_Window", "\346\267\273\345\212\240\344\270\200\346\235\241\345\257\206\347\240\201\350\256\260\345\275\225", nullptr));
+        exit_Button->setText(QCoreApplication::translate("Passwordmanager_Window", "\351\200\200\345\207\272", nullptr));
     } // retranslateUi
 
 };

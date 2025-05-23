@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>533</width>
-    <height>531</height>
+    <width>329</width>
+    <height>386</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -35,7 +35,7 @@
        <widget class="QTableView" name="financenote_record_table"/>
       </item>
       <item>
-       <widget class="QLabel" name="total_money_label">
+       <widget class="QLabel" name="display_label">
         <property name="text">
          <string>总金额：</string>
         </property>
@@ -107,7 +107,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>533</width>
+     <width>329</width>
      <height>17</height>
     </rect>
    </property>

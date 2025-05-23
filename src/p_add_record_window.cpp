@@ -6,6 +6,7 @@ p_add_record_Window::p_add_record_Window(QWidget *parent)
     , ui(new Ui::p_add_record_Window)
 {
     ui->setupUi(this);
+    setWindowTitle("添加一条密码记录...");
 }
 
 p_add_record_Window::~p_add_record_Window()

@@ -58,7 +58,7 @@ public:
     {
         if (Reminder_Window->objectName().isEmpty())
             Reminder_Window->setObjectName("Reminder_Window");
-        Reminder_Window->resize(389, 341);
+        Reminder_Window->resize(326, 366);
         centralwidget = new QWidget(Reminder_Window);
         centralwidget->setObjectName("centralwidget");
         verticalLayout_2 = new QVBoxLayout(centralwidget);
@@ -158,7 +158,7 @@ public:
         Reminder_Window->setCentralWidget(centralwidget);
         menubar = new QMenuBar(Reminder_Window);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 389, 17));
+        menubar->setGeometry(QRect(0, 0, 326, 17));
         Reminder_Window->setMenuBar(menubar);
         statusbar = new QStatusBar(Reminder_Window);
         statusbar->setObjectName("statusbar");
