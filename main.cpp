@@ -37,7 +37,12 @@ int run_Graphical_Interface(int argc, char* argv[]) {
     cout << "SHA256::sha_256(123456789)= " << SHA256::sha_256("123456789") << endl;
     QApplication app(argc,argv);
 
-    app.setWindowIcon(QIcon(":/icons/icon.ico"));
+    app.setWindowIcon(QIcon(":/icons/icon.png"));
+
+    QPixmap pixmap(":/icons/icon.png");
+    if (pixmap.isNull()) {
+        cerr << "加载图标失败！" << endl;
+    }
 
     QTranslator translator;
     const QStringList uiLanguages = QLocale::system().uiLanguages();
@@ -69,7 +74,7 @@ int run_Graphical_Interface(int argc, char* argv[]) {
     /*try {
         QApplication app(argc, argv);
         QLabel *info_label = new QLabel;
-        QLabel *whelcome_label = new QLabel;
+        QLabel *welcome_label = new QLabel;
         QLabel *choice_info_label = new QLabel;
         QPushButton *financenote_button = new QPushButton;
         QPushButton *reminder_button = new QPushButton;

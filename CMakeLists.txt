@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
 
 #添加Qt5库(已弃用)
 #if (WIN32)
@@ -26,8 +27,6 @@ file(GLOB UI_HEADERS_INCLUDE ${PROJECT_SOURCE_DIR}/include/*window.h)
 
 qt6_wrap_ui(UI_HEADERS ${UI_HEADERS_UI})
 
-qt_add_resources(RESOURCES resources.qrc)
-
 #set(CMAKE_EXE_LINKER_FLAGS "-static")
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
@@ -39,7 +38,17 @@ set(HEADERS
         ${UI_HEADERS_INCLUDE}
     ${UI_HEADERS})
 
-add_executable(SDU_2_homework ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp  ${SRC_LIST} ${HEADERS} ${RESOURCES})
+add_executable(SDU_2_homework ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp  ${SRC_LIST} ${HEADERS} resources.qrc)
+
+qt_add_resources(SDU_2_homework "app_resources" PREFIX "/" FILES resources.qrc)
+
+if(WIN32)
+    configure_file(
+            ${CMAKE_CURRENT_SOURCE_DIR}/icons/icon.rc.in
+            ${CMAKE_CURRENT_BINARY_DIR}/icon.rc
+    )
+    target_sources(SDU_2_homework PRIVATE ${CMAKE_CURRENT_BINARY_DIR}/icon.rc)
+endif ()
 
 #链接Qt6库
 if(WIN32 OR UNIX AND NOT APPLE)
