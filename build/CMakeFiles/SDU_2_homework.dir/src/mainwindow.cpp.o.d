@@ -424,6 +424,8 @@ CMakeFiles/SDU_2_homework.dir/src/mainwindow.cpp.o: \
  /home/tiny/AZ_projects/sdu-2-homework/build/./ui_mainwindow.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/QVariant \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qvariant.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/QAction \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qaction.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QApplication \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qapplication.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qcoreapplication.h \
@@ -443,14 +445,9 @@ CMakeFiles/SDU_2_homework.dir/src/mainwindow.cpp.o: \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qlayoutitem.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qboxlayout.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qgridlayout.h \
- /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QLabel \
- /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qlabel.h \
- /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qframe.h \
- /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qpicture.h \
- /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qiodevice.h \
- /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtextdocument.h \
- /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qurl.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QMainWindow \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QMenu \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qmenu.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QMenuBar \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qmenubar.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qmenu.h \
@@ -461,10 +458,12 @@ CMakeFiles/SDU_2_homework.dir/src/mainwindow.cpp.o: \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qlayoutitem.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QStatusBar \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qstatusbar.h \
- /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QTextBrowser \
- /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qtextbrowser.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QTextEdit \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qtextedit.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qabstractscrollarea.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qframe.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtextdocument.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qurl.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtextoption.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtextcursor.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qtextformat.h \

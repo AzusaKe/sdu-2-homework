@@ -470,7 +470,7 @@ CMakeFiles/SDU_2_homework.dir/main.cpp.o: \
  /usr/aarch64-linux-gnu/include/bits/termios-misc.h \
  /usr/aarch64-linux-gnu/include/sys/ttydefaults.h \
  /usr/include/c++/12/iostream \
- /home/tiny/AZ_projects/sdu-2-homework/include/Mainwindows.h \
+ /home/tiny/AZ_projects/sdu-2-homework/include/mainwindow.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QMainWindow \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qmainwindow.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qtabwidget.h \
@@ -491,4 +491,18 @@ CMakeFiles/SDU_2_homework.dir/main.cpp.o: \
  /home/tiny/AZ_projects/sdu-2-homework/include/passwordmanager.h \
  /home/tiny/AZ_projects/sdu-2-homework/include/reminder.h \
  /home/tiny/AZ_projects/sdu-2-homework/include/filecheck_and_init.h \
- /home/tiny/AZ_projects/sdu-2-homework/include/SHA_256.h
+ /home/tiny/AZ_projects/sdu-2-homework/include/SHA_256.h \
+ /home/tiny/AZ_projects/sdu-2-homework/include/mainwindow.h \
+ /home/tiny/AZ_projects/sdu-2-homework/include/financenote_window.h \
+ /home/tiny/AZ_projects/sdu-2-homework/include/reminder_window.h \
+ /home/tiny/AZ_projects/sdu-2-homework/include/passwordmanager_window.h \
+ /home/tiny/AZ_projects/sdu-2-homework/include/f_add_record_window.h \
+ /home/tiny/AZ_projects/sdu-2-homework/include/r_add_record_window.h \
+ /home/tiny/AZ_projects/sdu-2-homework/include/p_add_record_window.h \
+ /home/tiny/AZ_projects/sdu-2-homework/include/passwordauth_window.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/QTranslator \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qtranslator.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/QLocale \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qlocale.h \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/QIcon \
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qicon.h

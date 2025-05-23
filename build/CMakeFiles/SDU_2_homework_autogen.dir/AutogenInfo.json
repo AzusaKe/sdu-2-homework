@@ -375,7 +375,9 @@
 		"/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake",
 		"/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake",
 		"/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake",
-		"/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Widgets/Qt6WidgetsPlugins.cmake"
+		"/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Widgets/Qt6WidgetsPlugins.cmake",
+		"/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in",
+		"/home/tiny/AZ_projects/sdu-2-homework/resources.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/tiny/AZ_projects/sdu-2-homework",
 	"CROSS_CONFIG" : false,
@@ -384,9 +386,51 @@
 	"HEADERS" : 
 	[
 		[
-			"/home/tiny/AZ_projects/sdu-2-homework/include/Mainwindows.h",
+			"/home/tiny/AZ_projects/sdu-2-homework/include/f_add_record_window.h",
 			"MU",
-			"6YEA5652QU/moc_Mainwindows.cpp",
+			"6YEA5652QU/moc_f_add_record_window.cpp",
+			null
+		],
+		[
+			"/home/tiny/AZ_projects/sdu-2-homework/include/financenote_window.h",
+			"MU",
+			"6YEA5652QU/moc_financenote_window.cpp",
+			null
+		],
+		[
+			"/home/tiny/AZ_projects/sdu-2-homework/include/mainwindow.h",
+			"MU",
+			"6YEA5652QU/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"/home/tiny/AZ_projects/sdu-2-homework/include/p_add_record_window.h",
+			"MU",
+			"6YEA5652QU/moc_p_add_record_window.cpp",
+			null
+		],
+		[
+			"/home/tiny/AZ_projects/sdu-2-homework/include/passwordauth_window.h",
+			"MU",
+			"6YEA5652QU/moc_passwordauth_window.cpp",
+			null
+		],
+		[
+			"/home/tiny/AZ_projects/sdu-2-homework/include/passwordmanager_window.h",
+			"MU",
+			"6YEA5652QU/moc_passwordmanager_window.cpp",
+			null
+		],
+		[
+			"/home/tiny/AZ_projects/sdu-2-homework/include/r_add_record_window.h",
+			"MU",
+			"6YEA5652QU/moc_r_add_record_window.cpp",
+			null
+		],
+		[
+			"/home/tiny/AZ_projects/sdu-2-homework/include/reminder_window.h",
+			"MU",
+			"6YEA5652QU/moc_reminder_window.cpp",
 			null
 		]
 	],
@@ -443,8 +487,15 @@
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
+		"/home/tiny/AZ_projects/sdu-2-homework/build/.qt/rcc/qrc_app_resources.cpp",
+		"/home/tiny/AZ_projects/sdu-2-homework/build/ui_f_add_record_window.h",
 		"/home/tiny/AZ_projects/sdu-2-homework/build/ui_financenote_window.h",
-		"/home/tiny/AZ_projects/sdu-2-homework/build/ui_mainwindow.h"
+		"/home/tiny/AZ_projects/sdu-2-homework/build/ui_mainwindow.h",
+		"/home/tiny/AZ_projects/sdu-2-homework/build/ui_p_add_record_window.h",
+		"/home/tiny/AZ_projects/sdu-2-homework/build/ui_passwordauth_window.h",
+		"/home/tiny/AZ_projects/sdu-2-homework/build/ui_passwordmanager_window.h",
+		"/home/tiny/AZ_projects/sdu-2-homework/build/ui_r_add_record_window.h",
+		"/home/tiny/AZ_projects/sdu-2-homework/build/ui_reminder_window.h"
 	],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 1,
@@ -457,14 +508,14 @@
 	"SOURCES" : 
 	[
 		[ "/home/tiny/AZ_projects/sdu-2-homework/main.cpp", "MU", null ],
-		[
-			"/home/tiny/AZ_projects/sdu-2-homework/src/Mainwindows.cpp",
-			"MU",
-			null
-		],
 		[ "/home/tiny/AZ_projects/sdu-2-homework/src/SHA_256.cpp", "MU", null ],
 		[
 			"/home/tiny/AZ_projects/sdu-2-homework/src/console_adaption.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/tiny/AZ_projects/sdu-2-homework/src/f_add_record_window.cpp",
 			"MU",
 			null
 		],
@@ -488,22 +539,65 @@
 			"MU",
 			null
 		],
+		[
+			"/home/tiny/AZ_projects/sdu-2-homework/src/mainwindow.cpp",
+			"MU",
+			null
+		],
 		[ "/home/tiny/AZ_projects/sdu-2-homework/src/notebasic.cpp", "MU", null ],
+		[
+			"/home/tiny/AZ_projects/sdu-2-homework/src/p_add_record_window.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/tiny/AZ_projects/sdu-2-homework/src/passwordauth_window.cpp",
+			"MU",
+			null
+		],
 		[
 			"/home/tiny/AZ_projects/sdu-2-homework/src/passwordmanager.cpp",
 			"MU",
 			null
 		],
-		[ "/home/tiny/AZ_projects/sdu-2-homework/src/reminder.cpp", "MU", null ]
+		[
+			"/home/tiny/AZ_projects/sdu-2-homework/src/passwordmanager_window.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/tiny/AZ_projects/sdu-2-homework/src/r_add_record_window.cpp",
+			"MU",
+			null
+		],
+		[ "/home/tiny/AZ_projects/sdu-2-homework/src/reminder.cpp", "MU", null ],
+		[
+			"/home/tiny/AZ_projects/sdu-2-homework/src/reminder_window.cpp",
+			"MU",
+			null
+		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : 
 	[
+		"/home/tiny/AZ_projects/sdu-2-homework/build/.qt/rcc/qrc_app_resources.cpp",
+		"/home/tiny/AZ_projects/sdu-2-homework/build/ui_f_add_record_window.h",
 		"/home/tiny/AZ_projects/sdu-2-homework/build/ui_financenote_window.h",
 		"/home/tiny/AZ_projects/sdu-2-homework/build/ui_mainwindow.h",
+		"/home/tiny/AZ_projects/sdu-2-homework/build/ui_p_add_record_window.h",
+		"/home/tiny/AZ_projects/sdu-2-homework/build/ui_passwordauth_window.h",
+		"/home/tiny/AZ_projects/sdu-2-homework/build/ui_passwordmanager_window.h",
+		"/home/tiny/AZ_projects/sdu-2-homework/build/ui_r_add_record_window.h",
+		"/home/tiny/AZ_projects/sdu-2-homework/build/ui_reminder_window.h",
+		"/home/tiny/AZ_projects/sdu-2-homework/src/f_add_record_window.ui",
 		"/home/tiny/AZ_projects/sdu-2-homework/src/financenote_window.ui",
-		"/home/tiny/AZ_projects/sdu-2-homework/src/mainwindow.ui"
+		"/home/tiny/AZ_projects/sdu-2-homework/src/mainwindow.ui",
+		"/home/tiny/AZ_projects/sdu-2-homework/src/p_add_record_window.ui",
+		"/home/tiny/AZ_projects/sdu-2-homework/src/passwordauth_window.ui",
+		"/home/tiny/AZ_projects/sdu-2-homework/src/passwordmanager_window.ui",
+		"/home/tiny/AZ_projects/sdu-2-homework/src/r_add_record_window.ui",
+		"/home/tiny/AZ_projects/sdu-2-homework/src/reminder_window.ui"
 	],
 	"UIC_UI_FILES" : [],
 	"USE_BETTER_GRAPH" : false,

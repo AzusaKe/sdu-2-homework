@@ -136,6 +136,19 @@ SDU_2_homework/fast:
 .PHONY : SDU_2_homework/fast
 
 #=============================================================================
+# Target rules for targets named SDU_2_homework_other_files
+
+# Build rule for target.
+SDU_2_homework_other_files: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SDU_2_homework_other_files
+.PHONY : SDU_2_homework_other_files
+
+# fast build rule for target.
+SDU_2_homework_other_files/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework_other_files.dir/build.make CMakeFiles/SDU_2_homework_other_files.dir/build
+.PHONY : SDU_2_homework_other_files/fast
+
+#=============================================================================
 # Target rules for targets named SDU_2_homework_autogen
 
 # Build rule for target.
@@ -147,6 +160,30 @@ SDU_2_homework_autogen: cmake_check_build_system
 SDU_2_homework_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework_autogen.dir/build.make CMakeFiles/SDU_2_homework_autogen.dir/build
 .PHONY : SDU_2_homework_autogen/fast
+
+SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.o: SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.cpp.o
+.PHONY : SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.o
+
+# target to build an object file
+SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.cpp.o
+.PHONY : SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.cpp.o
+
+SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.i: SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.cpp.i
+.PHONY : SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.i
+
+# target to preprocess a source file
+SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.cpp.i
+.PHONY : SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.cpp.i
+
+SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.s: SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.cpp.s
+.PHONY : SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.s
+
+# target to generate assembly for a file
+SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.cpp.s
+.PHONY : SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.cpp.s
 
 SDU_2_homework_autogen/mocs_compilation.o: SDU_2_homework_autogen/mocs_compilation.cpp.o
 .PHONY : SDU_2_homework_autogen/mocs_compilation.o
@@ -172,6 +209,30 @@ SDU_2_homework_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/SDU_2_homework_autogen/mocs_compilation.cpp.s
 .PHONY : SDU_2_homework_autogen/mocs_compilation.cpp.s
 
+build/.qt/rcc/qrc_app_resources.o: build/.qt/rcc/qrc_app_resources.cpp.o
+.PHONY : build/.qt/rcc/qrc_app_resources.o
+
+# target to build an object file
+build/.qt/rcc/qrc_app_resources.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/build/.qt/rcc/qrc_app_resources.cpp.o
+.PHONY : build/.qt/rcc/qrc_app_resources.cpp.o
+
+build/.qt/rcc/qrc_app_resources.i: build/.qt/rcc/qrc_app_resources.cpp.i
+.PHONY : build/.qt/rcc/qrc_app_resources.i
+
+# target to preprocess a source file
+build/.qt/rcc/qrc_app_resources.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/build/.qt/rcc/qrc_app_resources.cpp.i
+.PHONY : build/.qt/rcc/qrc_app_resources.cpp.i
+
+build/.qt/rcc/qrc_app_resources.s: build/.qt/rcc/qrc_app_resources.cpp.s
+.PHONY : build/.qt/rcc/qrc_app_resources.s
+
+# target to generate assembly for a file
+build/.qt/rcc/qrc_app_resources.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/build/.qt/rcc/qrc_app_resources.cpp.s
+.PHONY : build/.qt/rcc/qrc_app_resources.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -195,30 +256,6 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-src/Mainwindows.o: src/Mainwindows.cpp.o
-.PHONY : src/Mainwindows.o
-
-# target to build an object file
-src/Mainwindows.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/Mainwindows.cpp.o
-.PHONY : src/Mainwindows.cpp.o
-
-src/Mainwindows.i: src/Mainwindows.cpp.i
-.PHONY : src/Mainwindows.i
-
-# target to preprocess a source file
-src/Mainwindows.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/Mainwindows.cpp.i
-.PHONY : src/Mainwindows.cpp.i
-
-src/Mainwindows.s: src/Mainwindows.cpp.s
-.PHONY : src/Mainwindows.s
-
-# target to generate assembly for a file
-src/Mainwindows.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/Mainwindows.cpp.s
-.PHONY : src/Mainwindows.cpp.s
 
 src/SHA_256.o: src/SHA_256.cpp.o
 .PHONY : src/SHA_256.o
@@ -267,6 +304,30 @@ src/console_adaption.s: src/console_adaption.cpp.s
 src/console_adaption.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/console_adaption.cpp.s
 .PHONY : src/console_adaption.cpp.s
+
+src/f_add_record_window.o: src/f_add_record_window.cpp.o
+.PHONY : src/f_add_record_window.o
+
+# target to build an object file
+src/f_add_record_window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/f_add_record_window.cpp.o
+.PHONY : src/f_add_record_window.cpp.o
+
+src/f_add_record_window.i: src/f_add_record_window.cpp.i
+.PHONY : src/f_add_record_window.i
+
+# target to preprocess a source file
+src/f_add_record_window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/f_add_record_window.cpp.i
+.PHONY : src/f_add_record_window.cpp.i
+
+src/f_add_record_window.s: src/f_add_record_window.cpp.s
+.PHONY : src/f_add_record_window.s
+
+# target to generate assembly for a file
+src/f_add_record_window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/f_add_record_window.cpp.s
+.PHONY : src/f_add_record_window.cpp.s
 
 src/filecheck_and_init.o: src/filecheck_and_init.cpp.o
 .PHONY : src/filecheck_and_init.o
@@ -364,6 +425,30 @@ src/formatcheck.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/formatcheck.cpp.s
 .PHONY : src/formatcheck.cpp.s
 
+src/mainwindow.o: src/mainwindow.cpp.o
+.PHONY : src/mainwindow.o
+
+# target to build an object file
+src/mainwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/mainwindow.cpp.o
+.PHONY : src/mainwindow.cpp.o
+
+src/mainwindow.i: src/mainwindow.cpp.i
+.PHONY : src/mainwindow.i
+
+# target to preprocess a source file
+src/mainwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/mainwindow.cpp.i
+.PHONY : src/mainwindow.cpp.i
+
+src/mainwindow.s: src/mainwindow.cpp.s
+.PHONY : src/mainwindow.s
+
+# target to generate assembly for a file
+src/mainwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/mainwindow.cpp.s
+.PHONY : src/mainwindow.cpp.s
+
 src/notebasic.o: src/notebasic.cpp.o
 .PHONY : src/notebasic.o
 
@@ -387,6 +472,54 @@ src/notebasic.s: src/notebasic.cpp.s
 src/notebasic.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/notebasic.cpp.s
 .PHONY : src/notebasic.cpp.s
+
+src/p_add_record_window.o: src/p_add_record_window.cpp.o
+.PHONY : src/p_add_record_window.o
+
+# target to build an object file
+src/p_add_record_window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/p_add_record_window.cpp.o
+.PHONY : src/p_add_record_window.cpp.o
+
+src/p_add_record_window.i: src/p_add_record_window.cpp.i
+.PHONY : src/p_add_record_window.i
+
+# target to preprocess a source file
+src/p_add_record_window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/p_add_record_window.cpp.i
+.PHONY : src/p_add_record_window.cpp.i
+
+src/p_add_record_window.s: src/p_add_record_window.cpp.s
+.PHONY : src/p_add_record_window.s
+
+# target to generate assembly for a file
+src/p_add_record_window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/p_add_record_window.cpp.s
+.PHONY : src/p_add_record_window.cpp.s
+
+src/passwordauth_window.o: src/passwordauth_window.cpp.o
+.PHONY : src/passwordauth_window.o
+
+# target to build an object file
+src/passwordauth_window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/passwordauth_window.cpp.o
+.PHONY : src/passwordauth_window.cpp.o
+
+src/passwordauth_window.i: src/passwordauth_window.cpp.i
+.PHONY : src/passwordauth_window.i
+
+# target to preprocess a source file
+src/passwordauth_window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/passwordauth_window.cpp.i
+.PHONY : src/passwordauth_window.cpp.i
+
+src/passwordauth_window.s: src/passwordauth_window.cpp.s
+.PHONY : src/passwordauth_window.s
+
+# target to generate assembly for a file
+src/passwordauth_window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/passwordauth_window.cpp.s
+.PHONY : src/passwordauth_window.cpp.s
 
 src/passwordmanager.o: src/passwordmanager.cpp.o
 .PHONY : src/passwordmanager.o
@@ -412,6 +545,54 @@ src/passwordmanager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/passwordmanager.cpp.s
 .PHONY : src/passwordmanager.cpp.s
 
+src/passwordmanager_window.o: src/passwordmanager_window.cpp.o
+.PHONY : src/passwordmanager_window.o
+
+# target to build an object file
+src/passwordmanager_window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/passwordmanager_window.cpp.o
+.PHONY : src/passwordmanager_window.cpp.o
+
+src/passwordmanager_window.i: src/passwordmanager_window.cpp.i
+.PHONY : src/passwordmanager_window.i
+
+# target to preprocess a source file
+src/passwordmanager_window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/passwordmanager_window.cpp.i
+.PHONY : src/passwordmanager_window.cpp.i
+
+src/passwordmanager_window.s: src/passwordmanager_window.cpp.s
+.PHONY : src/passwordmanager_window.s
+
+# target to generate assembly for a file
+src/passwordmanager_window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/passwordmanager_window.cpp.s
+.PHONY : src/passwordmanager_window.cpp.s
+
+src/r_add_record_window.o: src/r_add_record_window.cpp.o
+.PHONY : src/r_add_record_window.o
+
+# target to build an object file
+src/r_add_record_window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/r_add_record_window.cpp.o
+.PHONY : src/r_add_record_window.cpp.o
+
+src/r_add_record_window.i: src/r_add_record_window.cpp.i
+.PHONY : src/r_add_record_window.i
+
+# target to preprocess a source file
+src/r_add_record_window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/r_add_record_window.cpp.i
+.PHONY : src/r_add_record_window.cpp.i
+
+src/r_add_record_window.s: src/r_add_record_window.cpp.s
+.PHONY : src/r_add_record_window.s
+
+# target to generate assembly for a file
+src/r_add_record_window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/r_add_record_window.cpp.s
+.PHONY : src/r_add_record_window.cpp.s
+
 src/reminder.o: src/reminder.cpp.o
 .PHONY : src/reminder.o
 
@@ -436,6 +617,30 @@ src/reminder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/reminder.cpp.s
 .PHONY : src/reminder.cpp.s
 
+src/reminder_window.o: src/reminder_window.cpp.o
+.PHONY : src/reminder_window.o
+
+# target to build an object file
+src/reminder_window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/reminder_window.cpp.o
+.PHONY : src/reminder_window.cpp.o
+
+src/reminder_window.i: src/reminder_window.cpp.i
+.PHONY : src/reminder_window.i
+
+# target to preprocess a source file
+src/reminder_window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/reminder_window.cpp.i
+.PHONY : src/reminder_window.cpp.i
+
+src/reminder_window.s: src/reminder_window.cpp.s
+.PHONY : src/reminder_window.s
+
+# target to generate assembly for a file
+src/reminder_window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/SDU_2_homework.dir/build.make CMakeFiles/SDU_2_homework.dir/src/reminder_window.cpp.s
+.PHONY : src/reminder_window.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -445,22 +650,29 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... SDU_2_homework_autogen"
+	@echo "... SDU_2_homework_other_files"
 	@echo "... SDU_2_homework"
+	@echo "... SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.o"
+	@echo "... SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.i"
+	@echo "... SDU_2_homework_autogen/EWIEGA46WW/qrc_resources.s"
 	@echo "... SDU_2_homework_autogen/mocs_compilation.o"
 	@echo "... SDU_2_homework_autogen/mocs_compilation.i"
 	@echo "... SDU_2_homework_autogen/mocs_compilation.s"
+	@echo "... build/.qt/rcc/qrc_app_resources.o"
+	@echo "... build/.qt/rcc/qrc_app_resources.i"
+	@echo "... build/.qt/rcc/qrc_app_resources.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... src/Mainwindows.o"
-	@echo "... src/Mainwindows.i"
-	@echo "... src/Mainwindows.s"
 	@echo "... src/SHA_256.o"
 	@echo "... src/SHA_256.i"
 	@echo "... src/SHA_256.s"
 	@echo "... src/console_adaption.o"
 	@echo "... src/console_adaption.i"
 	@echo "... src/console_adaption.s"
+	@echo "... src/f_add_record_window.o"
+	@echo "... src/f_add_record_window.i"
+	@echo "... src/f_add_record_window.s"
 	@echo "... src/filecheck_and_init.o"
 	@echo "... src/filecheck_and_init.i"
 	@echo "... src/filecheck_and_init.s"
@@ -473,15 +685,33 @@ help:
 	@echo "... src/formatcheck.o"
 	@echo "... src/formatcheck.i"
 	@echo "... src/formatcheck.s"
+	@echo "... src/mainwindow.o"
+	@echo "... src/mainwindow.i"
+	@echo "... src/mainwindow.s"
 	@echo "... src/notebasic.o"
 	@echo "... src/notebasic.i"
 	@echo "... src/notebasic.s"
+	@echo "... src/p_add_record_window.o"
+	@echo "... src/p_add_record_window.i"
+	@echo "... src/p_add_record_window.s"
+	@echo "... src/passwordauth_window.o"
+	@echo "... src/passwordauth_window.i"
+	@echo "... src/passwordauth_window.s"
 	@echo "... src/passwordmanager.o"
 	@echo "... src/passwordmanager.i"
 	@echo "... src/passwordmanager.s"
+	@echo "... src/passwordmanager_window.o"
+	@echo "... src/passwordmanager_window.i"
+	@echo "... src/passwordmanager_window.s"
+	@echo "... src/r_add_record_window.o"
+	@echo "... src/r_add_record_window.i"
+	@echo "... src/r_add_record_window.s"
 	@echo "... src/reminder.o"
 	@echo "... src/reminder.i"
 	@echo "... src/reminder.s"
+	@echo "... src/reminder_window.o"
+	@echo "... src/reminder_window.i"
+	@echo "... src/reminder_window.s"
 .PHONY : help
 
 

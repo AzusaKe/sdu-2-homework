@@ -1,0 +1,22 @@
+{
+	"BUILD_DIR" : "/home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen",
+	"CMAKE_BINARY_DIR" : "/home/tiny/AZ_projects/sdu-2-homework/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/tiny/AZ_projects/sdu-2-homework/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/tiny/AZ_projects/sdu-2-homework",
+	"CMAKE_SOURCE_DIR" : "/home/tiny/AZ_projects/sdu-2-homework",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Unix Makefiles",
+	"INCLUDE_DIR" : "/home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/include",
+	"INPUTS" : [ "/home/tiny/AZ_projects/sdu-2-homework/icons/icon.ico" ],
+	"LOCK_FILE" : "/home/tiny/AZ_projects/sdu-2-homework/build/CMakeFiles/SDU_2_homework_autogen.dir/AutoRcc_resources_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/tiny/AZ_projects/sdu-2-homework/build/CMakeFiles/SDU_2_homework_autogen.dir/AutoRcc_resources_EWIEGA46WW_Used.txt",
+	"SOURCE" : "/home/tiny/AZ_projects/sdu-2-homework/resources.qrc",
+	"USE_BETTER_GRAPH" : false,
+	"VERBOSITY" : 0
+}

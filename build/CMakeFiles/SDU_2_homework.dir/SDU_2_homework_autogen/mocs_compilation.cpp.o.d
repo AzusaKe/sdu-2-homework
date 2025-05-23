@@ -1,8 +1,8 @@
 CMakeFiles/SDU_2_homework.dir/SDU_2_homework_autogen/mocs_compilation.cpp.o: \
  /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/mocs_compilation.cpp \
  /usr/aarch64-linux-gnu/include/stdc-predef.h \
- /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/6YEA5652QU/moc_Mainwindows.cpp \
- /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/6YEA5652QU/../../../include/Mainwindows.h \
+ /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/6YEA5652QU/moc_f_add_record_window.cpp \
+ /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/6YEA5652QU/../../../include/f_add_record_window.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/QMainWindow \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qmainwindow.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qtwidgetsglobal.h \
@@ -422,4 +422,18 @@ CMakeFiles/SDU_2_homework.dir/SDU_2_homework_autogen/mocs_compilation.cpp.o: \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qcursor.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtGui/qbitmap.h \
  /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtWidgets/qtabwidget.h \
- /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qtmochelpers.h
+ /home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/qtmochelpers.h \
+ /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/6YEA5652QU/moc_financenote_window.cpp \
+ /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/6YEA5652QU/../../../include/financenote_window.h \
+ /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/6YEA5652QU/moc_mainwindow.cpp \
+ /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/6YEA5652QU/../../../include/mainwindow.h \
+ /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/6YEA5652QU/moc_p_add_record_window.cpp \
+ /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/6YEA5652QU/../../../include/p_add_record_window.h \
+ /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/6YEA5652QU/moc_passwordauth_window.cpp \
+ /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/6YEA5652QU/../../../include/passwordauth_window.h \
+ /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/6YEA5652QU/moc_passwordmanager_window.cpp \
+ /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/6YEA5652QU/../../../include/passwordmanager_window.h \
+ /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/6YEA5652QU/moc_r_add_record_window.cpp \
+ /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/6YEA5652QU/../../../include/r_add_record_window.h \
+ /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/6YEA5652QU/moc_reminder_window.cpp \
+ /home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/6YEA5652QU/../../../include/reminder_window.h

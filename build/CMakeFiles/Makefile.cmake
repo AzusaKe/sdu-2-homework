@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.31.0/CMakeCCompiler.cmake"
   "CMakeFiles/3.31.0/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.31.0/CMakeSystem.cmake"
+  "/home/tiny/AZ_projects/sdu-2-homework/resources.qrc"
   "/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6/3rdparty/kwin/FindXKB.cmake"
   "/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6/FindWrapAtomic.cmake"
   "/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6/FindWrapOpenGL.cmake"
@@ -41,6 +42,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake"
   "/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake"
   "/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake"
+  "/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in"
   "/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake"
   "/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake"
   "/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake"
@@ -316,7 +318,9 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  ".qt/rcc/app_resources.qrc"
   "CMakeFiles/SDU_2_homework_autogen.dir/AutogenInfo.json"
+  "CMakeFiles/SDU_2_homework_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json"
   ".qt/QtDeploySupport.cmake"
   ".qt/QtDeployTargets.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -325,5 +329,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/SDU_2_homework.dir/DependInfo.cmake"
+  "CMakeFiles/SDU_2_homework_other_files.dir/DependInfo.cmake"
   "CMakeFiles/SDU_2_homework_autogen.dir/DependInfo.cmake"
   )

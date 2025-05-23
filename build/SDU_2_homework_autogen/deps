@@ -4,18 +4,32 @@ SDU_2_homework_autogen/timestamp: \
 	/home/tiny/AZ_projects/sdu-2-homework/build/CMakeFiles/3.31.0/CMakeCXXCompiler.cmake \
 	/home/tiny/AZ_projects/sdu-2-homework/build/CMakeFiles/3.31.0/CMakeSystem.cmake \
 	/home/tiny/AZ_projects/sdu-2-homework/build/SDU_2_homework_autogen/moc_predefs.h \
-	/home/tiny/AZ_projects/sdu-2-homework/include/Mainwindows.h \
+	/home/tiny/AZ_projects/sdu-2-homework/include/f_add_record_window.h \
+	/home/tiny/AZ_projects/sdu-2-homework/include/financenote_window.h \
+	/home/tiny/AZ_projects/sdu-2-homework/include/mainwindow.h \
+	/home/tiny/AZ_projects/sdu-2-homework/include/p_add_record_window.h \
+	/home/tiny/AZ_projects/sdu-2-homework/include/passwordauth_window.h \
+	/home/tiny/AZ_projects/sdu-2-homework/include/passwordmanager_window.h \
+	/home/tiny/AZ_projects/sdu-2-homework/include/r_add_record_window.h \
+	/home/tiny/AZ_projects/sdu-2-homework/include/reminder_window.h \
 	/home/tiny/AZ_projects/sdu-2-homework/main.cpp \
-	/home/tiny/AZ_projects/sdu-2-homework/src/Mainwindows.cpp \
+	/home/tiny/AZ_projects/sdu-2-homework/resources.qrc \
 	/home/tiny/AZ_projects/sdu-2-homework/src/SHA_256.cpp \
 	/home/tiny/AZ_projects/sdu-2-homework/src/console_adaption.cpp \
+	/home/tiny/AZ_projects/sdu-2-homework/src/f_add_record_window.cpp \
 	/home/tiny/AZ_projects/sdu-2-homework/src/filecheck_and_init.cpp \
 	/home/tiny/AZ_projects/sdu-2-homework/src/financenote.cpp \
 	/home/tiny/AZ_projects/sdu-2-homework/src/financenote_window.cpp \
 	/home/tiny/AZ_projects/sdu-2-homework/src/formatcheck.cpp \
+	/home/tiny/AZ_projects/sdu-2-homework/src/mainwindow.cpp \
 	/home/tiny/AZ_projects/sdu-2-homework/src/notebasic.cpp \
+	/home/tiny/AZ_projects/sdu-2-homework/src/p_add_record_window.cpp \
+	/home/tiny/AZ_projects/sdu-2-homework/src/passwordauth_window.cpp \
 	/home/tiny/AZ_projects/sdu-2-homework/src/passwordmanager.cpp \
+	/home/tiny/AZ_projects/sdu-2-homework/src/passwordmanager_window.cpp \
+	/home/tiny/AZ_projects/sdu-2-homework/src/r_add_record_window.cpp \
 	/home/tiny/AZ_projects/sdu-2-homework/src/reminder.cpp \
+	/home/tiny/AZ_projects/sdu-2-homework/src/reminder_window.cpp \
 	/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/q20functional.h \
 	/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/q20memory.h \
 	/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/include/QtCore/q20type_traits.h \
@@ -195,6 +209,7 @@ SDU_2_homework_autogen/timestamp: \
 	/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Core/Qt6CoreConfigExtras.cmake \
 	/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Core/Qt6CoreConfigVersion.cmake \
 	/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake \
+	/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in \
 	/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake \
 	/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Core/Qt6CoreMacros.cmake \
 	/home/tiny/Qt-6.9d/6.7.3/gcc_arm64/lib/cmake/Qt6Core/Qt6CoreTargets-relwithdebinfo.cmake \
@@ -759,6 +774,12 @@ SDU_2_homework_autogen/timestamp: \
 	/usr/lib/gcc/aarch64-linux-gnu/12/include/stdarg.h \
 	/usr/lib/gcc/aarch64-linux-gnu/12/include/stdbool.h \
 	/usr/lib/gcc/aarch64-linux-gnu/12/include/stddef.h \
+	/home/tiny/AZ_projects/sdu-2-homework/src/f_add_record_window.ui \
 	/home/tiny/AZ_projects/sdu-2-homework/src/financenote_window.ui \
 	/home/tiny/AZ_projects/sdu-2-homework/src/mainwindow.ui \
+	/home/tiny/AZ_projects/sdu-2-homework/src/p_add_record_window.ui \
+	/home/tiny/AZ_projects/sdu-2-homework/src/passwordauth_window.ui \
+	/home/tiny/AZ_projects/sdu-2-homework/src/passwordmanager_window.ui \
+	/home/tiny/AZ_projects/sdu-2-homework/src/r_add_record_window.ui \
+	/home/tiny/AZ_projects/sdu-2-homework/src/reminder_window.ui \
 	/home/tiny/cmake-3.31/bin/cmake
