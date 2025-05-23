@@ -7,6 +7,8 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
+#set(Qt6_DIR "/home/azusake/Qt/6.7.3/gcc_64/lib/cmake/Qt6")
+
 #添加Qt5库(已弃用)
 #if (WIN32)
     #set(Qt6_DIR "F:/Qt/6.7.3/mingw81_64/lib/cmake/Qt6")
@@ -36,7 +38,8 @@ file(GLOB SRC_LIST ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 
 set(HEADERS
         ${UI_HEADERS_INCLUDE}
-    ${UI_HEADERS})
+    ${UI_HEADERS}
+        main.cpp)
 
 add_executable(SDU_2_homework ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp  ${SRC_LIST} ${HEADERS} resources.qrc)
 
