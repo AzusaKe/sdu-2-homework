@@ -76,6 +76,26 @@ li.checked::marker { content: &quot;\2612&quot;; }
       <item>
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="financenote_Button">
+          <property name="text">
+           <string>记账本</string>
+          </property>
+         </widget>
+        </item>
+        <item>
          <spacer name="horizontalSpacer">
           <property name="orientation">
            <enum>Qt::Orientation::Horizontal</enum>
@@ -97,26 +117,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
         </item>
         <item>
          <spacer name="horizontalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Orientation::Horizontal</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QPushButton" name="financenote_Button">
-          <property name="text">
-           <string>记账本</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="horizontalSpacer_3">
           <property name="orientation">
            <enum>Qt::Orientation::Horizontal</enum>
           </property>
@@ -252,12 +252,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
      <height>17</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menu">
-    <property name="title">
-     <string>桌面工具</string>
-    </property>
-   </widget>
-   <addaction name="menu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

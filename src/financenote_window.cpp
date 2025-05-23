@@ -6,6 +6,7 @@ Financenote_Window::Financenote_Window(QWidget *parent)
     , ui(new Ui::Financenote_Window)
 {
     ui->setupUi(this);
+    setWindowTitle("桌面工具-记账本");
 }
 
 Financenote_Window::~Financenote_Window()

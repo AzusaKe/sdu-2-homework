@@ -9,6 +9,9 @@
 #include "SHA_256.h"
 
 #include"mainwindow.h"
+#include"financenote_window.h"
+#include"reminder_window.h"
+#include"passwordmanager_window.h"
 #include<QTranslator>
 #include<QLocale>
 
@@ -39,7 +42,13 @@ int run_Graphical_Interface(int argc, char* argv[]) {
         }
     }
     MainWindow w;
+    Financenote_Window f;
+    Reminder_Window r;
+    Passwordmanager_Window p;
     w.show();
+    f.show();
+    r.show();
+    p.show();
     return app.exec();
     //图形化界面代码实现
     /*try {

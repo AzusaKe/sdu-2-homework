@@ -6,6 +6,7 @@ Reminder_Window::Reminder_Window(QWidget *parent)
     , ui(new Ui::Reminder_Window)
 {
     ui->setupUi(this);
+    setWindowTitle("桌面工具-日程提醒");
 }
 
 Reminder_Window::~Reminder_Window()

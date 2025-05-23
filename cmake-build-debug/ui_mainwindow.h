@@ -10,11 +10,9 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QMainWindow>
-#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
@@ -35,11 +33,11 @@ public:
     QTextBrowser *textBrowser_2;
     QSpacerItem *verticalSpacer_2;
     QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer_3;
+    QPushButton *financenote_Button;
     QSpacerItem *horizontalSpacer;
     QPushButton *reminder_Button;
     QSpacerItem *horizontalSpacer_2;
-    QPushButton *financenote_Button;
-    QSpacerItem *horizontalSpacer_3;
     QPushButton *passwordmanager_Button;
     QSpacerItem *horizontalSpacer_5;
     QSpacerItem *verticalSpacer_3;
@@ -51,7 +49,6 @@ public:
     QSpacerItem *horizontalSpacer_7;
     QSpacerItem *verticalSpacer;
     QMenuBar *menubar;
-    QMenu *menu;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -88,6 +85,15 @@ public:
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_3);
+
+        financenote_Button = new QPushButton(centralwidget);
+        financenote_Button->setObjectName("financenote_Button");
+
+        horizontalLayout->addWidget(financenote_Button);
+
         horizontalSpacer = new QSpacerItem(28, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
@@ -100,15 +106,6 @@ public:
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer_2);
-
-        financenote_Button = new QPushButton(centralwidget);
-        financenote_Button->setObjectName("financenote_Button");
-
-        horizontalLayout->addWidget(financenote_Button);
-
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout->addItem(horizontalSpacer_3);
 
         passwordmanager_Button = new QPushButton(centralwidget);
         passwordmanager_Button->setObjectName("passwordmanager_Button");
@@ -163,14 +160,10 @@ public:
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
         menubar->setGeometry(QRect(0, 0, 374, 17));
-        menu = new QMenu(menubar);
-        menu->setObjectName("menu");
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
         MainWindow->setStatusBar(statusbar);
-
-        menubar->addAction(menu->menuAction());
 
         retranslateUi(MainWindow);
 
@@ -196,11 +189,10 @@ public:
 "li.checked::marker { content: \"\\2612\"; }\n"
 "</style></head><body style=\" font-family:'Microsoft YaHei UI'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\344\273\273\351\200\211\344\270\200\344\270\252\346\250\241\345\235\227\344\273\245\347\273\247\347\273\255</p></body></html>", nullptr));
-        reminder_Button->setText(QCoreApplication::translate("MainWindow", "\346\227\245\347\250\213\346\217\220\351\206\222", nullptr));
         financenote_Button->setText(QCoreApplication::translate("MainWindow", "\350\256\260\350\264\246\346\234\254", nullptr));
+        reminder_Button->setText(QCoreApplication::translate("MainWindow", "\346\227\245\347\250\213\346\217\220\351\206\222", nullptr));
         passwordmanager_Button->setText(QCoreApplication::translate("MainWindow", "\345\257\206\347\240\201\347\256\241\347\220\206\345\231\250", nullptr));
         exit_Button->setText(QCoreApplication::translate("MainWindow", "\351\200\200\345\207\272", nullptr));
-        menu->setTitle(QCoreApplication::translate("MainWindow", "\346\241\214\351\235\242\345\267\245\345\205\267", nullptr));
     } // retranslateUi
 
 };

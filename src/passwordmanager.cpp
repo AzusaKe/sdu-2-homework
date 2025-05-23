@@ -49,7 +49,11 @@ void passwordmanager::load_from_file() {
 
     string line;
     if (getline(file, line)) {
-        correct_key_sha_256 = line;
+        if (line == "") {
+            is_new_user = true;
+        }else {
+            correct_key_sha_256 = line;
+        }
     }
     while (getline(file, line)) {
         stringstream ss(line);
