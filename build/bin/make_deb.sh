@@ -3,8 +3,8 @@
 set -e
 
 APP_NAME="sdu-2-homework"
-APP_EXEC="/home/tiny/AZ_Projects/sdu-2-homework/build/bin/SDU_2_homework"
-ICON_SRC="/home/tiny/AZ_Projects/sdu-2-homework/build/bin/icon.ico"
+APP_EXEC="/home/tiny/AZ_projects/sdu-2-homework/build/bin/SDU_2_homework"
+ICON_SRC="/home/tiny/AZ_projects/sdu-2-homework/build/bin/icon.ico"
 VERSION="1.0"
 ARCH="arm64"
 
