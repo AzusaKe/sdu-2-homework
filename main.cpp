@@ -40,22 +40,25 @@ int main(int argc, char* argv[]) {
 //图形化程序入口
 int run_Graphical_Interface(int argc, char* argv[]) {
     is_graphic = true;
-    cout << "Running graphical interface..." << endl;//调试用代码
+    cout << "运行图形界面..." << endl;//调试用代码
     financenote finance_note;
     reminder reminder_temp;
     passwordmanager password_manager;
+    cout << "测试：" << endl;
     cout <<"is_graphic = " << (is_graphic ? "True" : "False") << endl;
     reminder_temp.get_current_date();
     cout << "SHA256::sha_256(123)= " << SHA256::sha_256("123") << endl;
     cout << "SHA256::sha_256(123456)= " << SHA256::sha_256("123456") << endl;
     cout << "SHA256::sha_256(123456789)= " << SHA256::sha_256("123456789") << endl;
     QApplication app(argc,argv);
-
-    app.setWindowIcon(QIcon(":/icons/icon.ico"));
+    cout << "已创建QApplication对象！" << endl;
 
     QPixmap pixmap(":/icons/icon.ico");
     if (pixmap.isNull()) {
         cerr << "加载图标失败！" << endl;
+    }else {
+        app.setWindowIcon(QIcon(":/icons/icon.ico"));
+        cout << "已设置图标！" << endl;
     }
 
     QTranslator translator;
@@ -72,7 +75,7 @@ int run_Graphical_Interface(int argc, char* argv[]) {
     main_window.show();
 
     return app.exec();
-    //图形化界面代码实现
+    //图形化界面代码实现测试，已注释
     /*try {
         QApplication app(argc, argv);
         QLabel *info_label = new QLabel;
