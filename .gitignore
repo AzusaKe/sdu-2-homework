@@ -1,0 +1,6 @@
+/out/
+/cmake-build-debug/
+/chromebook_build/
+/build/
+/.vscode/
+/.vs/
