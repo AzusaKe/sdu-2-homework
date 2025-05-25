@@ -49,4 +49,5 @@ This project uses `C++` and `Qt` to achieve cross-platform development. If you w
 - Automatically load all records from the files when the system starts
 ### Expanded Functions
 - Store the files again upon closing
+- Automatically initialize files
 > Graphical functions remain consistent after GUI implementation
