@@ -1,5 +1,0 @@
-/home/tiny/AZ_projects/sdu-2-homework/build/CMakeFiles/SDU_2_homework.dir
-/home/tiny/AZ_projects/sdu-2-homework/build/CMakeFiles/SDU_2_homework_other_files.dir
-/home/tiny/AZ_projects/sdu-2-homework/build/CMakeFiles/edit_cache.dir
-/home/tiny/AZ_projects/sdu-2-homework/build/CMakeFiles/rebuild_cache.dir
-/home/tiny/AZ_projects/sdu-2-homework/build/CMakeFiles/SDU_2_homework_autogen.dir

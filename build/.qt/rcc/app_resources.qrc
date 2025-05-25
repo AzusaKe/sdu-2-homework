@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/">
-    <file alias="resources.qrc">/home/tiny/AZ_projects/sdu-2-homework/resources.qrc</file>
-  </qresource>
-</RCC>
-

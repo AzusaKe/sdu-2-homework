@@ -1,8 +1,0 @@
-Package: sdu-2-homework
-Version: 1.0
-Section: utils
-Priority: optional
-Architecture: arm64
-Maintainer: Azusa <zhuo9_9@outlook.com>
-Description: SDU Qt Homework Project
-Depends: libqt6core6, libqt6gui6, libqt6widgets6
