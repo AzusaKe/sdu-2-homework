@@ -61,8 +61,4 @@ endif()
 if (WIN32)
     add_custom_command(TARGET SDU_2_homework POST_BUILD
     COMMAND ${Qt6_DIR}/../../../bin/windeployqt.exe ${CMAKE_CURRENT_OUTPUT_DIRECTORY} $<TARGET_FILE:SDU_2_homework>)
-elseif (UNIX AND NOT APPLE)
-    add_custom_command(TARGET SDU_2_homework POST_BUILD
-    COMMAND ${CMAKE_CURRENT_OUTPUT_DERECTORY}/make_deb.sh
-    COMMAND ${CMAKE_CURRENT_OUTPUT_DERECTORY}/make_appimage.sh)
 endif()
