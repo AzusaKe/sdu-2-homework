@@ -1,4 +1,4 @@
-[English](README_en.md) | [中文](README.md)
+[English](README_en.MD) | [中文](README.MD)
 # 项目介绍
 这是SDU-2025年大一下的期末大作业，要求开发一个桌面工具，详见项目要求：[c++项目要求](https://github.com/YanniYang-PolyU/2025-Cplusplus-Project)，并包含三个模块：
 1. 记账本

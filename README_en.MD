@@ -1,4 +1,4 @@
-[English](README_en.md) | [中文](README.md)
+[English](README_en.MD) | [中文](README.MD)
 # Project Introduction
 This is the final major assignment for the second semester of the first year of SDU-2025, requiring the development of a desktop tool. For more details, see the project requirements: [C++ Project Requirements](https://github.com/YanniYang-PolyU/2025-Cplusplus-Project), and it includes three modules:
 1. Finance Note
