@@ -2,6 +2,7 @@
 #define PASSWORDMANAGER_WINDOW_H
 
 #include <QMainWindow>
+#include "p_add_record_window.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

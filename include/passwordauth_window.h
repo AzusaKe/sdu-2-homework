@@ -2,6 +2,7 @@
 #define PASSWORDAUTH_WINDOW_H
 
 #include <QMainWindow>
+#include "passwordmanager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

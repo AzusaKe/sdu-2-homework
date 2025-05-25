@@ -2,6 +2,7 @@
 #define REMINDER_WINDOW_H
 
 #include <QMainWindow>
+#include "r_add_record_window.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

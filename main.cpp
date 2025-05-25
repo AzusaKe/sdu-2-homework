@@ -2,20 +2,10 @@
 //为不同系统添加兼容代码
 
 #include<iostream>
-#include"financenote.h"
-#include"passwordmanager.h"
-#include"reminder.h"
 #include"filecheck_and_init.h"
 #include "SHA_256.h"
 
 #include"mainwindow.h"
-#include"financenote_window.h"
-#include"reminder_window.h"
-#include"passwordmanager_window.h"
-#include"f_add_record_window.h"
-#include"r_add_record_window.h"
-#include"p_add_record_window.h"
-#include"passwordauth_window.h"
 #include<QTranslator>
 #include<QLocale>
 #include<QIcon>

@@ -2,6 +2,7 @@
 #define P_ADD_RECORD_WINDOW_H
 
 #include <QMainWindow>
+#include "passwordauth_window.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {

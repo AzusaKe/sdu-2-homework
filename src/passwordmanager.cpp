@@ -296,7 +296,7 @@ void passwordmanager::init() {
             key = system_get_hidden_input();
             correct_key_sha_256 = SHA256::sha_256(key);
             passwordmanager::save_to_file();
-            cout << "你的密码凭据已创建并保存，请牢记！回车以进入密码管理器！" << endl;
+            cout << endl << "你的密码凭据已创建并保存，请牢记！回车以进入密码管理器！" << endl;
             system_pause();
             is_new_user = false;
         }else {

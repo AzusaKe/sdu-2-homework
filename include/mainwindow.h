@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "financenote_window.h"
+#include "reminder_window.h"
+#include "passwordmanager_window.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
