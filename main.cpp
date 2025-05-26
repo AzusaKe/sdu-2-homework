@@ -50,38 +50,44 @@ int run_Graphical_Interface(int argc, char* argv[]) {
     cout << "SHA256::sha_256(123)= " << SHA256::sha_256("123") << endl;
     cout << "SHA256::sha_256(123456)= " << SHA256::sha_256("123456") << endl;
     cout << "SHA256::sha_256(123456789)= " << SHA256::sha_256("123456789") << endl;
-    QApplication app(argc,argv);
-    cout << "已创建QApplication对象！" << endl;
+    try {
+        QApplication app(argc,argv);
+        cout << "已创建QApplication对象！" << endl;
 
-    QPixmap pixmap(":/icons/icon.ico");
-    if (pixmap.isNull()) {
-        cerr << "加载图标失败！" << endl;
-    }else {
-        app.setWindowIcon(QIcon(":/icons/icon.ico"));
-        cout << "已设置图标！" << endl;
-    }
-
-    QTranslator translator;
-    const QStringList uiLanguages = QLocale::system().uiLanguages();
-    for (const QString &locale : uiLanguages) {
-        const QString baseName = "main_ui_" + QLocale(locale).name();
-        if (translator.load(":/i18n/" + baseName)) {
-            app.installTranslator(&translator);
-            break;
+        QPixmap pixmap(":/icons/icon.ico");
+        if (pixmap.isNull()) {
+            cerr << "加载图标失败！" << endl;
+        }else {
+            app.setWindowIcon(QIcon(":/icons/icon.ico"));
+            cout << "已设置图标！" << endl;
         }
+
+        QTranslator translator;
+        const QStringList uiLanguages = QLocale::system().uiLanguages();
+        for (const QString &locale : uiLanguages) {
+            const QString baseName = "main_ui_" + QLocale(locale).name();
+            if (translator.load(":/i18n/" + baseName)) {
+                app.installTranslator(&translator);
+                break;
+            }
+        }
+
+        financenote *finance_note_ptr = &finance_note;
+        reminder *reminder_temp_ptr = &reminder_temp;
+        passwordmanager *password_manager_ptr = &password_manager;
+
+        MainWindow main_window;
+        main_window.set_ptr_financenote_2(finance_note_ptr);
+        main_window.set_ptr_reminder_2(reminder_temp_ptr);
+        main_window.set_ptr_passwordmanager_2(password_manager_ptr);
+        main_window.show();
+
+        return app.exec();
+    }catch (const std::exception& e) {
+        cerr << "Error: " << e.what() << endl;
+        return -1;
     }
 
-    financenote *finance_note_ptr = &finance_note;
-    reminder *reminder_temp_ptr = &reminder_temp;
-    passwordmanager *password_manager_ptr = &password_manager;
-
-    MainWindow main_window;
-    main_window.set_ptr_financenote_2(finance_note_ptr);
-    main_window.set_ptr_reminder_2(reminder_temp_ptr);
-    main_window.set_ptr_passwordmanager_2(password_manager_ptr);
-    main_window.show();
-
-    return app.exec();
     //图形化界面代码实现测试，已注释
     /*try {
         QApplication app(argc, argv);
