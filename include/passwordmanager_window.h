@@ -18,7 +18,12 @@ public:
     Passwordmanager_Window(QWidget *parent = nullptr);
     ~Passwordmanager_Window();
 
+    void set_ptr(passwordmanager *ptr);
+
+    void closeEvent(QCloseEvent *event) override;
+
 private:
     Ui::Passwordmanager_Window *ui;
+    passwordmanager *password_manager_ptr_4;
 };
 #endif // PASSWORDMANAGER_WINDOW_H

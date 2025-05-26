@@ -18,7 +18,11 @@ public:
     Reminder_Window(QWidget *parent = nullptr);
     ~Reminder_Window();
 
+    void set_ptr(reminder *ptr);
+    void closeEvent(QCloseEvent *event) override;
+
 private:
     Ui::Reminder_Window *ui;
+    reminder *reminder_temp_ptr_3;
 };
 #endif // REMINDER_WINDOW_H

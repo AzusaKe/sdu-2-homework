@@ -13,7 +13,8 @@
 #include <QVBoxLayout>
 #include <QWidget>
 #include <QtCore/qglobal.h>
-
+#define WIN32_LEAN_AND_MEAN
+#define NOGDI
 #ifdef Q_OS_WIN
 #include<windows.h>
 #include<conio.h>

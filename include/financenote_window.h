@@ -18,7 +18,11 @@ public:
     Financenote_Window(QWidget *parent = nullptr);
     ~Financenote_Window();
 
+    void set_ptr(financenote *ptr);
+    void closeEvent(QCloseEvent *event) override;
+
 private:
     Ui::Financenote_Window *ui;
+    financenote *finance_note_ptr_3;
 };
 #endif // FINANCENOTE_WINDOW_H

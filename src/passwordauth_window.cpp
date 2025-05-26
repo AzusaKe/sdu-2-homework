@@ -1,5 +1,7 @@
 #include "passwordauth_window.h"
 #include "./ui_passwordauth_window.h"
+#include "console_adaption.h"
+#include "SHA_256.h"
 
 Passwordauth_Window::Passwordauth_Window(QWidget *parent)
     : QMainWindow(parent)
@@ -7,9 +9,36 @@ Passwordauth_Window::Passwordauth_Window(QWidget *parent)
 {
     ui->setupUi(this);
     setWindowTitle("用户身份验证...");
+    connect(ui->confirm_Button, &QPushButton::clicked, this, &Passwordauth_Window::authenticate);
+    connect(ui->exit_Button, &QPushButton::clicked, this, &Passwordauth_Window::close);
 }
 
 Passwordauth_Window::~Passwordauth_Window()
 {
     delete ui;
 }
+
+void Passwordauth_Window::closeEvent(QCloseEvent *event) {
+    QMainWindow::closeEvent(event);
+    if (is_authenticated) {
+        emit authenticated();
+    }else {
+        emit destroyed();
+    }
+}
+
+void Passwordauth_Window::authenticate() {
+    std::string input_password = ui->auth_lineEdit->text().toStdString();
+    input_password = SHA256::sha_256(input_password);
+    is_authenticated = password_manager_ptr_5->is_correct_key(input_password);
+    cout << "身份验证结果：" << (is_authenticated ? "成功" : "失败") << endl;
+    if (is_authenticated) {
+        close();
+        cout << "身份验证成功！" << endl;
+    }else {
+        ui->auth_lineEdit->clear();
+        QMessageBox::warning(this, "身份验证失败", "密码错误，请重新输入！", QMessageBox::Ok);
+    }
+}
+
+

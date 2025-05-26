@@ -71,7 +71,14 @@ int run_Graphical_Interface(int argc, char* argv[]) {
         }
     }
 
+    financenote *finance_note_ptr = &finance_note;
+    reminder *reminder_temp_ptr = &reminder_temp;
+    passwordmanager *password_manager_ptr = &password_manager;
+
     MainWindow main_window;
+    main_window.set_ptr_financenote_2(finance_note_ptr);
+    main_window.set_ptr_reminder_2(reminder_temp_ptr);
+    main_window.set_ptr_passwordmanager_2(password_manager_ptr);
     main_window.show();
 
     return app.exec();

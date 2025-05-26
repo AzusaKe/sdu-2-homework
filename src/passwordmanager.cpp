@@ -229,10 +229,19 @@ vector<passwordmanager::search_record> passwordmanager::operator=(const vector<r
 }
 
 bool passwordmanager::is_correct_key(const string &tested_key) {
-    if (is_graphic){
-        cout << "凭证已校验:" << (tested_key == correct_key_sha_256 ? "已通过！" : "未通过...") << endl;
+    if (is_graphic) {
+        cout <<"正在校验凭据..." << endl;
     }
-    return tested_key == correct_key_sha_256;
+    if (!is_new_user) {
+        if (is_graphic){
+            cout << "凭证已校验:" << (tested_key == correct_key_sha_256 ? "已通过！" : "未通过...") << endl;
+        }
+        return tested_key == correct_key_sha_256;
+    }else {
+        cerr << "当前为新用户，无法验证凭据！" << endl;
+        return false;
+    }
+
 }
 
 /*void passwordmanager::set_key(const string& k) {
