@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include "log.h"
 //构造函数
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -16,6 +17,10 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+    for (QObject *child : children()) {
+        *(azusa_log::log) << "正在析构子对象：" << child->objectName().toStdString() << endl;
+        delete child; //析构子对象
+    }
 }
 //设置指针函数
 void MainWindow::set_ptr_financenote_2(financenote *ptr) {

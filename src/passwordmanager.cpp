@@ -6,7 +6,6 @@
 
 #include "notebasic.h"
 #include "passwordmanager.h"
-#include "financenote.h"
 #include "formatcheck.h"
 #include "SHA_256.h"
 #include <iostream>

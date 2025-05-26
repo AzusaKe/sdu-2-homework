@@ -1,5 +1,6 @@
 #include "passwordmanager_window.h"
 #include "./ui_passwordmanager_window.h"
+#include "log.h"
 
 Passwordmanager_Window::Passwordmanager_Window(QWidget *parent)
     : QMainWindow(parent)
@@ -13,6 +14,7 @@ Passwordmanager_Window::Passwordmanager_Window(QWidget *parent)
 Passwordmanager_Window::~Passwordmanager_Window()
 {
     delete ui;
+    *(azusa_log::log) << "密码管理器窗口已析构！" << endl;
 }
 //设置指针函数
 void Passwordmanager_Window::set_ptr(passwordmanager *ptr) {

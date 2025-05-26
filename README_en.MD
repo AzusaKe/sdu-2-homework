@@ -50,4 +50,5 @@ This project uses `C++` and `Qt` to achieve cross-platform development. If you w
 ### Expanded Functions
 - Store the files again upon closing
 - Automatically initialize files
+- Add a logging system
 > Graphical functions remain consistent after GUI implementation

@@ -1,5 +1,6 @@
 #include "reminder_window.h"
 #include "./ui_reminder_window.h"
+#include "log.h"
 
 Reminder_Window::Reminder_Window(QWidget *parent)
     : QMainWindow(parent)
@@ -13,6 +14,7 @@ Reminder_Window::Reminder_Window(QWidget *parent)
 Reminder_Window::~Reminder_Window()
 {
     delete ui;
+    *(azusa_log::log) << "日程提醒窗口已析构！" << endl;
 }
 //设置指针函数
 void Reminder_Window::set_ptr(reminder *ptr) {
