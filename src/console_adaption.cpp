@@ -67,3 +67,27 @@ string system_get_hidden_input() {
     return input;
     #endif
 }
+
+void log() {
+    std::filesystem::create_directories("log");
+
+    // 获取当前时间
+    auto now = std::chrono::system_clock::now();
+    std::time_t t = std::chrono::system_clock::to_time_t(now);
+    std::tm tm;
+#ifdef _WIN32
+    localtime_s(&tm, &t);
+#else
+    localtime_r(&t, &tm);
+#endif
+    std::ostringstream oss;
+    oss << "log/"
+        << std::put_time(&tm, "%Y-%m-%d_%H-%M-%S")
+        << ".log";
+    std::string log_path = oss.str();
+
+    // 重定向日志
+    static std::ofstream log_file(log_path, std::ios::out | std::ios::app);
+    std::cout.rdbuf(log_file.rdbuf());
+    std::cerr.rdbuf(log_file.rdbuf());
+}

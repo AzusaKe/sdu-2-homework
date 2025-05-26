@@ -21,5 +21,6 @@ void Passwordmanager_Window::set_ptr(passwordmanager *ptr) {
 
 void Passwordmanager_Window::closeEvent(QCloseEvent *event) {
     QMainWindow::closeEvent(event);
+    password_manager_ptr_4->close();
     emit destroyed();
 }

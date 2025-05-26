@@ -136,7 +136,7 @@ void reminder::add_entry(const string &time,const string& content, const int &pr
 void reminder::close() {
     reminder::save_to_file();
     if (is_graphic){
-        cout << "已关闭这个记账本实例！" << endl;
+        cout << "已关闭这个日程提醒实例！" << endl;
     }
 }
 

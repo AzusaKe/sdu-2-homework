@@ -32,7 +32,7 @@ private:
     vector<search_record> search_result;
     string key;
     string correct_key_sha_256;
-    bool is_new_user;
+    bool is_new_user = false;
     string file_path = "./data/password.txt";
 public:
     passwordmanager();
@@ -54,6 +54,7 @@ public:
     void close() override;
 
     bool is_new_user_flag() const;
+    void set_correct_key_sha_256(string key);
 
     //临时测hi用
     //void set_key(const string& k);

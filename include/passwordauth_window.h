@@ -19,9 +19,7 @@ public:
     Passwordauth_Window(QWidget *parent = nullptr);
     ~Passwordauth_Window();
 
-    void set_ptr(passwordmanager *ptr) {
-        password_manager_ptr_5 = ptr;
-    }
+    void set_ptr(passwordmanager *ptr) ;
 
     void authenticate();
 

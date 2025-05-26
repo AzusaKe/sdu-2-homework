@@ -26,7 +26,6 @@ int main(int argc, char* argv[]) {
     SetConsoleMode(GetStdHandle(STD_OUTPUT_HANDLE),ENABLE_PROCESSED_OUTPUT | ENABLE_WRAP_AT_EOL_OUTPUT);//修改控制台编码格式,避免乱码
 #endif
     filecheck_and_init();//检查文件是否存在并初始化
-
     if (argc > 1) {// 在完成图形化后记得修改为if (argc > 1)
         // 如果没有命令行参数，运行命令行界面
         run_Command_Line_Interface(argc, argv);
@@ -39,7 +38,14 @@ int main(int argc, char* argv[]) {
 
 //图形化程序入口
 int run_Graphical_Interface(int argc, char* argv[]) {
+    // log系统启动
+    log();
     is_graphic = true;
+#ifdef Q_OS_WIN
+    //::FreeConsole();
+#elif defined(Q_OS_LINUX)
+    // 无需隐藏
+#endif
     cout << "运行图形界面..." << endl;//调试用代码
     financenote finance_note;
     reminder reminder_temp;
@@ -81,6 +87,13 @@ int run_Graphical_Interface(int argc, char* argv[]) {
         main_window.set_ptr_reminder_2(reminder_temp_ptr);
         main_window.set_ptr_passwordmanager_2(password_manager_ptr);
         main_window.show();
+
+        // 监听 MainWindow 的 exit 信号，析构三个模块并关闭程序
+        QObject::connect(&main_window, &MainWindow::exit, [&]() {
+            // 析构模块对象
+            app.quit();
+            return 0;
+        });
 
         return app.exec();
     }catch (const std::exception& e) {
@@ -132,7 +145,6 @@ int run_Graphical_Interface(int argc, char* argv[]) {
         cerr << "Error: " << e.what() << endl;
         return -1;
     }*/
-
 }
 
 //命令行程序入口

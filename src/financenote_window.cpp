@@ -21,5 +21,6 @@ void Financenote_Window::set_ptr(financenote *ptr) {
 
 void Financenote_Window::closeEvent(QCloseEvent *event) {
     QMainWindow::closeEvent(event);
+    finance_note_ptr_3->close();
     emit destroyed();
 }

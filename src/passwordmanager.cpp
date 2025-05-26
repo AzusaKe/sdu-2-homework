@@ -32,7 +32,15 @@ passwordmanager::~passwordmanager() {
 bool passwordmanager::is_new_user_flag() const {
     return is_new_user;
 }
-;
+//设置正确的密码凭据
+void passwordmanager::set_correct_key_sha_256(string input_key) {
+    correct_key_sha_256 = SHA256::sha_256(input_key);
+    if (is_graphic){
+        cout << "已设置正确的密码凭据！" << endl;
+    }
+    is_new_user = false; // 设置为非新用户
+    passwordmanager::save_to_file(); // 保存到文件
+}
 
 //文件加载函数-复用自记账本
 void passwordmanager::load_from_file() {

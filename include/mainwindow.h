@@ -23,12 +23,15 @@ public:
     void set_ptr_financenote_2(financenote *ptr);
     void set_ptr_reminder_2(reminder *ptr);
     void set_ptr_passwordmanager_2(passwordmanager *ptr);
+    signals:
+    void exit();
 public slots:
     void on_financenote_button_clicked();
     void on_reminder_button_clicked();
     void on_passwordmanager_button_clicked();
     void on_exit_button_clicked();
     void open_passwordmanager_window();
+
 
 private:
     Ui::MainWindow *ui;

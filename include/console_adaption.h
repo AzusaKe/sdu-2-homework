@@ -25,6 +25,11 @@
 #include<string>
 #include<cstdlib>
 #include<iostream>
+#include<fstream>
+#include <filesystem>
+#include <chrono>
+#include <iomanip>
+#include <sstream>
 #include"mainwindow.h"
 using namespace std;
 
@@ -33,5 +38,7 @@ extern bool is_graphic;
 void system_clear();
 void system_pause();
 string system_get_hidden_input();
+
+void log();
 
 #endif //CONSOLE_ADAPTION_H

@@ -57,13 +57,14 @@ void MainWindow::open_passwordmanager_window() {
 //密码管理器身份验证按钮
 void MainWindow::on_passwordmanager_button_clicked() {
     Passwordauth_Window *passwordauth_window = new Passwordauth_Window(this);
-    passwordauth_window->set_ptr(password_manager_ptr_2);
     this->hide();
     passwordauth_window->show();
+    passwordauth_window->set_ptr(password_manager_ptr_2);
     connect(passwordauth_window,SIGNAL(authenticated()),this,SLOT(open_passwordmanager_window()));
     connect(passwordauth_window, &Passwordauth_Window::destroyed, this, &MainWindow::show);
 }
 //退出按钮
 void MainWindow::on_exit_button_clicked() {
     close();
+    emit exit();
 }

@@ -89,6 +89,9 @@ void financenote::add_entry(const string &date, double amount, const string &cat
 //关闭函数，避免错误保存
 void financenote::close() {
     financenote::save_to_file();
+    if (is_graphic){
+        cout << "已关闭这个记账本实例！" << endl;
+    }
 }
 
 //排序函数

@@ -22,5 +22,6 @@ void Reminder_Window::set_ptr(reminder *ptr) {
 //关闭窗口事件
 void Reminder_Window::closeEvent(QCloseEvent *event) {
     QMainWindow::closeEvent(event);
+    reminder_temp_ptr_3->close();
     emit destroyed();
 }
