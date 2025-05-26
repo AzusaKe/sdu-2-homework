@@ -1,5 +1,6 @@
 #include "financenote_window.h"
 #include "./ui_financenote_window.h"
+#include "log.h"
 
 Financenote_Window::Financenote_Window(QWidget *parent)
     : QMainWindow(parent)
@@ -13,6 +14,10 @@ Financenote_Window::Financenote_Window(QWidget *parent)
 Financenote_Window::~Financenote_Window()
 {
     delete ui;
+    for (QObject *child : children()) {
+        *(azusa_log::log) << "正在析构子对象：" << child->objectName().toStdString() << endl;
+        delete child; //析构子对象
+    }
 }
 //设置指针函数
 void Financenote_Window::set_ptr(financenote *ptr) {
