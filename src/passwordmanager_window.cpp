@@ -14,6 +14,10 @@ Passwordmanager_Window::Passwordmanager_Window(QWidget *parent)
 Passwordmanager_Window::~Passwordmanager_Window()
 {
     delete ui;
+    for (QObject *child : children()) {
+        *(azusa_log::log) << "正在析构子对象：" << child->objectName().toStdString() << endl;
+        delete child; //析构子对象
+    }
     *(azusa_log::log) << "密码管理器窗口已析构！" << endl;
 }
 //设置指针函数
