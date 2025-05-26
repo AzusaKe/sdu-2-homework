@@ -16,12 +16,13 @@
 using namespace std;
 
 class reminder : public notebasic {
-private:
+public:
     struct event {
         string time;
         string content;
         int priority;
     };
+private:
     string current_date;
     vector<event> entries;
     vector<event> search_result;

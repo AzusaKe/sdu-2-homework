@@ -2,6 +2,7 @@
 #define FINANCENOTE_WINDOW_H
 
 #include <QMainWindow>
+#include <QMessageBox>
 #include"f_add_record_window.h"
 
 QT_BEGIN_NAMESPACE
@@ -20,6 +21,7 @@ public:
 
     void set_ptr(financenote *ptr);
     void closeEvent(QCloseEvent *event) override;
+    void on_search_Button_clicked();
 
 private:
     Ui::Financenote_Window *ui;

@@ -24,3 +24,14 @@ void Financenote_Window::closeEvent(QCloseEvent *event) {
     finance_note_ptr_3->close();
     emit destroyed();
 }
+
+//搜索函数
+void Financenote_Window::on_search_Button_clicked() {
+    string month = ui->search_lineEdit->text().toStdString();
+    if (month.empty()) {
+        QMessageBox::warning(this, "警告", "请输入月份！");
+        return;
+    }else {
+        finance_note_ptr_3->search(month);
+    }
+}

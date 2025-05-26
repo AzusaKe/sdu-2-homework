@@ -16,16 +16,18 @@
 using namespace std;
 
 class financenote : public notebasic {
-private:
+public:
     struct entry {
         string date;//日期
         double amount;//金额
         string category;//类别
-    };
+    };//定义结构体用于存储每条记录
+private:
     vector<entry> entries;//创建向量用于存储记录
     vector<entry> search_result;
     string file_path = "./data/finance.txt";
 public:
+
     financenote();
     ~financenote();
     void load_from_file() override;//从文件加载，继承自基类

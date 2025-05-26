@@ -16,12 +16,13 @@
 using namespace std;
 
 class passwordmanager : public notebasic {
-private:
+public:
     struct record {
         string site_name;
         string username;
         string password;
     };
+private:
     struct search_record {
         string site_name;
         string username;
