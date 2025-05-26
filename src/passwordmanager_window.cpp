@@ -12,7 +12,6 @@ Passwordmanager_Window::Passwordmanager_Window(QWidget *parent)
 
 Passwordmanager_Window::~Passwordmanager_Window()
 {
-    delete password_manager_ptr_4; //析构密码管理器指针
     delete ui;
 }
 //设置指针函数

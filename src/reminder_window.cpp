@@ -12,7 +12,6 @@ Reminder_Window::Reminder_Window(QWidget *parent)
 
 Reminder_Window::~Reminder_Window()
 {
-    delete reminder_temp_ptr_3;
     delete ui;
 }
 //设置指针函数

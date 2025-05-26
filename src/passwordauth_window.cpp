@@ -15,7 +15,6 @@ Passwordauth_Window::Passwordauth_Window(QWidget *parent)
 
 Passwordauth_Window::~Passwordauth_Window()
 {
-    delete password_manager_ptr_5;
     delete ui;
 }
 
