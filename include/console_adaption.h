@@ -31,14 +31,13 @@
 #include <iomanip>
 #include <sstream>
 #include"mainwindow.h"
+#include "log.h"
 using namespace std;
 
 #pragma once
-extern bool is_graphic;
+
 void system_clear();
 void system_pause();
 string system_get_hidden_input();
-
-void log();
 
 #endif //CONSOLE_ADAPTION_H

@@ -14,16 +14,13 @@
 
 passwordmanager::passwordmanager() {
     passwordmanager::load_from_file();
-    if (is_graphic){
-        cout << "密码管理器构造成功！" << endl;
-    }
+        *(azusa_log::log) << "密码管理器构造成功！" << endl;
 }
 
 passwordmanager::~passwordmanager() {
     passwordmanager::close();
-    if (is_graphic){
-        cout << "密码管理器析构成功！" << endl;
-    }
+    *(azusa_log::log) << "密码管理器析构成功！" << endl;
+
 }
 
 //逻辑部分--------------------------------------------------------------------------------------------------------------------
@@ -35,9 +32,7 @@ bool passwordmanager::is_new_user_flag() const {
 //设置正确的密码凭据
 void passwordmanager::set_correct_key_sha_256(string input_key) {
     correct_key_sha_256 = SHA256::sha_256(input_key);
-    if (is_graphic){
-        cout << "已设置正确的密码凭据！" << endl;
-    }
+    *(azusa_log::log) << "已设置正确的密码凭据！" << endl;
     is_new_user = false; // 设置为非新用户
     passwordmanager::save_to_file(); // 保存到文件
 }
@@ -49,9 +44,11 @@ void passwordmanager::load_from_file() {
     ifstream file(file_path);
     if (!file.is_open()) {
         cerr << "无法打开目标文件：" << file_path << "，即将自动创建新文件" << endl;
+        *(azusa_log::log) << "无法打开目标文件：" << file_path << "，即将自动创建新文件" << endl;
         ofstream createFile(file_path);
         if (!createFile.is_open()) {
             cerr << "无法创建文件：" << file_path << "，请检查数据文件夹是否损坏" << endl;
+            *(azusa_log::log) << "无法创建文件：" << file_path << "，请检查数据文件夹是否损坏" << endl;
             system_pause();
             return;
         }
@@ -79,9 +76,7 @@ void passwordmanager::load_from_file() {
         }
     }
     file.close();
-    if (is_graphic){
-        cout << "已读取文件：" << passwordmanager::file_path << endl;
-    }
+    *(azusa_log::log) << "已读取文件：" << passwordmanager::file_path << endl;
 }
 //文件写入函数-复用自记账本
 void passwordmanager::save_to_file() {
@@ -102,9 +97,7 @@ void passwordmanager::save_to_file() {
         file << temp.site_name << " " << temp.username << " " << temp.password << endl;
     }
     file.close();
-    if (is_graphic){
-        cout << "已写入文件：" << passwordmanager::file_path << endl;;
-    }
+    *(azusa_log::log) << "已写入文件：" << passwordmanager::file_path << endl;;
 }
 
 //搜索函数
@@ -161,9 +154,7 @@ void passwordmanager::search(const string &site_name) {
         }
         return a.similarity > b.similarity;
     });
-    if (is_graphic){
-        cout << "[ " << site_name << " ]搜索已完成！" << endl;
-    }
+    *(azusa_log::log) << "[ " << site_name << " ]搜索已完成！" << endl;
 }
 
 //加密函数
@@ -173,9 +164,7 @@ string passwordmanager::encoder(const string &this_password) {
     for (size_t i = 0; i < encrypted_password.size(); ++i) {
         encrypted_password[i] ^= key[i % key.size()];
     }
-    if (is_graphic){
-        cout << "密码已加密为：" << encrypted_password;
-    }
+    *(azusa_log::log) << "密码已加密为：" << encrypted_password;
     return encrypted_password;
 }
 
@@ -185,18 +174,14 @@ string passwordmanager::decoder(const string &this_password) {
     for (size_t i = 0; i < decrypted_password.size(); ++i) {
         decrypted_password[i] ^= key[i % key.size()];
     }
-    if (is_graphic){
-        cout << this_password << "已解密。" << endl;
-    }
+    *(azusa_log::log) << this_password << "已解密。" << endl;
     return decrypted_password;
 }
 //检测密码是否已经存在
 bool passwordmanager::is_already_exist(const string &site_name, const string &username, const string &password) {
     for (const auto &entry: entries) {
         if (entry.site_name == site_name && entry.username == username && entry.password == password) {
-            if (is_graphic){
-                cout << "记录已存在！" << endl;
-            }
+            *(azusa_log::log) << "记录已存在！" << endl;
             return true;
         }
     }
@@ -208,17 +193,13 @@ bool passwordmanager::is_already_exist(const string &site_name, const string &us
 void passwordmanager::add_entry(const string &site_name, const string &username, const string &password) {
     entries.push_back({site_name, username, password});
     passwordmanager::save_to_file();
-    if (is_graphic){
-        cout << "记录已添加！" << endl;
-    }
+    *(azusa_log::log) << "记录已添加！" << endl;
 }
 
 //关闭函数，避免错误保存
 void passwordmanager::close() {
     passwordmanager::save_to_file();
-    if (is_graphic){
-        cout << "已关闭这个密码管理器实例！" << endl;
-    }
+    *(azusa_log::log) << "已关闭这个密码管理器实例！" << endl;
 }
 
 //排序函数
@@ -226,9 +207,7 @@ void passwordmanager::sort() {
     std::sort(search_result.begin(), search_result.end(), [](const search_record &a, const search_record &b) {
         return a.similarity > b.similarity;
     });
-    if (is_graphic){
-        cout << "记录已排序" << endl;
-    }
+    *(azusa_log::log) << "记录已排序" << endl;
 }
 
 //运算符重载，用于将不同类型的值先呵护转化
@@ -237,20 +216,14 @@ vector<passwordmanager::search_record> passwordmanager::operator=(const vector<r
     for (const auto &entry : entries) {
         result.push_back({entry.site_name, entry.username, entry.password, 1.0});
     }
-    if (is_graphic){
-        cout << "已将record向量组转化为search_record类型！" << endl;
-    }
+    *(azusa_log::log) << "已将record向量组转化为search_record类型！" << endl;
     return result;
 }
 
 bool passwordmanager::is_correct_key(const string &tested_key) {
-    if (is_graphic) {
-        cout <<"正在校验凭据..." << endl;
-    }
+    *(azusa_log::log) <<"正在校验凭据..." << endl;
     if (!is_new_user) {
-        if (is_graphic){
-            cout << "凭证已校验:" << (tested_key == correct_key_sha_256 ? "已通过！" : "未通过...") << endl;
-        }
+        *(azusa_log::log) << "凭证已校验:" << (tested_key == correct_key_sha_256 ? "已通过！" : "未通过...") << endl;
         return tested_key == correct_key_sha_256;
     }else {
         cerr << "当前为新用户，无法验证凭据！" << endl;

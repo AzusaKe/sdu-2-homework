@@ -10,16 +10,12 @@
 
 financenote::financenote(){
     financenote::load_from_file();
-    if (is_graphic){
-        cout << "记账本构造成功！" << endl;
-    }
+    *(azusa_log::log) << "记账本构造成功！" << endl;
 }
 
 financenote::~financenote(){
     financenote::close();
-    if (is_graphic){
-        cout << "记账本析构成功！" << endl;
-    }
+    *(azusa_log::log) << "记账本析构成功！" << endl;
 }
 //逻辑部分----------------------------------------------------------------------------------------------------------------------
 //文件加载函数
@@ -89,9 +85,7 @@ void financenote::add_entry(const string &date, double amount, const string &cat
 //关闭函数，避免错误保存
 void financenote::close() {
     financenote::save_to_file();
-    if (is_graphic){
-        cout << "已关闭这个记账本实例！" << endl;
-    }
+    *(azusa_log::log) << "已关闭这个记账本实例！" << endl;
 }
 
 //排序函数

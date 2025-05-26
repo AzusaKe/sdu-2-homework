@@ -68,31 +68,3 @@ string system_get_hidden_input() {
     return input;
     #endif
 }
-
-void log() {
-    std::filesystem::create_directories("log");
-    auto now = std::chrono::system_clock::now();
-    std::time_t t = std::chrono::system_clock::to_time_t(now);
-    std::tm tm;
-#ifdef _WIN32
-    localtime_s(&tm, &t);
-#else
-    localtime_r(&t, &tm);
-#endif
-    std::ostringstream oss;
-    oss << "log/"
-        << std::put_time(&tm, "%Y-%m-%d_%H-%M-%S")
-        << ".log";
-    std::string log_path = oss.str();
-
-    static std::ofstream log_file(log_path, std::ios::out | std::ios::app);
-    if (!is_graphic) {
-        static dual_streambuf dsb(std::cout.rdbuf(), log_file.rdbuf());
-        std::cout.rdbuf(&dsb);
-        static dual_streambuf dsb_err(std::cerr.rdbuf(), log_file.rdbuf());
-        std::cerr.rdbuf(&dsb_err);
-    } else {
-        std::cout.rdbuf(log_file.rdbuf());
-        std::cerr.rdbuf(log_file.rdbuf());
-    }
-}

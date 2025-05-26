@@ -12,6 +12,7 @@ Financenote_Window::Financenote_Window(QWidget *parent)
 
 Financenote_Window::~Financenote_Window()
 {
+    delete finance_note_ptr_3; //析构记账本指针
     delete ui;
 }
 //设置指针函数
