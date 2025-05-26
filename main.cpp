@@ -38,11 +38,11 @@ int main(int argc, char* argv[]) {
 
 //图形化程序入口
 int run_Graphical_Interface(int argc, char* argv[]) {
+    is_graphic = true;
     // log系统启动
     log();
-    is_graphic = true;
 #ifdef Q_OS_WIN
-    //::FreeConsole();
+    ::FreeConsole();
 #elif defined(Q_OS_LINUX)
     // 无需隐藏
 #endif
@@ -150,6 +150,8 @@ int run_Graphical_Interface(int argc, char* argv[]) {
 //命令行程序入口
 int run_Command_Line_Interface(int argc, char* argv[]) {
     is_graphic = false;
+    // log系统启动
+    log();
     while (true) {
         financenote finance_note;
         reminder reminder_temp;

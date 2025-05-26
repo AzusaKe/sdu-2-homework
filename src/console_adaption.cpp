@@ -3,6 +3,7 @@
 //
 
 #include "console_adaption.h"
+#include"dual_streambuf.h"
 
 void system_clear() {
 #ifdef Q_OS_WIN
@@ -70,8 +71,6 @@ string system_get_hidden_input() {
 
 void log() {
     std::filesystem::create_directories("log");
-
-    // 获取当前时间
     auto now = std::chrono::system_clock::now();
     std::time_t t = std::chrono::system_clock::to_time_t(now);
     std::tm tm;
@@ -86,8 +85,14 @@ void log() {
         << ".log";
     std::string log_path = oss.str();
 
-    // 重定向日志
     static std::ofstream log_file(log_path, std::ios::out | std::ios::app);
-    std::cout.rdbuf(log_file.rdbuf());
-    std::cerr.rdbuf(log_file.rdbuf());
+    if (!is_graphic) {
+        static dual_streambuf dsb(std::cout.rdbuf(), log_file.rdbuf());
+        std::cout.rdbuf(&dsb);
+        static dual_streambuf dsb_err(std::cerr.rdbuf(), log_file.rdbuf());
+        std::cerr.rdbuf(&dsb_err);
+    } else {
+        std::cout.rdbuf(log_file.rdbuf());
+        std::cerr.rdbuf(log_file.rdbuf());
+    }
 }
