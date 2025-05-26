@@ -27,7 +27,7 @@ int main(int argc, char* argv[]) {
 #endif
     filecheck_and_init();//检查文件是否存在并初始化
 
-    if (argc > 1) {//在完成图形化后记得修改为if (argc > 1)
+    if (argc > 1) {// 在完成图形化后记得修改为if (argc > 1)
         // 如果没有命令行参数，运行命令行界面
         run_Command_Line_Interface(argc, argv);
     } else {

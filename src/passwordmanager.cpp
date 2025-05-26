@@ -27,6 +27,13 @@ passwordmanager::~passwordmanager() {
 }
 
 //逻辑部分--------------------------------------------------------------------------------------------------------------------
+
+//is_new_user用于判断是否为新用户，如果是则需要创建密码凭据，否则需要验证密码凭据。
+bool passwordmanager::is_new_user_flag() const {
+    return is_new_user;
+}
+;
+
 //文件加载函数-复用自记账本
 void passwordmanager::load_from_file() {
     entries.clear();

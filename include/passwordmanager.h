@@ -53,6 +53,8 @@ public:
     void init() override;
     void close() override;
 
+    bool is_new_user_flag() const;
+
     //临时测hi用
     //void set_key(const string& k);
 };
