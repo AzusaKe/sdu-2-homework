@@ -66,12 +66,16 @@ void financenote::save_to_file() {
 
 //搜索函数
 void financenote::search(const string &month) {//输入搜索月份
-    search_result.clear();//清空之前的搜索结果
-    for (const auto& temp : entries) {
-        //如果符合搜索条件，输出全部删记录
-        if (temp.date.substr(0,7) == month) {
-            entry temp_search = temp;//将temp复制到temp_search
-            search_result.push_back(temp_search);//加入搜索结果表
+    if (month.empty()) {
+        search_result = entries; //如果没有传入月份参数，直接将总表复制到搜索结果表
+    }else {
+        search_result.clear();//清空之前的搜索结果
+        for (const auto& temp : entries) {
+            //如果符合搜索条件，输出全部删记录
+            if (temp.date.substr(0,7) == month) {
+                entry temp_search = temp;//将temp复制到temp_search
+                search_result.push_back(temp_search);//加入搜索结果表
+            }
         }
     }
 }
@@ -112,11 +116,10 @@ void financenote::display(const string &month) {
     //提高兼容性
     if (month.empty()) {//如果没有传入月份参数，显示全部消费记录
         cout << "[全部消费记录]" << endl;
-        search_result = entries;//将总表直接复制到搜索结果表
     } else {//如果传入参数，显示月份记录
         cout << "[" << month << "月消费记录]" << endl;
-        financenote::search(month);
     }
+    financenote::search(month);
     //表格格式分别输出三种数据表头
     cout << left << setw(19) << "日期"
          << setw(24) << "| 金额"
