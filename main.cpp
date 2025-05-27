@@ -33,6 +33,7 @@ int main(int argc, char* argv[]) {
         // 否则，运行图形化界面
         run_Graphical_Interface(argc, argv);
     }
+    *(azusa_log::log) << "程序已结束！" << endl;//日志记录程序结束
     return 0;//退出
 }
 
@@ -92,6 +93,7 @@ int run_Graphical_Interface(int argc, char* argv[]) {
         QObject::connect(&main_window, &MainWindow::exit, [&]() {
             // 析构模块对象
             app.quit();
+            *(azusa_log::log) << "程序即将退出！" << endl;//日志记录程序退出
             return 0;
         });
 
@@ -175,5 +177,6 @@ int run_Command_Line_Interface(int argc, char* argv[]) {
             cerr << "无效的选项，请重新输入！" << endl;//错误提示
         }
     }
+    *(azusa_log::log) << "程序即将退出！" << endl;//日志记录程序退出
     return 0;//退出
 }
