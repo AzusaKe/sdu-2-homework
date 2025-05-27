@@ -25,7 +25,8 @@ public:
     public slots:
     void display();
     void on_search_Button_clicked();
-    void on_add_Button_clicked() ;
+    void on_add_Button_clicked();
+    void on_clear_Button_clicked();
 
 private:
     Ui::Financenote_Window *ui;

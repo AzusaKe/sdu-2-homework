@@ -44,6 +44,8 @@ void f_add_record_Window::on_add_record_Button_clicked() {
         return;
     }
     finance_note_ptr_5->add_entry(date, amount, category);
+    finance_note_ptr_5->search("");
+    finance_note_ptr_5->sort();
     emit refresh(); // 发送刷新信号
     close(); // 关闭窗口
 }

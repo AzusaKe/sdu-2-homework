@@ -29,10 +29,24 @@
           </property>
          </widget>
         </item>
+        <item>
+         <widget class="QPushButton" name="clear_Button">
+          <property name="text">
+           <string>清除</string>
+          </property>
+         </widget>
+        </item>
        </layout>
       </item>
       <item>
-       <widget class="QTableView" name="financenote_record_table"/>
+       <widget class="QTableWidget" name="financenote_record_table">
+        <property name="columnCount">
+         <number>3</number>
+        </property>
+        <column/>
+        <column/>
+        <column/>
+       </widget>
       </item>
       <item>
        <widget class="QLabel" name="display_label">
@@ -108,7 +122,7 @@
      <x>0</x>
      <y>0</y>
      <width>329</width>
-     <height>17</height>
+     <height>33</height>
     </rect>
    </property>
   </widget>
