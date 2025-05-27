@@ -38,12 +38,11 @@ void f_add_record_Window::on_add_record_Button_clicked() {
         return;
     }
 
-    double amount = amount_temp.toDouble();
+    double amount = ui->amount_lineEdit->text().toDouble();
     if (amount <= 0) {
         QMessageBox::warning(this, "警告", "金额必须大于0！");
         return;
     }
-
     finance_note_ptr_5->add_entry(date, amount, category);
     emit refresh(); // 发送刷新信号
     close(); // 关闭窗口

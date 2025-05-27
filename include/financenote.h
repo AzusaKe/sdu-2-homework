@@ -35,6 +35,7 @@ public:
     void display(const string&) override;//显示，继承自基类
     void search(const string& month) override;//搜索，继承自基类
     void sort() override;//按日期排序
+    vector<entry> get_search_result(); //获取搜索结果
     //string get_type() const override;//获取类别，继承自基类
 
     void add_entry(const string& date,double amount,const string& category);//添加记录

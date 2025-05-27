@@ -59,7 +59,7 @@ void financenote::save_to_file() {
     }
 
     for (const auto& temp : entries) {//从总表中遍历临时表
-        file << temp.date << " " << temp.amount << " " << temp.category << endl;//用空格隔开
+        file << temp.date << " " << fixed << setprecision(2) << temp.amount << " " << temp.category << endl;//用空格隔开
     }
     file.close();//关闭文件占用
 }
@@ -76,11 +76,18 @@ void financenote::search(const string &month) {//输入搜索月份
     }
 }
 
+//用于图形化的搜索结果输出
+
+vector<financenote::entry> financenote::get_search_result() {
+    return search_result; //返回搜索结果
+}
+
+
 //记录添加函数
 void financenote::add_entry(const string &date, double amount, const string &category) {
     entries.push_back({date, amount, category});//将数据添加进总表
     financenote::save_to_file();//每添加一次记录就保存一次，避免出错
-    *(azusa_log::log) << "已添加一条记录：" << date << " " << amount << " " << category << endl;//记录日志
+    *(azusa_log::log) << "已添加一条记录：" << date << " " << fixed << setprecision(2) << amount << " " << category << endl;//记录日志
 }
 
 //关闭函数，避免错误保存
