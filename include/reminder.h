@@ -40,6 +40,7 @@ public:
     void sort() override;
     void get_current_date();
     void add_old_entries();
+    bool get_index_status();
     //string get_type() const override;
 
     void add_entry(const string& time,const string& content,const int& priority);

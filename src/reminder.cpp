@@ -98,12 +98,20 @@ void reminder::save_to_file() {
 //搜索函数-复用自记账本
 void reminder::search(const string &date) {
     search_result.clear();
-    for (const auto& temp : entries) {
-        if (temp.time.substr(0,10) == date ) {
-            event temp_search = temp;
-            search_result.push_back(temp_search);
-        }else {
-            continue;
+    is_in_index = true; //默认索引状态为true
+    if (date.empty()) {
+        search_result = entries;
+    }else if (date == "-") {
+        search_result = old_entries;
+        is_in_index = false;
+    }else {
+        for (const auto& temp : entries) {
+            if (temp.time.substr(0,10) == date ) {
+                event temp_search = temp;
+                search_result.push_back(temp_search);
+            }else {
+                continue;
+            }
         }
     }
     *(azusa_log::log) << "[ " << date << " ]搜索完成！" << endl;
@@ -174,8 +182,13 @@ void reminder::add_old_entries() {
             ++it;
         }
     }
+    *(azusa_log::log) << "已将过时的提醒加入回收站！" << endl;
 }
 
+//获取当前索引状态
+bool reminder::get_index_status() {
+    return is_in_index;
+}
 
 //逻辑部分结束-------------------------------------------------------------------------------------------------------------------
 //命令行交互部分----------------------------------------------------------------------------------------------------------------
@@ -185,15 +198,12 @@ void reminder::display(const string &date) {
     system_clear();
     if (date.empty()) {
         cout << "[全部课程提醒]" << endl;
-        search_result = entries;
     } else if (date == "-") {
         cout << "[当前为回收站中过时提醒]" << endl;
-        search_result = old_entries;
-        is_in_index = false;
     } else {
         cout << "[" << date << "日课程提醒]" << endl;
-        reminder::search(date);
     }
+    reminder::search(date);
     cout << left << setw(19) << "时间"
          << setw(24) << "| 内容"
          << setw(15) << "| 优先级" << endl;
@@ -230,7 +240,7 @@ void reminder::display(const string &date) {
         cout << "回车以回到提醒主页：" << endl;
         system_pause();
     }
-    is_in_index = true;
+    *(azusa_log::log) << "已显示" << (date.empty() ? "全部" : date) << "课程提醒！" << endl;
 }
 
 //初始化函数，包含课程提醒主页

@@ -101,7 +101,12 @@ void passwordmanager::save_to_file() {
 
 //搜索函数
 void passwordmanager::search(const string &site_name) {
-    //内建相似度计算函数，用于辅助搜索，输入被比较字符串，输出双精度浮点数用于评判两字符串是否相似
+    search_result.clear();
+    if (site_name.empty()) {
+        search_result = *this = entries; //如果没有输入站点名，则返回所有记录
+        passwordmanager::sort(); //对结果进行排序
+    }else {
+        //内建相似度计算函数，用于辅助搜索，输入被比较字符串，输出双精度浮点数用于评判两字符串是否相似
     auto calculate_similarity = [](const string &a, const string &b) -> double {
         //检测是否有共有的字母，没有相似度直接判零
         bool has_common_char = false;
@@ -131,7 +136,6 @@ void passwordmanager::search(const string &site_name) {
         }
         return 1.0 / (1.0 + dp[len_a][len_b]);
     };
-    search_result.clear();
     //对于每一个记录，计算相似度，将相似的记录加入搜索结果
     for (const auto &entry: entries) {
         double similarity = calculate_similarity(entry.site_name, site_name);
@@ -153,6 +157,7 @@ void passwordmanager::search(const string &site_name) {
         }
         return a.similarity > b.similarity;
     });
+    }
     *(azusa_log::log) << "[ " << site_name << " ]搜索已完成！" << endl;
 }
 
@@ -241,12 +246,10 @@ void passwordmanager::display(const string &site_name) {
     system_clear();
     if (site_name.empty()) {
         cout << "[全部密码记录]" << endl;
-        search_result = *this = entries;
-        passwordmanager::sort();
     } else {
         cout << "[" << site_name << "搜索结果]" << endl;
-        passwordmanager::search(site_name);
     }
+    passwordmanager::search(site_name);
     cout << left << setw(31) << "网站名"
          << setw(25) << "| 用户名"
          << setw(15) << "| 密码" << endl;

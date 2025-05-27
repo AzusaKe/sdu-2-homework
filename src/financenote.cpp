@@ -66,10 +66,10 @@ void financenote::save_to_file() {
 
 //搜索函数
 void financenote::search(const string &month) {//输入搜索月份
+    search_result.clear();//清空之前的搜索结果
     if (month.empty()) {
         search_result = entries; //如果没有传入月份参数，直接将总表复制到搜索结果表
     }else {
-        search_result.clear();//清空之前的搜索结果
         for (const auto& temp : entries) {
             //如果符合搜索条件，输出全部删记录
             if (temp.date.substr(0,7) == month) {
@@ -78,6 +78,7 @@ void financenote::search(const string &month) {//输入搜索月份
             }
         }
     }
+    *(azusa_log::log) << "已搜索" << (month.empty() ? "全部" : month) << "消费记录，共计" << search_result.size() << "条记录。" << endl;//记录日志
 }
 
 //用于图形化的搜索结果输出

@@ -1,6 +1,7 @@
 #include "financenote_window.h"
 #include "./ui_financenote_window.h"
 #include "log.h"
+#include <QTableView>
 
 Financenote_Window::Financenote_Window(QWidget *parent)
     : QMainWindow(parent)
@@ -52,5 +53,4 @@ void Financenote_Window::on_add_Button_clicked(){
 
 //显示
 void Financenote_Window::display() {
-    
 }
