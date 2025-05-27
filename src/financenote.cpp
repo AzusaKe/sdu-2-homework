@@ -80,6 +80,7 @@ void financenote::search(const string &month) {//输入搜索月份
 void financenote::add_entry(const string &date, double amount, const string &category) {
     entries.push_back({date, amount, category});//将数据添加进总表
     financenote::save_to_file();//每添加一次记录就保存一次，避免出错
+    *(azusa_log::log) << "已添加一条记录：" << date << " " << amount << " " << category << endl;//记录日志
 }
 
 //关闭函数，避免错误保存
