@@ -287,8 +287,10 @@ void reminder::init() {
             system_pause();
         }else if (choice == 4) {
             reminder::display("-");
-        }else {
+        }else if (choice == 0) {
             break;
+        }else {
+            cerr << "无效的选项，请重新输入！" << endl;//错误提示
         }
     }reminder::close();
 }

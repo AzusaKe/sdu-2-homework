@@ -337,8 +337,10 @@ void passwordmanager::init() {
             cin >> search_site_name;
             system_clear();
             passwordmanager::display(search_site_name);
-        }else {
+        }else if (choice == 0) {
             break;
+        }else {
+            cerr << "无效的选项，请重新输入！" << endl;//错误提示
         }
     }passwordmanager::close();
 }

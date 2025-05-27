@@ -190,8 +190,10 @@ void financenote::init() {
                 }
             }while (!is_valid_month(month));
             financenote::display(month);
-        }else {
+        }else if (choice == 0){
             break;//返回
+        }else {
+            cerr << "无效的选项，请重新输入！" << endl;//错误提示
         }
         //关闭窗口
     }financenote::close();

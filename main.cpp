@@ -169,8 +169,10 @@ int run_Command_Line_Interface(int argc, char* argv[]) {
         }
         else if (choice == 3) {
             password_manager.init();
-        }else {
+        }else if (choice == 0) {//退出
             break;//退出代码
+        }else {
+            cerr << "无效的选项，请重新输入！" << endl;//错误提示
         }
     }
     return 0;//退出
