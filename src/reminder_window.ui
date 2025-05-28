@@ -39,7 +39,7 @@
        </layout>
       </item>
       <item>
-       <widget class="QTableView" name="reminder_record_table"/>
+       <widget class="QTableWidget" name="reminder_record_table"/>
       </item>
       <item>
        <widget class="QLabel" name="display_label">

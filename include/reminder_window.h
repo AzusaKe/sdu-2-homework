@@ -20,6 +20,8 @@ public:
 
     void set_ptr(reminder *ptr);
     void closeEvent(QCloseEvent *event) override;
+    public slots:
+    void display();
 
 private:
     Ui::Reminder_Window *ui;
