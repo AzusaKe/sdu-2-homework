@@ -42,11 +42,13 @@ void Passwordauth_Window::closeEvent(QCloseEvent *event) {
 void Passwordauth_Window::authenticate() {
     if (!password_manager_ptr_5->is_new_user_flag()) {
         std::string input_password = ui->auth_lineEdit->text().toStdString();
-        input_password = SHA256::sha_256(input_password);
-        is_authenticated = password_manager_ptr_5->is_correct_key(input_password);
+        string temp_input_password = SHA256::sha_256(input_password);
+        is_authenticated = password_manager_ptr_5->is_correct_key(temp_input_password);
         *(azusa_log::log) << "身份验证结果：" << (is_authenticated ? "成功" : "失败") << endl;
         if (is_authenticated) {
             *(azusa_log::log) << "身份验证成功！" << endl;
+            QMessageBox::information(this, "身份验证成功", "欢迎使用密码管理器！", QMessageBox::Ok);
+            password_manager_ptr_5->set_key_graphic(input_password);
             close();
         }else {
             ui->auth_lineEdit->clear();

@@ -19,8 +19,13 @@ public:
     ~Passwordmanager_Window();
 
     void set_ptr(passwordmanager *ptr);
-
     void closeEvent(QCloseEvent *event) override;
+    signals:
+    public slots:
+    void display();
+    void on_search_Button_clicked();
+    void on_add_Button_clicked();
+    void on_clear_Button_clicked();
 
 private:
     Ui::Passwordmanager_Window *ui;

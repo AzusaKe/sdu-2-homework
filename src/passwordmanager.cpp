@@ -24,6 +24,16 @@ passwordmanager::~passwordmanager() {
 
 //逻辑部分--------------------------------------------------------------------------------------------------------------------
 
+//key设置函数，图形化专用
+void passwordmanager::set_key_graphic(const string &input_key) {
+    key = input_key;
+}
+
+
+vector<passwordmanager::search_record> passwordmanager::get_search_result() {
+    return search_result;
+}
+
 //is_new_user用于判断是否为新用户，如果是则需要创建密码凭据，否则需要验证密码凭据。
 bool passwordmanager::is_new_user_flag() const {
     return is_new_user;
@@ -209,9 +219,16 @@ void passwordmanager::close() {
 //排序函数
 void passwordmanager::sort() {
     std::sort(search_result.begin(), search_result.end(), [](const search_record &a, const search_record &b) {
-        return a.similarity > b.similarity;
+        std::string site_name_a = a.site_name;
+        std::string site_name_b = b.site_name;
+
+        // 将字符串转换为小写
+        std::transform(site_name_a.begin(), site_name_a.end(), site_name_a.begin(), ::tolower);
+        std::transform(site_name_b.begin(), site_name_b.end(), site_name_b.begin(), ::tolower);
+
+        return site_name_a < site_name_b; // 忽略大小写的字典顺序升序排序
     });
-    *(azusa_log::log) << "记录已排序" << endl;
+    *(azusa_log::log) << "记录已按 site_name 排序（忽略大小写）" << endl;
 }
 
 //运算符重载，用于将不同类型的值先呵护转化

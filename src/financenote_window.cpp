@@ -27,6 +27,7 @@ Financenote_Window::~Financenote_Window()
         *(azusa_log::log) << "正在析构子对象：" << child->objectName().toStdString() << endl;
         delete child; //析构子对象
     }
+    *(azusa_log::log) << "记账本窗口已析构！" << endl;
 }
 //设置指针函数
 void Financenote_Window::set_ptr(financenote *ptr) {

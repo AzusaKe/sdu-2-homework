@@ -46,6 +46,7 @@ public:
     string decoder(const string& this_password);//普通解密函数
     string encoder(const string& this_password);//普通加密函数
     vector<search_record> operator=(const vector<record> & entries);
+    vector<search_record> get_search_result();
     //string get_type() const override;
 
     bool is_already_exist(const string& site_name,const string& username,const string& password);
@@ -56,6 +57,7 @@ public:
 
     bool is_new_user_flag() const;
     void set_correct_key_sha_256(string key);
+    void set_key_graphic(const string& input_key);
 
     //临时测hi用
     //void set_key(const string& k);
