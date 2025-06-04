@@ -24,6 +24,7 @@ reminder::~reminder(){
 //文件加载函数-复用自记账本
 void reminder::load_from_file() {
     entries.clear();
+    old_entries.clear();
     ifstream file(file_path);
     if (!file.is_open()) {
         cerr << "无法打开目标文件：" << file_path << "，即将自动创建新文件" << endl;
@@ -66,6 +67,8 @@ void reminder::load_from_file() {
     }
     old_file.close();
     *(azusa_log::log) << "过时提醒已读取！" << endl;
+    *(azusa_log::log) << "共读取到 " << entries.size() << " 条正常提醒和 "
+                      << old_entries.size() << " 条过时提醒！" << endl;
 }
 //文件写入函数-复用自记账本
 void reminder::save_to_file() {
@@ -100,15 +103,17 @@ void reminder::search(const string &date) {
     search_result.clear();
     if (date.empty()) {
         search_result = entries;
-    }else if (date == "-") {
-        search_result = old_entries;
     }else if (date.substr(0,1) == "-"){
-        for (const auto& temp : old_entries) {
-            if (temp.time.substr(0,10) == date.substr(1)) {
-                event temp_search = temp;
-                search_result.push_back(temp_search);
-            }else {
-                continue;
+        if (date == "-") {
+            search_result = old_entries; //如果传入参数为"-"，则搜索回收站
+        }else {
+            for (const auto& temp : old_entries) {
+                if (temp.time.substr(0,10) == date.substr(1)) {
+                    event temp_search = temp;
+                    search_result.push_back(temp_search);
+                }else {
+                    continue;
+                }
             }
         }
     }else {
@@ -122,6 +127,11 @@ void reminder::search(const string &date) {
         }
     }
     *(azusa_log::log) << "[ " << date << " ]搜索完成！" << endl;
+    if (search_result.empty()) {
+        *(azusa_log::log) << "没有找到符合条件的记录！" << endl;
+    } else {
+        *(azusa_log::log) << "找到 " << search_result.size() << " 条符合条件的记录！" << endl;
+    }
 }
 
 //记录添加函数-复用自记账本
