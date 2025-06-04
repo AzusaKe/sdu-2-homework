@@ -43,7 +43,7 @@ int run_Graphical_Interface(int argc, char* argv[]) {
     azusa_log::init_log();
     *(azusa_log::log) << "日志启动..." << endl;//日志记录程序启动
 #ifdef Q_OS_WIN
-    //::FreeConsole();
+    ::FreeConsole();//隐藏控制台窗口
 #elif defined(Q_OS_LINUX)
     // 无需隐藏
 #endif
