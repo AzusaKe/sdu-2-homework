@@ -5,7 +5,7 @@ This is the final major assignment for the second semester of the first year of 
 2. Reminder (Course Reminder)
 3. Password Manager
 # Deployment
-> Note: This project is not yet complete!
+> Note: This project is now completed!
 > 
 This project uses `C++` and `Qt` to achieve cross-platform development. If you want to clone the project locally and compile it, please ensure you follow these steps:
 1. Install the necessary toolchain: `cmake3.31.0+`, download the `Qt6` library (recommended version `Qt6.7.3`) and corresponding compiler (usually selectable in the Qt online installer).
