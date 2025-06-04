@@ -78,15 +78,20 @@ void Passwordmanager_Window::display() {
 }
 
 void Passwordmanager_Window::on_search_Button_clicked() {
-    string site_name = ui->search_lineEdit->text().toStdString();
-    if (site_name.empty()) {
-        QMessageBox::warning(this, "输入错误", "请输入网站名进行搜索！", QMessageBox::Ok);
-        *(azusa_log::log) << "搜索网站名为空，未进行搜索。" << endl;
-        return;
+    try {
+        string site_name = ui->search_lineEdit->text().toStdString();
+        if (site_name.empty()) {
+            QMessageBox::warning(this, "输入错误", "请输入网站名进行搜索！", QMessageBox::Ok);
+            *(azusa_log::log) << "搜索网站名为空，未进行搜索。" << endl;
+            return;
+        }
+        password_manager_ptr_4->search(site_name);// 调用搜索函数
+        display();
+        *(azusa_log::log) << "密码管理器搜索函数已被调用" << endl;
+    }catch (const std::exception& e) {
+        *(azusa_log::log) << "Error(passwordmanager_window::on_search_Button_clicked): " << e.what() << endl;
+        QMessageBox::critical(this, "错误", QString::fromStdString(e.what()));
     }
-    password_manager_ptr_4->search(site_name);// 调用搜索函数
-    display();
-    *(azusa_log::log) << "密码管理器搜索函数已被调用" << endl;
 }
 
 void Passwordmanager_Window::on_add_Button_clicked() {

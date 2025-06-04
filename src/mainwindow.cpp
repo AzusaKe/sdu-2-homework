@@ -38,35 +38,55 @@ void MainWindow::set_ptr_passwordmanager_2(passwordmanager *ptr) {
 //窗口功能实现
 //记账本按钮
 void MainWindow::on_financenote_button_clicked() {
-    Financenote_Window *financenote_window = new Financenote_Window(this);
-    financenote_window->set_ptr(finance_note_ptr_2);
-    this->hide();
-    financenote_window->show();
-    connect(financenote_window, &Financenote_Window::destroyed, this, &MainWindow::show);
+    try {
+        Financenote_Window *financenote_window = new Financenote_Window(this);
+        financenote_window->set_ptr(finance_note_ptr_2);
+        this->hide();
+        financenote_window->show();
+        connect(financenote_window, &Financenote_Window::destroyed, this, &MainWindow::show);
+    }catch (const std::exception& e) {
+        *(azusa_log::log) << "Error(MainWindow::on_financenote_button_clicked): " << e.what() << endl;
+        QMessageBox::critical(this, "错误", QString::fromStdString(e.what()));
+    }
 }
 //日程提醒按钮
 void MainWindow::on_reminder_button_clicked() {
-    Reminder_Window *reminder_window = new Reminder_Window(this);
-    reminder_window->set_ptr(reminder_temp_ptr_2);
-    this->hide();
-    reminder_window->show();
-    connect(reminder_window, &Reminder_Window::destroyed, this, &MainWindow::show);
+    try {
+        Reminder_Window *reminder_window = new Reminder_Window(this);
+        reminder_window->set_ptr(reminder_temp_ptr_2);
+        this->hide();
+        reminder_window->show();
+        connect(reminder_window, &Reminder_Window::destroyed, this, &MainWindow::show);
+    }catch (const std::exception& e) {
+        *(azusa_log::log) << "Error(MainWindow::on_reminder_button_clicked): " << e.what() << endl;
+        QMessageBox::critical(this, "错误", QString::fromStdString(e.what()));
+    }
 }
 //密码管理器按钮
 void MainWindow::open_passwordmanager_window() {
-    Passwordmanager_Window *passwordmanager_window = new Passwordmanager_Window(this);
-    passwordmanager_window->set_ptr(password_manager_ptr_2);
-    passwordmanager_window->show();
-    connect(passwordmanager_window, &Passwordmanager_Window::destroyed, this, &MainWindow::show);
+    try {
+        Passwordmanager_Window *passwordmanager_window = new Passwordmanager_Window(this);
+        passwordmanager_window->set_ptr(password_manager_ptr_2);
+        passwordmanager_window->show();
+        connect(passwordmanager_window, &Passwordmanager_Window::destroyed, this, &MainWindow::show);
+    }catch (const std::exception& e) {
+        *(azusa_log::log) << "Error(MainWindow::open_passwordmanager_window): " << e.what() << endl;
+        QMessageBox::critical(this, "错误", QString::fromStdString(e.what()));
+    }
 }
 //密码管理器身份验证按钮
 void MainWindow::on_passwordmanager_button_clicked() {
-    Passwordauth_Window *passwordauth_window = new Passwordauth_Window(this);
-    this->hide();
-    passwordauth_window->show();
-    passwordauth_window->set_ptr(password_manager_ptr_2);
-    connect(passwordauth_window,SIGNAL(authenticated()),this,SLOT(open_passwordmanager_window()));
-    connect(passwordauth_window, &Passwordauth_Window::destroyed, this, &MainWindow::show);
+    try {
+        Passwordauth_Window *passwordauth_window = new Passwordauth_Window(this);
+        this->hide();
+        passwordauth_window->show();
+        passwordauth_window->set_ptr(password_manager_ptr_2);
+        connect(passwordauth_window,SIGNAL(authenticated()),this,SLOT(open_passwordmanager_window()));
+        connect(passwordauth_window, &Passwordauth_Window::destroyed, this, &MainWindow::show);
+    }catch (const std::exception& e) {
+        *(azusa_log::log) << "Error(MainWindow::on_passwordmanager_button_clicked): " << e.what() << endl;
+        QMessageBox::critical(this, "错误", QString::fromStdString(e.what()));
+    }
 }
 //退出按钮
 void MainWindow::on_exit_button_clicked() {
