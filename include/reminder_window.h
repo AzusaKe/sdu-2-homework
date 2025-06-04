@@ -22,6 +22,11 @@ public:
     void closeEvent(QCloseEvent *event) override;
     public slots:
     void display();
+    void on_search_Button_clicked();
+    void on_add_Button_clicked();
+    void on_clear_Button_clicked();
+    void on_move_to_old_Button_clicked();
+    void on_change_to_old_Button_clicked();
 
 private:
     Ui::Reminder_Window *ui;

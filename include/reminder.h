@@ -41,6 +41,7 @@ public:
     void get_current_date();
     void add_old_entries();
     bool get_index_status();
+    void set_index_status(bool status) ;
     vector<event> get_search_result();
     //string get_type() const override;
 

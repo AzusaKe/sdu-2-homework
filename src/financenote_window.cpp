@@ -56,10 +56,10 @@ void Financenote_Window::on_search_Button_clicked() {
         finance_note_ptr_3->sort();
         display();
     }else {
-        QMessageBox::warning(this, "输入错误", "请输入正确的日期格式（YYYY-MM-DD）！", QMessageBox::Ok);
+        QMessageBox::warning(this, "输入错误", "请输入正确的日期格式（YYYY-MM）！", QMessageBox::Ok);
         *(azusa_log::log) << "输入的日期格式不正确：" << month << endl;
     }
-    *(azusa_log::log) << "搜索函数已被调用" << endl;
+    *(azusa_log::log) << "记账本搜索函数已被调用" << endl;
 }
 
 //添加记录函数
@@ -110,9 +110,15 @@ void Financenote_Window::display() {
 }
 
 void Financenote_Window::on_clear_Button_clicked() {
-    ui->search_lineEdit->clear();
-    finance_note_ptr_3->search("");
-    finance_note_ptr_3->sort();
-    display();
-    *(azusa_log::log) << "已清除搜索条件，显示所有记录。" << endl;
+    try {
+        ui->search_lineEdit->clear();
+        finance_note_ptr_3->search("");
+        finance_note_ptr_3->sort();
+        display();
+        *(azusa_log::log) << "已清除搜索条件，显示所有记录。" << endl;
+    }catch (const std::exception& e) {
+        *(azusa_log::log) << "Error(financenote_window::on_clear_Button_clicked): " << e.what() << endl;
+        QMessageBox::critical(this, "错误", QString::fromStdString(e.what()));
+    }
+
 }

@@ -98,12 +98,19 @@ void reminder::save_to_file() {
 //搜索函数-复用自记账本
 void reminder::search(const string &date) {
     search_result.clear();
-    is_in_index = true; //默认索引状态为true
     if (date.empty()) {
         search_result = entries;
     }else if (date == "-") {
         search_result = old_entries;
-        is_in_index = false;
+    }else if (date.substr(0,1) == "-"){
+        for (const auto& temp : old_entries) {
+            if (temp.time.substr(0,10) == date.substr(1)) {
+                event temp_search = temp;
+                search_result.push_back(temp_search);
+            }else {
+                continue;
+            }
+        }
     }else {
         for (const auto& temp : entries) {
             if (temp.time.substr(0,10) == date ) {
@@ -188,6 +195,11 @@ void reminder::add_old_entries() {
 //获取当前索引状态
 bool reminder::get_index_status() {
     return is_in_index;
+}
+
+void reminder::set_index_status(bool status) {
+    is_in_index = status;
+    *(azusa_log::log) << "索引状态已设置为：" << (status ? "true" : "false") << endl;
 }
 
 vector<reminder::event> reminder::get_search_result() {
@@ -293,6 +305,7 @@ void reminder::init() {
                     cerr << "错误的日期格式！请重新输入！" << endl;
                 }
             }while (!is_valid_date(date));
+            is_in_index = true; //设置索引状态为true
             reminder::display(date);
         }else if (choice == 3) {
             reminder::add_old_entries();
@@ -300,6 +313,7 @@ void reminder::init() {
             cout << "已将过时的提醒加入回收站！" << endl;
             system_pause();
         }else if (choice == 4) {
+            is_in_index = false; //设置索引状态为false
             reminder::display("-");
         }else if (choice == 0) {
             break;
