@@ -5,6 +5,10 @@
 #include "console_adaption.h"
 #include"dual_streambuf.h"
 
+/* 实现多系统兼容的控制台适配函数
+  兼容Windows，Linux */
+
+// 清屏函数
 void system_clear() {
 #ifdef Q_OS_WIN
     system("cls");
@@ -13,6 +17,7 @@ void system_clear() {
 #endif
 }
 
+// 暂停函数
 void system_pause() {
 #ifdef Q_OS_WIN
     system("pause");
@@ -21,6 +26,7 @@ void system_pause() {
 #endif
 }
 
+// 获取隐藏输入函数
 string system_get_hidden_input() {
     cin.ignore();
     #ifdef Q_OS_WIN

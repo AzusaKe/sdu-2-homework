@@ -10,7 +10,16 @@
 #include <iomanip>
 #include <sstream>
 
+// 日志记录模块
+// 该模块负责初始化日志记录系统，并提供一个全局的日志输出流
+// 日志将同时输出到控制台和一个文件中（如果是图形化界面），
+// 文件名格式为 "log/YYYY-MM-DD_HH-MM-SS.log"
+// 具有双缓冲功能，允许同时输出到多个流（如控制台和文件）
+// 支持跨平台的时间格式化和文件操作
+
+// 使用新的命名空间 azusa_log，避免与其他模块冲突
 namespace azusa_log {
+    // 新建输入输出流对象
     static std::ofstream log_file;
     std::ostream* log = &std::cout;
 
@@ -52,6 +61,7 @@ namespace azusa_log {
             << ".log";
         log_file.open(oss.str(), std::ios::out | std::ios::app);
 
+        // 检测是否为图形化界面，文件是否打开
         if (is_graphic && log_file.is_open()) {
             dual_buf = new dual_streambuf(log_file.rdbuf(), std::cout.rdbuf());
             dual_stream = new std::ostream(dual_buf);
@@ -61,6 +71,6 @@ namespace azusa_log {
         } else {
             log = &std::cout;
         }
-        *azusa_log::log << "日志初始化成功..." << oss.str() << std::endl;
+        *log << "日志初始化成功..." << oss.str() << std::endl;
     }
 }

@@ -6,6 +6,7 @@
 using namespace std;
 
 bool is_valid_time(const string& time) {
+    // 正则表达式匹配时间格式
     regex pattern(R"(^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])\s([01]\d|2[0-3]):([0-5]\d)$)");
     return regex_match(time, pattern);
 }
@@ -26,6 +27,7 @@ bool is_valid_date(const string& date) {
     if (month < 1 ||month > 12) {
         return false;
     }
+    // 检查闰年
     bool is_leap_year = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
     if (is_leap_year && month == 2) {
         days_in_month[1] = 29;
@@ -42,6 +44,7 @@ bool is_valid_month(const string& month) {
     char dash;
     stringstream ss(month);
     ss >> year >> dash >> mon;
+    // 检查月份是否在1到12之间
     if (dash != '-' || mon < 1 || mon > 12) {
         return false;
     }
@@ -49,6 +52,7 @@ bool is_valid_month(const string& month) {
 }
 
 bool is_valid_priority(const int& priority) {
+    // 检查优先级是否在1到3之间
     return priority >= 1 && priority <= 3;
 }
 

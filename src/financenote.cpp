@@ -8,16 +8,19 @@
 #include "formatcheck.h"
 #include <iostream>
 
+// 记账本构造函数
 financenote::financenote(){
     financenote::load_from_file();
     *(azusa_log::log) << "记账本构造成功！" << endl;
 }
 
+// 记账本析构函数
 financenote::~financenote(){
     financenote::close();
     *(azusa_log::log) << "记账本析构成功！" << endl;
 }
 //逻辑部分----------------------------------------------------------------------------------------------------------------------
+
 //文件加载函数
 void financenote::load_from_file() {
     entries.clear();//清除之前内存里的记录
@@ -43,6 +46,7 @@ void financenote::load_from_file() {
         }//反之不写入
     }
     file.close();//关闭文件占用
+    *(azusa_log::log) << "已读取文件：" << financenote::file_path << endl;//记录日志
 }
 //文件写入函数
 void financenote::save_to_file() {
@@ -62,6 +66,7 @@ void financenote::save_to_file() {
         file << temp.date << " " << fixed << setprecision(2) << temp.amount << " " << temp.category << endl;//用空格隔开
     }
     file.close();//关闭文件占用
+    *(azusa_log::log) << "已保存文件：" << financenote::file_path << endl;//记录日志
 }
 
 //搜索函数
@@ -101,7 +106,7 @@ void financenote::close() {
     *(azusa_log::log) << "已关闭这个记账本实例！" << endl;
 }
 
-//排序函数
+//排序函数 依据日期降序排列
 void financenote::sort() {
     std::sort(search_result.begin(), search_result.end(), [](const entry& a, const entry& b) {
         return a.date > b.date;
